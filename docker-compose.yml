@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ros:
+      build:
+          context: .
+          dockerfile: Dockerfile
+      volumes:
+        - ./catkin_ws:/src
+
