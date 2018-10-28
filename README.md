@@ -1,7 +1,7 @@
 # Ros Docker container
 The catkin workspace is packaged along with a docker config to avoid dependency issues across systems.
 
-**Install tutorial requires ubuntu**
+**Install tutorial requires Ubuntu**
 
 1. Install Docker-CE: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
