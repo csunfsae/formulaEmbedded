@@ -19,4 +19,4 @@ The catkin workspace is packaged along with a docker config to avoid dependency 
 
 7. Run Docker environment: sudo docker run -it jetsontx2-master_ros
   
-8. Edit files locally && run catkin workspace commands via terminal/docker
+Now we can capable of editing files locally & running catkin workspace commands via terminal/docker
