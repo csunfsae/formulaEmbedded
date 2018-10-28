@@ -11,7 +11,7 @@ The catkin workspace is packaged along with a docker config to avoid dependency 
 
 4. Pull package: git clone https://github.com/csunfsae/jetsonTx2.git
 
-5. Unzip to convenient location: unzip jetsonTx2-master.zip 
+5. Unzip package: unzip jetsonTx2-master.zip 
 
 5. Change directory to jetsonTx2-master: cd jetsonTx2-master
 
