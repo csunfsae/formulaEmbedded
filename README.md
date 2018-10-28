@@ -16,10 +16,13 @@ The catkin workspace is packaged along with a docker config to avoid dependency 
   4a. git clone https://github.com/csunfsae/jetsonTx2.git
   4b. unzip jetsonTx2-master.zip
 
-3. Build Docker environment
+5. Change directory to jetsonTx2-master
+  cd jetsonTx2-master
+
+6. Build Docker environment
   sudo docker-compose up --build
 
-4. Run Docker environment 
+7. Run Docker environment 
   sudo docker run -it jetsontx2-master_ros
   
-5. Edit files locally && run catkin workspace commands via terminal/docker
+8. Edit files locally && run catkin workspace commands via terminal/docker
