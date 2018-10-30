@@ -1,5 +1,3 @@
-![](/readme/csunfsaelogo.png)
-
 # Formula SAE Electric Vehicle
 
 # Ros Docker container
