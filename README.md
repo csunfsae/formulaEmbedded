@@ -1,7 +1,8 @@
 # Ros Docker container
-The catkin workspace is packaged along with a docker config to avoid dependency issues across systems.
 
 **Install tutorial requires Ubuntu**
+
+The catkin workspace is packaged along with a docker config to avoid dependency issues across systems.
 
 ## Running Locally
 Commands
