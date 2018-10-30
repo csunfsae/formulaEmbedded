@@ -1,5 +1,3 @@
-# Formula SAE Electric Vehicle
-
 # Ros Docker container
 
 **Install tutorial requires Ubuntu**
