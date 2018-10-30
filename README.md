@@ -28,7 +28,7 @@ cd jetsonTx2-master
 # Build and run Docker environment
 sudo docker-compose up --build
 
-#Run Docker environment 
+# Run Docker environment 
 sudo docker run -it jetsontx2-master_ros
 
 ```
