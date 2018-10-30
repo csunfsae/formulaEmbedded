@@ -25,7 +25,7 @@ unzip jetsonTx2-master.zip
 # Change directory to jetsonTx2-master
 cd jetsonTx2-master
 
-# Build and run Docker environment
+# Build Docker environment
 sudo docker-compose up --build
 
 # Run Docker environment 
