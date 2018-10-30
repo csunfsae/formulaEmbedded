@@ -1,3 +1,6 @@
+# Formula SAE Electric Vehicle
+[![Build Status](https://travis-ci.org/csunfsae/formulaIO.svg?branch=master)](https://travis-ci.org/csunfsae/formulaIO)
+
 # Ros Docker container
 
 **Install tutorial requires Ubuntu**
