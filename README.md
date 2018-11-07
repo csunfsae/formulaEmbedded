@@ -19,11 +19,8 @@ systemctl show --property ActiveState docker
 # Pull package 
 git clone https://github.com/csunfsae/jetsonTx2.git
 
-# Unzip package 
-unzip jetsonTx2-master.zip  
-
 # Change directory to jetsonTx2-master
-cd jetsonTx2-master
+cd jetsonTx2
 
 # Build Docker environment
 sudo docker-compose up --build
