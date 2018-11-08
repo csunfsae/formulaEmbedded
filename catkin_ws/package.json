@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "rosnodejs": "^3.0.0"
+  }
+}
