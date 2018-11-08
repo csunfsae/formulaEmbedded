@@ -1,22 +1,35 @@
 # Ros Docker container
-The catkin workspace is packaged along with a docker config to avoid dependency issues across systems.
 
 **Install tutorial requires Ubuntu**
 
-1. Install Docker-CE: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+The catkin workspace is packaged along with a docker config to avoid dependency issues across systems.
 
-2. Install Docker-Compose: https://docs.docker.com/compose/install/#install-compose
+## Running Locally
+Commands
+```bash
+# Install Docker-CE 
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-3. Verify installation is active: systemctl show --property ActiveState docker
+# Install Docker-Compose 
+https://docs.docker.com/compose/install/#install-compose
 
-4. Pull package: git clone https://github.com/csunfsae/jetsonTx2.git
+# Verify installation is active 
+systemctl show --property ActiveState docker
 
-5. Unzip package: unzip jetsonTx2-master.zip 
+# Pull package 
+git clone https://github.com/csunfsae/jetsonTx2.git
 
-5. Change directory to jetsonTx2-master: cd jetsonTx2-master
+# Unzip package 
+unzip jetsonTx2-master.zip  
 
-6. Build Docker environment: sudo docker-compose up --build
+# Change directory to jetsonTx2-master
+cd jetsonTx2-master
 
-7. Run Docker environment: sudo docker run -it jetsontx2-master_ros
-  
-Now we can capable of editing files locally & running catkin workspace commands via terminal/docker
+# Build Docker environment
+sudo docker-compose up --build
+
+# Run Docker environment 
+sudo docker run -it jetsontx2-master_ros
+
+```
+**Now we can capable of editing files locally & running catkin workspace commands via terminal/docker**
