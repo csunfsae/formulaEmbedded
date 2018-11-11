@@ -1,7 +1,8 @@
 /*
  * CSUN FSAE EV 2018
  * ROS NODE: Database Interface
- * Topics Recieved: Filtered Signals
+ * Topics Subscribed: Filtered Signals
+ * Topics Publishing: None
  * Tag: RN1 
  * Summary:
  *   The purpose of this node is to recieve the sensor data after its been filtered for noise. 
