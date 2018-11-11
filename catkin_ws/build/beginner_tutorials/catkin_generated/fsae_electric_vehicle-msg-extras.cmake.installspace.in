@@ -1,0 +1,2 @@
+set(fsae_electric_vehicle_MESSAGE_FILES "msg/Num.msg")
+set(fsae_electric_vehicle_SERVICE_FILES "")

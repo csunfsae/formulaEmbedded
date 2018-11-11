@@ -1,0 +1,8 @@
+prefix=/src/catkin_ws/install
+
+Name: fsae_electric_vehicle
+Description: Description of fsae_electric_vehicle
+Version: 0.0.0
+Cflags: -I/src/catkin_ws/install/include
+Libs: -L/src/catkin_ws/install/lib 
+Requires: message_runtime

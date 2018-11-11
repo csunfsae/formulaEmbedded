@@ -1,2 +1,2 @@
-beginner_tutorials
+fsae_electric_vehicle
 -DCATKIN_DEVEL_PREFIX=/src/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/src/catkin_ws/install -G Unix Makefiles
