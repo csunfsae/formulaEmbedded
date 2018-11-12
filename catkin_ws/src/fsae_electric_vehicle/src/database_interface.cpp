@@ -64,7 +64,7 @@ void chatterCallback(const fsae_electric_vehicle::wheel_velocity::ConstPtr& msg)
 	char *sql;
   std::time_t t = std::time(0);
   char os[300] = { '\0' };
-  strcat(os, "INSERT INTO front_left (SampleNumber, Value, Time) "); 
+  strcat(os, "INSERT INTO front_left (sample_number, Value, Time) "); 
   strcat(os ,"VALUES (");
 	strcat(os,std::to_string(counter).c_str());
 	strcat(os, ", ");
@@ -73,7 +73,7 @@ void chatterCallback(const fsae_electric_vehicle::wheel_velocity::ConstPtr& msg)
   strcat(os, std::to_string(t).c_str());
   strcat(os, " );");
 	
-	rc = sqlite3_open("dataAcquisition.db", &db);
+	rc = sqlite3_open("wheel_velocity.db", &db);
 
 	if( rc ) {
 		fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
