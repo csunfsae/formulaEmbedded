@@ -1,6 +1,6 @@
 {
   "name": "fsae_electric_vehicle",
-  "version": "0.1",
+  "version": "1.0.0",
   "description": "The csun fsae electric vehicle nodejs ros nodes",
   "keywords": [
     "ros"
@@ -12,6 +12,8 @@
   "author": "CSUN_FSAE_EV",
   "license": "UNLISCENCED",
   "repository": {
+    "type": "git",
+    "url": "git://github.com/csunfsae/jetsonTx2"
   },
   "dependencies": {
     "rosnodejs": "2.1.1"
