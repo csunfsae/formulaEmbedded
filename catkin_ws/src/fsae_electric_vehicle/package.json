@@ -1,0 +1,19 @@
+{
+  "name": "fsae_electric_vehicle",
+  "version": "0.1",
+  "description": "The csun fsae electric vehicle nodejs ros nodes",
+  "keywords": [
+    "ros"
+  ],
+  "scripts": {
+    "talker": "node fsae_electric_vehicle/talker.js",
+    "listener": "node fsae_electric_vehicle/listener.js"
+  },
+  "author": "CSUN_FSAE_EV",
+  "license": "UNLISCENCED",
+  "repository": {
+  },
+  "dependencies": {
+    "rosnodejs": "2.1.1"
+  }
+}

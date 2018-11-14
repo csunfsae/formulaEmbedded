@@ -25,3 +25,11 @@ add_executable(database_interface src/database_interface.cpp)
 target_link_libraries(database_interface ${catkin_LIBRARIES} sqlite3)
 add_dependencies(database_interface fsae_electric_vehicle_generate_messages_cpp)
 
+
+
+##ALL ROS NODEJS CONFIGURATION
+install(PROGRAMS
+   fsae_electric_vehicle/talker.js
+   fsae_electric_vehicle/listener.js
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
