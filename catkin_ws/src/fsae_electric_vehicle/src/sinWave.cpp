@@ -1,4 +1,3 @@
-
 /*
  * CSUN FSAE EV 2018
  * ROS NODE: SinWave 
@@ -15,15 +14,17 @@
 #include <sstream>
 #include <string>
 #include <math.h>
+#include <comedilib.h>
 #define PI 3.14159265
 
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
 
-class CollectedData{
+class Wheel_velocity_data{
   public:
-    std::string first;
+    double value;
+    std::string time;
   };
 
 
@@ -46,8 +47,8 @@ int main(int argc, char **argv)
    * NodeHandle destructed will close down the node.
    */
   ros::NodeHandle n;
-  CollectedData test;
-  //test.first = "hi friend!!!";
+  Wheel_velocity_data front_left;
+  //front_left.first = "hi friend!!!";
   /**
    * The advertise() function is how you tell ROS that you want to
    * publish on a given topic name. This invokes a call to the ROS
@@ -65,7 +66,7 @@ int main(int argc, char **argv)
    * than we can send them, the number here specifies how many messages to
    * buffer up before throwing some away.
    */
-  ros::Publisher chatter_pub = n.advertise<fsae_electric_vehicle::wheel_velocity>("sinWave", 1000);
+  ros::Publisher wheel_velocity_topic = n.advertise<fsae_electric_vehicle::wheel_velocity>("sinWave", 1000);
 
   ros::Rate loop_rate(10);
 
@@ -83,14 +84,14 @@ int main(int argc, char **argv)
     if(count == 360){
 			count = 0;
 		}
-    fsae_electric_vehicle::wheel_velocity msg;
+    fsae_electric_vehicle::wheel_velocity wheel_velocity;
     wave = 100 * sin (count*PI/180); 
     std::stringstream ss;
-    test.first = std::to_string(wave); 
-    ss << test.first << count;
-    msg.Value = ss.str();
+    front_left.time = std::to_string(wave); 
+    ss << front_left.time << count;
+    wheel_velocity.front_left_time = ss.str();
 
-    ROS_INFO("%s", msg.Value.c_str());
+    ROS_INFO("%s", wheel_velocity.front_left_time.c_str());
 
     /**
      * The publish() function is how you send messages. The parameter
@@ -98,7 +99,7 @@ int main(int argc, char **argv)
      * given as a template parameter to the advertise<>() call, as was done
      * in the constructor above.
      */
-    chatter_pub.publish(msg);
+    wheel_velocity_topic.publish(wheel_velocity);
 
     ros::spinOnce();
 
