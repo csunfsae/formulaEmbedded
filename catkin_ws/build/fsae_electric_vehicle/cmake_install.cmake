@@ -90,7 +90,9 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/fsae_electric_vehicle" TYPE PROGRAM FILES
-    "/src/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/talker.js"
+    "/src/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/filtered_signals/signals_listener.js"
+    "/src/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/mcu_settings/mcu_listener.js"
+    "/src/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/traction_control/tc_listener.js"
     "/src/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/listener.js"
     )
 endif()

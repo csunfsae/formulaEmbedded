@@ -691,8 +691,4 @@ std_msgs/String.h
 /src/catkin_ws/src/fsae_electric_vehicle/src/std_msgs/String.h
 sstream
 -
-string
--
-math.h
--
 

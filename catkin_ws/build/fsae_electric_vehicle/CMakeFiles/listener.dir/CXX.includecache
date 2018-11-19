@@ -689,10 +689,4 @@ ros/ros.h
 /src/catkin_ws/src/fsae_electric_vehicle/src/ros/ros.h
 std_msgs/String.h
 /src/catkin_ws/src/fsae_electric_vehicle/src/std_msgs/String.h
-sqlite3.h
--
-ctime
--
-sstream
--
 

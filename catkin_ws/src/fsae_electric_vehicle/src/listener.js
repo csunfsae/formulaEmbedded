@@ -29,14 +29,28 @@ const std_msgs = rosnodejs.require('std_msgs').msg;
 
 function listener() {
   // Register node with ROS master
-  rosnodejs.initNode('/listener_node')
+  rosnodejs.initNode('/chatter')
     .then((rosNode) => {
       // Create ROS subscriber on the 'chatter' topic expecting String messages
-      let sub = rosNode.subscribe('/chatter', std_msgs.String,
+      let fs_sub = rosNode.subscribe('/filtered_signals', std_msgs.String,
         (data) => { // define callback execution
           rosnodejs.log.info('I heard: [' + data.data + ']');
         }
       );
+
+      // Create ROS subscriber on the 'chatter' topic expecting String messages
+        let mcu_sub = rosNode.subscribe('/mcu_settings', std_msgs.String,
+          (data) => { // define callback execution
+            rosnodejs.log.info('I heard: [' + data.data + ']');
+          }
+        );  
+
+      // Create ROS subscriber on the 'chatter' topic expecting String messages
+        let tc_sub = rosNode.subscribe('/traction_control', std_msgs.String,
+          (data) => { // define callback execution
+            rosnodejs.log.info('I heard: [' + data.data + ']');
+          }
+        );
     });
 }
 
