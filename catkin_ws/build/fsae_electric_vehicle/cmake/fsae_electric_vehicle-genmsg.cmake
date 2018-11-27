@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "fsae_electric_vehicle: 1 messages, 0 services")
+message(STATUS "fsae_electric_vehicle: 5 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ifsae_electric_vehicle:/src/catkin_ws/src/fsae_electric_vehicle/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -17,6 +17,26 @@ add_custom_target(fsae_electric_vehicle_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg" NAME_WE)
+add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg" ""
+)
+
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
+add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" ""
+)
+
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
+add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" ""
+)
+
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg" NAME_WE)
+add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg" ""
+)
+
 get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg" NAME_WE)
 add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg" ""
@@ -28,6 +48,30 @@ add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filenam
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_cpp(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_cpp(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_cpp(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
+)
 _generate_msg_cpp(fsae_electric_vehicle
   "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
   "${MSG_I_FLAGS}"
@@ -49,6 +93,14 @@ add_custom_target(fsae_electric_vehicle_generate_messages_cpp
 add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 
@@ -61,6 +113,30 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fsae_electric_vehicle_generate_mess
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_eus(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_eus(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_eus(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
+)
 _generate_msg_eus(fsae_electric_vehicle
   "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
   "${MSG_I_FLAGS}"
@@ -82,6 +158,14 @@ add_custom_target(fsae_electric_vehicle_generate_messages_eus
 add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 
@@ -94,6 +178,30 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fsae_electric_vehicle_generate_mess
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_lisp(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_lisp(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_lisp(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
+)
 _generate_msg_lisp(fsae_electric_vehicle
   "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
   "${MSG_I_FLAGS}"
@@ -115,6 +223,14 @@ add_custom_target(fsae_electric_vehicle_generate_messages_lisp
 add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 
@@ -127,6 +243,30 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fsae_electric_vehicle_generate_mess
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_nodejs(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_nodejs(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_nodejs(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
+)
 _generate_msg_nodejs(fsae_electric_vehicle
   "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
   "${MSG_I_FLAGS}"
@@ -148,6 +288,14 @@ add_custom_target(fsae_electric_vehicle_generate_messages_nodejs
 add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 
@@ -160,6 +308,30 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fsae_electric_vehicle_generate_mess
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_py(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_py(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_py(fsae_electric_vehicle
+  "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
+)
 _generate_msg_py(fsae_electric_vehicle
   "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
   "${MSG_I_FLAGS}"
@@ -181,6 +353,14 @@ add_custom_target(fsae_electric_vehicle_generate_messages_py
 add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 

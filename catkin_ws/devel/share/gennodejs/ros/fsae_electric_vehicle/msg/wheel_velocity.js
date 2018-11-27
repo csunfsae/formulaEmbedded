@@ -18,22 +18,85 @@ class wheel_velocity {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.Value = null;
+      this.front_left_value = null;
+      this.front_left_time = null;
+      this.front_right_value = null;
+      this.front_right_time = null;
+      this.back_left_value = null;
+      this.back_left_time = null;
+      this.back_right_value = null;
+      this.back_right_time = null;
     }
     else {
-      if (initObj.hasOwnProperty('Value')) {
-        this.Value = initObj.Value
+      if (initObj.hasOwnProperty('front_left_value')) {
+        this.front_left_value = initObj.front_left_value
       }
       else {
-        this.Value = '';
+        this.front_left_value = 0.0;
+      }
+      if (initObj.hasOwnProperty('front_left_time')) {
+        this.front_left_time = initObj.front_left_time
+      }
+      else {
+        this.front_left_time = '';
+      }
+      if (initObj.hasOwnProperty('front_right_value')) {
+        this.front_right_value = initObj.front_right_value
+      }
+      else {
+        this.front_right_value = 0.0;
+      }
+      if (initObj.hasOwnProperty('front_right_time')) {
+        this.front_right_time = initObj.front_right_time
+      }
+      else {
+        this.front_right_time = '';
+      }
+      if (initObj.hasOwnProperty('back_left_value')) {
+        this.back_left_value = initObj.back_left_value
+      }
+      else {
+        this.back_left_value = 0.0;
+      }
+      if (initObj.hasOwnProperty('back_left_time')) {
+        this.back_left_time = initObj.back_left_time
+      }
+      else {
+        this.back_left_time = '';
+      }
+      if (initObj.hasOwnProperty('back_right_value')) {
+        this.back_right_value = initObj.back_right_value
+      }
+      else {
+        this.back_right_value = 0.0;
+      }
+      if (initObj.hasOwnProperty('back_right_time')) {
+        this.back_right_time = initObj.back_right_time
+      }
+      else {
+        this.back_right_time = '';
       }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type wheel_velocity
-    // Serialize message field [Value]
-    bufferOffset = _serializer.string(obj.Value, buffer, bufferOffset);
+    // Serialize message field [front_left_value]
+    bufferOffset = _serializer.float32(obj.front_left_value, buffer, bufferOffset);
+    // Serialize message field [front_left_time]
+    bufferOffset = _serializer.string(obj.front_left_time, buffer, bufferOffset);
+    // Serialize message field [front_right_value]
+    bufferOffset = _serializer.float32(obj.front_right_value, buffer, bufferOffset);
+    // Serialize message field [front_right_time]
+    bufferOffset = _serializer.string(obj.front_right_time, buffer, bufferOffset);
+    // Serialize message field [back_left_value]
+    bufferOffset = _serializer.float32(obj.back_left_value, buffer, bufferOffset);
+    // Serialize message field [back_left_time]
+    bufferOffset = _serializer.string(obj.back_left_time, buffer, bufferOffset);
+    // Serialize message field [back_right_value]
+    bufferOffset = _serializer.float32(obj.back_right_value, buffer, bufferOffset);
+    // Serialize message field [back_right_time]
+    bufferOffset = _serializer.string(obj.back_right_time, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -41,15 +104,32 @@ class wheel_velocity {
     //deserializes a message object of type wheel_velocity
     let len;
     let data = new wheel_velocity(null);
-    // Deserialize message field [Value]
-    data.Value = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [front_left_value]
+    data.front_left_value = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [front_left_time]
+    data.front_left_time = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [front_right_value]
+    data.front_right_value = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [front_right_time]
+    data.front_right_time = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [back_left_value]
+    data.back_left_value = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [back_left_time]
+    data.back_left_time = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [back_right_value]
+    data.back_right_value = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [back_right_time]
+    data.back_right_time = _deserializer.string(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
-    length += object.Value.length;
-    return length + 4;
+    length += object.front_left_time.length;
+    length += object.front_right_time.length;
+    length += object.back_left_time.length;
+    length += object.back_right_time.length;
+    return length + 32;
   }
 
   static datatype() {
@@ -59,13 +139,20 @@ class wheel_velocity {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'c39d4884ea4866f0b5cd78380dec7bc0';
+    return '8a6ea563b0ec5361d7adcaeba167aaab';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string Value
+    float32 front_left_value
+    string front_left_time
+    float32 front_right_value
+    string front_right_time
+    float32 back_left_value
+    string back_left_time
+    float32 back_right_value
+    string back_right_time
     
     `;
   }
@@ -76,11 +163,60 @@ class wheel_velocity {
       msg = {};
     }
     const resolved = new wheel_velocity(null);
-    if (msg.Value !== undefined) {
-      resolved.Value = msg.Value;
+    if (msg.front_left_value !== undefined) {
+      resolved.front_left_value = msg.front_left_value;
     }
     else {
-      resolved.Value = ''
+      resolved.front_left_value = 0.0
+    }
+
+    if (msg.front_left_time !== undefined) {
+      resolved.front_left_time = msg.front_left_time;
+    }
+    else {
+      resolved.front_left_time = ''
+    }
+
+    if (msg.front_right_value !== undefined) {
+      resolved.front_right_value = msg.front_right_value;
+    }
+    else {
+      resolved.front_right_value = 0.0
+    }
+
+    if (msg.front_right_time !== undefined) {
+      resolved.front_right_time = msg.front_right_time;
+    }
+    else {
+      resolved.front_right_time = ''
+    }
+
+    if (msg.back_left_value !== undefined) {
+      resolved.back_left_value = msg.back_left_value;
+    }
+    else {
+      resolved.back_left_value = 0.0
+    }
+
+    if (msg.back_left_time !== undefined) {
+      resolved.back_left_time = msg.back_left_time;
+    }
+    else {
+      resolved.back_left_time = ''
+    }
+
+    if (msg.back_right_value !== undefined) {
+      resolved.back_right_value = msg.back_right_value;
+    }
+    else {
+      resolved.back_right_value = 0.0
+    }
+
+    if (msg.back_right_time !== undefined) {
+      resolved.back_right_time = msg.back_right_time;
+    }
+    else {
+      resolved.back_right_time = ''
     }
 
     return resolved;

@@ -700,6 +700,10 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/src/catkin_ws/src/fsae_electric_vehicle/include/wheel_sensor.h
+chrono
+-
+
 /src/catkin_ws/src/fsae_electric_vehicle/src/sinWave.cpp
 ros/ros.h
 /src/catkin_ws/src/fsae_electric_vehicle/src/ros/ros.h
@@ -713,4 +717,8 @@ string
 -
 math.h
 -
+comedilib.h
+-
+../include/wheel_sensor.h
+/src/catkin_ws/src/fsae_electric_vehicle/include/wheel_sensor.h
 

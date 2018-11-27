@@ -24,17 +24,52 @@ struct wheel_velocity_
   typedef wheel_velocity_<ContainerAllocator> Type;
 
   wheel_velocity_()
-    : Value()  {
+    : front_left_value(0.0)
+    , front_left_time()
+    , front_right_value(0.0)
+    , front_right_time()
+    , back_left_value(0.0)
+    , back_left_time()
+    , back_right_value(0.0)
+    , back_right_time()  {
     }
   wheel_velocity_(const ContainerAllocator& _alloc)
-    : Value(_alloc)  {
+    : front_left_value(0.0)
+    , front_left_time(_alloc)
+    , front_right_value(0.0)
+    , front_right_time(_alloc)
+    , back_left_value(0.0)
+    , back_left_time(_alloc)
+    , back_right_value(0.0)
+    , back_right_time(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _Value_type;
-  _Value_type Value;
+   typedef float _front_left_value_type;
+  _front_left_value_type front_left_value;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _front_left_time_type;
+  _front_left_time_type front_left_time;
+
+   typedef float _front_right_value_type;
+  _front_right_value_type front_right_value;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _front_right_time_type;
+  _front_right_time_type front_right_time;
+
+   typedef float _back_left_value_type;
+  _back_left_value_type back_left_value;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _back_left_time_type;
+  _back_left_time_type back_left_time;
+
+   typedef float _back_right_value_type;
+  _back_right_value_type back_right_value;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _back_right_time_type;
+  _back_right_time_type back_right_time;
 
 
 
@@ -114,12 +149,12 @@ struct MD5Sum< ::fsae_electric_vehicle::wheel_velocity_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "c39d4884ea4866f0b5cd78380dec7bc0";
+    return "8a6ea563b0ec5361d7adcaeba167aaab";
   }
 
   static const char* value(const ::fsae_electric_vehicle::wheel_velocity_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xc39d4884ea4866f0ULL;
-  static const uint64_t static_value2 = 0xb5cd78380dec7bc0ULL;
+  static const uint64_t static_value1 = 0x8a6ea563b0ec5361ULL;
+  static const uint64_t static_value2 = 0xd7adcaeba167aaabULL;
 };
 
 template<class ContainerAllocator>
@@ -138,7 +173,14 @@ struct Definition< ::fsae_electric_vehicle::wheel_velocity_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "string Value\n\
+    return "float32 front_left_value\n\
+string front_left_time\n\
+float32 front_right_value\n\
+string front_right_time\n\
+float32 back_left_value\n\
+string back_left_time\n\
+float32 back_right_value\n\
+string back_right_time\n\
 ";
   }
 
@@ -157,7 +199,14 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.Value);
+      stream.next(m.front_left_value);
+      stream.next(m.front_left_time);
+      stream.next(m.front_right_value);
+      stream.next(m.front_right_time);
+      stream.next(m.back_left_value);
+      stream.next(m.back_left_time);
+      stream.next(m.back_right_value);
+      stream.next(m.back_right_time);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -176,8 +225,22 @@ struct Printer< ::fsae_electric_vehicle::wheel_velocity_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::fsae_electric_vehicle::wheel_velocity_<ContainerAllocator>& v)
   {
-    s << indent << "Value: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.Value);
+    s << indent << "front_left_value: ";
+    Printer<float>::stream(s, indent + "  ", v.front_left_value);
+    s << indent << "front_left_time: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.front_left_time);
+    s << indent << "front_right_value: ";
+    Printer<float>::stream(s, indent + "  ", v.front_right_value);
+    s << indent << "front_right_time: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.front_right_time);
+    s << indent << "back_left_value: ";
+    Printer<float>::stream(s, indent + "  ", v.back_left_value);
+    s << indent << "back_left_time: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.back_left_time);
+    s << indent << "back_right_value: ";
+    Printer<float>::stream(s, indent + "  ", v.back_right_value);
+    s << indent << "back_right_time: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.back_right_time);
   }
 };
 

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
+messages_str = "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg;/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg;/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg;/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg;/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
 services_str = ""
 pkg_name = "fsae_electric_vehicle"
 dependencies_str = "std_msgs"

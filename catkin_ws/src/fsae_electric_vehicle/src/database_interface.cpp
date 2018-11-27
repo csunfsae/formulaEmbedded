@@ -68,7 +68,7 @@ void chatterCallback(const fsae_electric_vehicle::wheel_velocity::ConstPtr& msg)
   strcat(os ,"VALUES (");
 	strcat(os,std::to_string(counter).c_str());
 	strcat(os, ", ");
-  strcat(os, msg->Value.c_str());
+  strcat(os, msg->front_left_time.c_str());
   strcat(os,  ", ");
   strcat(os, std::to_string(t).c_str());
   strcat(os, " );");

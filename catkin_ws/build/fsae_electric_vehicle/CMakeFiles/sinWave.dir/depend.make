@@ -61,5 +61,6 @@ fsae_electric_vehicle/CMakeFiles/sinWave.dir/src/sinWave.cpp.o: /opt/ros/melodic
 fsae_electric_vehicle/CMakeFiles/sinWave.dir/src/sinWave.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 fsae_electric_vehicle/CMakeFiles/sinWave.dir/src/sinWave.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
 fsae_electric_vehicle/CMakeFiles/sinWave.dir/src/sinWave.cpp.o: /src/catkin_ws/devel/include/fsae_electric_vehicle/wheel_velocity.h
+fsae_electric_vehicle/CMakeFiles/sinWave.dir/src/sinWave.cpp.o: /src/catkin_ws/src/fsae_electric_vehicle/include/wheel_sensor.h
 fsae_electric_vehicle/CMakeFiles/sinWave.dir/src/sinWave.cpp.o: /src/catkin_ws/src/fsae_electric_vehicle/src/sinWave.cpp
 

@@ -15,6 +15,7 @@
 #include <string>
 #include <math.h>
 #include <comedilib.h>
+#include "../include/wheel_sensor.h"
 #define PI 3.14159265
 
 /**

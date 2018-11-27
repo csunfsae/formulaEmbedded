@@ -38,7 +38,13 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/msg" TYPE FILE FILES "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/msg" TYPE FILE FILES
+    "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
+    "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg"
+    "/src/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg"
+    "/src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
+    "/src/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
