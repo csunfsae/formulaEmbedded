@@ -24,17 +24,22 @@
 
 // Require rosnodejs itself
 const rosnodejs = require('rosnodejs');
+var io = require('socket.io-client')("https://api.matadormotorsports.racing");
+//var socket = io("https://api.matadormotorsports.racing");
+console.log(io);
 // Requires the std_msgs message package
-const std_msgs = rosnodejs.require('std_msgs').msg;
+const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
 
 function listener() {
   // Register node with ROS master
   rosnodejs.initNode('/listener_node')
     .then((rosNode) => {
       // Create ROS subscriber on the 'chatter' topic expecting String messages
-      let sub = rosNode.subscribe('/chatter', std_msgs.String,
+      let sub = rosNode.subscribe('sinWave', std_msgs.wheel_velocity,
         (data) => { // define callback execution
-          rosnodejs.log.info('I heard: [' + data.data + ']');
+            let now = new Date();
+            console.log(data.front_left_time);
+            io.emit("offsets", {time: now, value: parseInt(data.front_left_time), device: "Potentiometer"});
         }
       );
     });
