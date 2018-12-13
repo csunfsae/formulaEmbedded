@@ -91,25 +91,24 @@ sinWave_EXTERNAL_OBJECTS =
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: fsae_electric_vehicle/CMakeFiles/sinWave.dir/src/sinWave.cpp.o
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: fsae_electric_vehicle/CMakeFiles/sinWave.dir/build.make
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /opt/ros/melodic/lib/libroscpp.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libpthread.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libboost_signals.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /opt/ros/melodic/lib/librosconsole.so
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /opt/ros/melodic/lib/librosconsole_log4cxx.so
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libboost_regex.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /opt/ros/melodic/lib/libxmlrpcpp.so
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /opt/ros/melodic/lib/libroscpp_serialization.so
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /opt/ros/melodic/lib/librostime.so
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /opt/ros/melodic/lib/libcpp_common.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libboost_system.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libboost_thread.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libboost_chrono.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libboost_date_time.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libboost_atomic.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libpthread.so
-/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libpthread.so
+/src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave: fsae_electric_vehicle/CMakeFiles/sinWave.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/src/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /src/catkin_ws/devel/lib/fsae_electric_vehicle/sinWave"
 	cd /src/catkin_ws/build/fsae_electric_vehicle && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sinWave.dir/link.txt --verbose=$(VERBOSE)
