@@ -1,1 +1,1 @@
-sudo docker run -v $PWD:/src -it jetsontx2 
+sudo docker run -u 0 -v $PWD:/src -it jetsontx2 

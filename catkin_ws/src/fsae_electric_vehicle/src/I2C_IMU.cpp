@@ -30,9 +30,11 @@
 
 int main(int argc, char **argv)
 {
-  RTIMUSettings *imu_settings = new RTIMUSettings("RTIMULib");
-  RTIMU *imu_pointer;
+  RTIMUSettings *imu_settings = new RTIMUSettings("Ivensense MPU9250");
+  RTIMU *imu_pointer = RTIMU::createIMU(imu_settings);
+  imu_pointer->IMUInit();
   /**
+   *
    * The ros::init() function needs to see argc and argv so that it can perform
    * any ROS arguments and name remapping that were provided at the command line.
    * For programmatic remappings you can use a different version of init() which takes
