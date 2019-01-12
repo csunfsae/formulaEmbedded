@@ -257,6 +257,15 @@ Project_BINARY_DIR:STATIC=/src/catkin_ws/build
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/src/catkin_ws/src
 
+//Value Computed by CMake
+RTIMULib_BINARY_DIR:STATIC=/src/catkin_ws/build/fsae_electric_vehicle
+
+//Dependencies for target
+RTIMULib_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+RTIMULib_SOURCE_DIR:STATIC=/src/catkin_ws/src/fsae_electric_vehicle
+
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 

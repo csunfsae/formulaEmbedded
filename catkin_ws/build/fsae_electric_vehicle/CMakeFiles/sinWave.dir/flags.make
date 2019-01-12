@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"fsae_electric_vehicle\"
 
-CXX_INCLUDES = -I/src/catkin_ws/devel/include -I/src/catkin_ws/src/fsae_electric_vehicle/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/src/catkin_ws/devel/include -I/src/catkin_ws/src/fsae_electric_vehicle/src/RTIMULib2 -I/src/catkin_ws/src/fsae_electric_vehicle/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

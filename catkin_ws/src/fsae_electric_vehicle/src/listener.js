@@ -4,18 +4,18 @@
  * ROS NODE: DATA OUT
  * Topics Subscribed: Filtered Signals
  * Topics Publishing: None
- * Tag: RN2 
+ * Tag: RN2
  * Summary:
- *  This node is meant to take the filtered data from the data aqcuisition pci card and send it 
- *  to the server for remote viewing i.e. visualization. Socketio is the main lib used here. 
- *  The main function of this node is to subscribe to all data from the daq card and send it 
+ *  This node is meant to take the filtered data from the data aqcuisition pci card and send it
+ *  to the server for remote viewing i.e. visualization. Socketio is the main lib used here.
+ *  The main function of this node is to subscribe to all data from the daq card and send it
  *  out.
- *   
+ *
  * Related:
  *   Documentation:
  *     - COMP-490-FSAE/Embedded/JetsonRos.html (draw.io)
 */
-
+// hi test
 'use strict';
 const rosnodejs = require('rosnodejs');
 var io = require('socket.io-client')("https://api.matadormotorsports.racing");

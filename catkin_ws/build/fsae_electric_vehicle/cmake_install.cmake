@@ -38,6 +38,42 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  foreach(file
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libRTIMULib.so.8.0.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libRTIMULib.so.8"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libRTIMULib.so"
+      )
+    if(EXISTS "${file}" AND
+       NOT IS_SYMLINK "${file}")
+      file(RPATH_CHECK
+           FILE "${file}"
+           RPATH "")
+    endif()
+  endforeach()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
+    "/src/catkin_ws/devel/lib/libRTIMULib.so.8.0.0"
+    "/src/catkin_ws/devel/lib/libRTIMULib.so.8"
+    "/src/catkin_ws/devel/lib/libRTIMULib.so"
+    )
+  foreach(file
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libRTIMULib.so.8.0.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libRTIMULib.so.8"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libRTIMULib.so"
+      )
+    if(EXISTS "${file}" AND
+       NOT IS_SYMLINK "${file}")
+      if(CMAKE_INSTALL_DO_STRIP)
+        execute_process(COMMAND "/usr/bin/strip" "${file}")
+      endif()
+    endif()
+  endforeach()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/src/catkin_ws/src/fsae_electric_vehicle/." FILES_MATCHING REGEX "/[^/]*\\.h$")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/msg" TYPE FILE FILES
     "/src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
     "/src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg"
