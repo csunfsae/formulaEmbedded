@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
+set(CMAKE_CXX_STANDARD 11)
 ########################################################################
 IF(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
     MESSAGE(FATAL_ERROR "Prevented in-tree built. This is bad practice.")
@@ -69,6 +70,10 @@ catkin_package( CATKIN_DEPENDS message_runtime)
 
 ## Build sinWave and database_interface
 include_directories(include ${catkin_INCLUDE_DIRS})
+
+add_executable(dummyReader src/dummyReader.cpp)
+target_link_libraries(dummyReader ${catkin_LIBRARIES})
+add_dependencies(dummyReader fsae_electric_vehicle_generate_messages_cpp)
 
 add_executable(sinWave src/sinWave.cpp)
 target_link_libraries(sinWave ${catkin_LIBRARIES})

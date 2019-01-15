@@ -37,7 +37,7 @@ int main(int argc, char **argv)
   //Setting up the IMU with the RTIMULib2 library Note: Our waveshare model conatins the 
   //MPU9255 but the MPU9250 will get the data for us as well
   RTIMUSettings *imu_settings = new RTIMUSettings();
-  imu_settings->m_fusionType = 1; 
+  imu_settings->m_fusionType = 0; 
 
   RTIMU *imu_pointer = RTIMU::createIMU(imu_settings);
   RTIMU_DATA* data = new RTIMU_DATA();

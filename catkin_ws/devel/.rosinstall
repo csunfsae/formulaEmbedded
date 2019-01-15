@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /src/catkin_ws/devel/setup.sh
+    local-name: /home/nvidia/Github/jetsonTx2/catkin_ws/devel/setup.sh

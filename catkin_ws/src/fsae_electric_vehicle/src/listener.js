@@ -19,17 +19,21 @@
 'use strict';
 const rosnodejs = require('rosnodejs');
 var io = require('socket.io-client')("https://api.matadormotorsports.racing");
+const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
 function listener() {
-  rosnodejs.initNode('/listener_node')
+  console.log("test");
+  rosnodejs.initNode('listener')
     .then((rosNode) => {
-      rosnodejs.loadAllPackages().then(function(){
-        const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
-      });
-      let sub = rosNode.subscribe('sinWave', std_msgs.wheel_velocity,
+      let sub = rosNode.subscribe('imu_data', std_msgs.imu_data,
         (data) => { // define callback execution
-            let now = new Date();
-            console.log(data.front_left_time);
-            io.emit("offsets", {time: now, value: parseInt(data.front_left_time), device: "Potentiometer"});
+              console.log("test");
+              let now = new Date();
+              console.log(data.gyro_x);
+              console.log(data.accel_x);
+              console.log(data.compass_x);
+              io.emit("gyroscope", {time: now, x: data.gyro_x, y: data.gyro_y, z: data.gyro_z});
+              io.emit("accelometer", {time: now, x: data.accel_x, y: data.accel_y, z: data.accel_z});
+              io.emit("compass", {time: now, x: data.compass_x, y: data.compass_y, z: data.compass_z});
         }
       );
     });
