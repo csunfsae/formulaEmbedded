@@ -4,8 +4,8 @@
 (defsystem "fsae_electric_vehicle-msg"
   :depends-on (:roslisp-msg-protocol :roslisp-utils )
   :components ((:file "_package")
-    (:file "gravitational_forces" :depends-on ("_package_gravitational_forces"))
-    (:file "_package_gravitational_forces" :depends-on ("_package"))
+    (:file "imu_data" :depends-on ("_package_imu_data"))
+    (:file "_package_imu_data" :depends-on ("_package"))
     (:file "steering_input" :depends-on ("_package_steering_input"))
     (:file "_package_steering_input" :depends-on ("_package"))
     (:file "suspension_offset" :depends-on ("_package_suspension_offset"))

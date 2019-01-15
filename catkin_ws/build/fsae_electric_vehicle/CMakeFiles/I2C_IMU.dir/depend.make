@@ -60,7 +60,7 @@ fsae_electric_vehicle/CMakeFiles/I2C_IMU.dir/src/I2C_IMU.cpp.o: /opt/ros/melodic
 fsae_electric_vehicle/CMakeFiles/I2C_IMU.dir/src/I2C_IMU.cpp.o: /opt/ros/melodic/include/std_msgs/String.h
 fsae_electric_vehicle/CMakeFiles/I2C_IMU.dir/src/I2C_IMU.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 fsae_electric_vehicle/CMakeFiles/I2C_IMU.dir/src/I2C_IMU.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
-fsae_electric_vehicle/CMakeFiles/I2C_IMU.dir/src/I2C_IMU.cpp.o: /src/catkin_ws/devel/include/fsae_electric_vehicle/wheel_velocity.h
+fsae_electric_vehicle/CMakeFiles/I2C_IMU.dir/src/I2C_IMU.cpp.o: /src/catkin_ws/devel/include/fsae_electric_vehicle/imu_data.h
 fsae_electric_vehicle/CMakeFiles/I2C_IMU.dir/src/I2C_IMU.cpp.o: /src/catkin_ws/src/fsae_electric_vehicle/src/I2C_IMU.cpp
 fsae_electric_vehicle/CMakeFiles/I2C_IMU.dir/src/I2C_IMU.cpp.o: /src/catkin_ws/src/fsae_electric_vehicle/src/RTIMULib2/RTIMULib/./RTMath.h
 fsae_electric_vehicle/CMakeFiles/I2C_IMU.dir/src/I2C_IMU.cpp.o: /src/catkin_ws/src/fsae_electric_vehicle/src/RTIMULib2/RTIMULib/IMUDrivers/RTHumidity.h

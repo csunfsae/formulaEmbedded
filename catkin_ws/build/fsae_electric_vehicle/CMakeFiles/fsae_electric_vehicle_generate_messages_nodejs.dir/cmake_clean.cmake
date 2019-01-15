@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/steering_input.js"
   "/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/tire_pressure.js"
   "/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/suspension_offset.js"
-  "/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/gravitational_forces.js"
+  "/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/imu_data.js"
   "/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/wheel_velocity.js"
 )
 

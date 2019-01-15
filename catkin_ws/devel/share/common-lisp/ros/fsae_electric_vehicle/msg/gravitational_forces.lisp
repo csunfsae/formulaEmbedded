@@ -7,24 +7,64 @@
 ;//! \htmlinclude gravitational_forces.msg.html
 
 (cl:defclass <gravitational_forces> (roslisp-msg-protocol:ros-message)
-  ((x
-    :reader x
-    :initarg :x
+  ((gyro_x
+    :reader gyro_x
+    :initarg :gyro_x
     :type cl:float
     :initform 0.0)
-   (y
-    :reader y
-    :initarg :y
+   (gyro_y
+    :reader gyro_y
+    :initarg :gyro_y
     :type cl:float
     :initform 0.0)
-   (z
-    :reader z
-    :initarg :z
+   (gyro_z
+    :reader gyro_z
+    :initarg :gyro_z
     :type cl:float
     :initform 0.0)
-   (time
-    :reader time
-    :initarg :time
+   (gyro_time
+    :reader gyro_time
+    :initarg :gyro_time
+    :type cl:string
+    :initform "")
+   (accel_x
+    :reader accel_x
+    :initarg :accel_x
+    :type cl:float
+    :initform 0.0)
+   (accel_y
+    :reader accel_y
+    :initarg :accel_y
+    :type cl:float
+    :initform 0.0)
+   (accel_z
+    :reader accel_z
+    :initarg :accel_z
+    :type cl:float
+    :initform 0.0)
+   (accel_time
+    :reader accel_time
+    :initarg :accel_time
+    :type cl:string
+    :initform "")
+   (compass_x
+    :reader compass_x
+    :initarg :compass_x
+    :type cl:float
+    :initform 0.0)
+   (compass_y
+    :reader compass_y
+    :initarg :compass_y
+    :type cl:float
+    :initform 0.0)
+   (compass_z
+    :reader compass_z
+    :initarg :compass_z
+    :type cl:float
+    :initform 0.0)
+   (compass_time
+    :reader compass_time
+    :initarg :compass_time
     :type cl:string
     :initform ""))
 )
@@ -37,48 +77,130 @@
   (cl:unless (cl:typep m 'gravitational_forces)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name fsae_electric_vehicle-msg:<gravitational_forces> is deprecated: use fsae_electric_vehicle-msg:gravitational_forces instead.")))
 
-(cl:ensure-generic-function 'x-val :lambda-list '(m))
-(cl:defmethod x-val ((m <gravitational_forces>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:x-val is deprecated.  Use fsae_electric_vehicle-msg:x instead.")
-  (x m))
+(cl:ensure-generic-function 'gyro_x-val :lambda-list '(m))
+(cl:defmethod gyro_x-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:gyro_x-val is deprecated.  Use fsae_electric_vehicle-msg:gyro_x instead.")
+  (gyro_x m))
 
-(cl:ensure-generic-function 'y-val :lambda-list '(m))
-(cl:defmethod y-val ((m <gravitational_forces>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:y-val is deprecated.  Use fsae_electric_vehicle-msg:y instead.")
-  (y m))
+(cl:ensure-generic-function 'gyro_y-val :lambda-list '(m))
+(cl:defmethod gyro_y-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:gyro_y-val is deprecated.  Use fsae_electric_vehicle-msg:gyro_y instead.")
+  (gyro_y m))
 
-(cl:ensure-generic-function 'z-val :lambda-list '(m))
-(cl:defmethod z-val ((m <gravitational_forces>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:z-val is deprecated.  Use fsae_electric_vehicle-msg:z instead.")
-  (z m))
+(cl:ensure-generic-function 'gyro_z-val :lambda-list '(m))
+(cl:defmethod gyro_z-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:gyro_z-val is deprecated.  Use fsae_electric_vehicle-msg:gyro_z instead.")
+  (gyro_z m))
 
-(cl:ensure-generic-function 'time-val :lambda-list '(m))
-(cl:defmethod time-val ((m <gravitational_forces>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:time-val is deprecated.  Use fsae_electric_vehicle-msg:time instead.")
-  (time m))
+(cl:ensure-generic-function 'gyro_time-val :lambda-list '(m))
+(cl:defmethod gyro_time-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:gyro_time-val is deprecated.  Use fsae_electric_vehicle-msg:gyro_time instead.")
+  (gyro_time m))
+
+(cl:ensure-generic-function 'accel_x-val :lambda-list '(m))
+(cl:defmethod accel_x-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:accel_x-val is deprecated.  Use fsae_electric_vehicle-msg:accel_x instead.")
+  (accel_x m))
+
+(cl:ensure-generic-function 'accel_y-val :lambda-list '(m))
+(cl:defmethod accel_y-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:accel_y-val is deprecated.  Use fsae_electric_vehicle-msg:accel_y instead.")
+  (accel_y m))
+
+(cl:ensure-generic-function 'accel_z-val :lambda-list '(m))
+(cl:defmethod accel_z-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:accel_z-val is deprecated.  Use fsae_electric_vehicle-msg:accel_z instead.")
+  (accel_z m))
+
+(cl:ensure-generic-function 'accel_time-val :lambda-list '(m))
+(cl:defmethod accel_time-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:accel_time-val is deprecated.  Use fsae_electric_vehicle-msg:accel_time instead.")
+  (accel_time m))
+
+(cl:ensure-generic-function 'compass_x-val :lambda-list '(m))
+(cl:defmethod compass_x-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:compass_x-val is deprecated.  Use fsae_electric_vehicle-msg:compass_x instead.")
+  (compass_x m))
+
+(cl:ensure-generic-function 'compass_y-val :lambda-list '(m))
+(cl:defmethod compass_y-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:compass_y-val is deprecated.  Use fsae_electric_vehicle-msg:compass_y instead.")
+  (compass_y m))
+
+(cl:ensure-generic-function 'compass_z-val :lambda-list '(m))
+(cl:defmethod compass_z-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:compass_z-val is deprecated.  Use fsae_electric_vehicle-msg:compass_z instead.")
+  (compass_z m))
+
+(cl:ensure-generic-function 'compass_time-val :lambda-list '(m))
+(cl:defmethod compass_time-val ((m <gravitational_forces>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:compass_time-val is deprecated.  Use fsae_electric_vehicle-msg:compass_time instead.")
+  (compass_time m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <gravitational_forces>) ostream)
   "Serializes a message object of type '<gravitational_forces>"
-  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'x))))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'gyro_x))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
-  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'y))))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'gyro_y))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
-  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'z))))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'gyro_z))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
-  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'time))))
+  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'gyro_time))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
-  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'time))
+  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'gyro_time))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'accel_x))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'accel_y))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'accel_z))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'accel_time))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'accel_time))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'compass_x))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'compass_y))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'compass_z))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'compass_time))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'compass_time))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <gravitational_forces>) istream)
   "Deserializes a message object of type '<gravitational_forces>"
@@ -87,27 +209,79 @@
       (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
-    (cl:setf (cl:slot-value msg 'x) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:setf (cl:slot-value msg 'gyro_x) (roslisp-utils:decode-single-float-bits bits)))
     (cl:let ((bits 0))
       (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
-    (cl:setf (cl:slot-value msg 'y) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:setf (cl:slot-value msg 'gyro_y) (roslisp-utils:decode-single-float-bits bits)))
     (cl:let ((bits 0))
       (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
-    (cl:setf (cl:slot-value msg 'z) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:setf (cl:slot-value msg 'gyro_z) (roslisp-utils:decode-single-float-bits bits)))
     (cl:let ((__ros_str_len 0))
       (cl:setf (cl:ldb (cl:byte 8 0) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 16) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) __ros_str_len) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'time) (cl:make-string __ros_str_len))
+      (cl:setf (cl:slot-value msg 'gyro_time) (cl:make-string __ros_str_len))
       (cl:dotimes (__ros_str_idx __ros_str_len msg)
-        (cl:setf (cl:char (cl:slot-value msg 'time) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
+        (cl:setf (cl:char (cl:slot-value msg 'gyro_time) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'accel_x) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'accel_y) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'accel_z) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((__ros_str_len 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'accel_time) (cl:make-string __ros_str_len))
+      (cl:dotimes (__ros_str_idx __ros_str_len msg)
+        (cl:setf (cl:char (cl:slot-value msg 'accel_time) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'compass_x) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'compass_y) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'compass_z) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((__ros_str_len 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'compass_time) (cl:make-string __ros_str_len))
+      (cl:dotimes (__ros_str_idx __ros_str_len msg)
+        (cl:setf (cl:char (cl:slot-value msg 'compass_time) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<gravitational_forces>)))
@@ -118,28 +292,44 @@
   "fsae_electric_vehicle/gravitational_forces")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<gravitational_forces>)))
   "Returns md5sum for a message object of type '<gravitational_forces>"
-  "093e31f85644998fb59a959954c3fd8b")
+  "96e2fc03b6486059b9ae94e0a184b112")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'gravitational_forces)))
   "Returns md5sum for a message object of type 'gravitational_forces"
-  "093e31f85644998fb59a959954c3fd8b")
+  "96e2fc03b6486059b9ae94e0a184b112")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<gravitational_forces>)))
   "Returns full string definition for message of type '<gravitational_forces>"
-  (cl:format cl:nil "float32 x ~%float32 y ~%float32 z ~%string time~%~%~%"))
+  (cl:format cl:nil "float32 gyro_x ~%float32 gyro_y ~%float32 gyro_z ~%string gyro_time~%float32 accel_x ~%float32 accel_y ~%float32 accel_z ~%string accel_time~%float32 compass_x ~%float32 compass_y ~%float32 compass_z ~%string compass_time~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'gravitational_forces)))
   "Returns full string definition for message of type 'gravitational_forces"
-  (cl:format cl:nil "float32 x ~%float32 y ~%float32 z ~%string time~%~%~%"))
+  (cl:format cl:nil "float32 gyro_x ~%float32 gyro_y ~%float32 gyro_z ~%string gyro_time~%float32 accel_x ~%float32 accel_y ~%float32 accel_z ~%string accel_time~%float32 compass_x ~%float32 compass_y ~%float32 compass_z ~%string compass_time~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <gravitational_forces>))
   (cl:+ 0
      4
      4
      4
-     4 (cl:length (cl:slot-value msg 'time))
+     4 (cl:length (cl:slot-value msg 'gyro_time))
+     4
+     4
+     4
+     4 (cl:length (cl:slot-value msg 'accel_time))
+     4
+     4
+     4
+     4 (cl:length (cl:slot-value msg 'compass_time))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <gravitational_forces>))
   "Converts a ROS message object to a list"
   (cl:list 'gravitational_forces
-    (cl:cons ':x (x msg))
-    (cl:cons ':y (y msg))
-    (cl:cons ':z (z msg))
-    (cl:cons ':time (time msg))
+    (cl:cons ':gyro_x (gyro_x msg))
+    (cl:cons ':gyro_y (gyro_y msg))
+    (cl:cons ':gyro_z (gyro_z msg))
+    (cl:cons ':gyro_time (gyro_time msg))
+    (cl:cons ':accel_x (accel_x msg))
+    (cl:cons ':accel_y (accel_y msg))
+    (cl:cons ':accel_z (accel_z msg))
+    (cl:cons ':accel_time (accel_time msg))
+    (cl:cons ':compass_x (compass_x msg))
+    (cl:cons ':compass_y (compass_y msg))
+    (cl:cons ':compass_z (compass_z msg))
+    (cl:cons ':compass_time (compass_time msg))
 ))

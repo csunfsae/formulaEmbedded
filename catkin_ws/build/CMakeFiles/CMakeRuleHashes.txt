@@ -3,6 +3,7 @@ a788bbd658d0bbf67d751ed13f9c3633 /src/catkin_ws/devel/include/beginner_tutorials
 38b45d8e72d7a1150f5324d4ff8a9ccb /src/catkin_ws/devel/include/beginner_tutorials/Num.h
 6d1867190fa83b0f3523c5fb61a6aea1 /src/catkin_ws/devel/include/fsae_electric_vehicle/Num.h
 1ce24f9b50fa2c67cfb547660d360818 /src/catkin_ws/devel/include/fsae_electric_vehicle/gravitational_forces.h
+2fb13668ee6ffaf03ece8c03919c6906 /src/catkin_ws/devel/include/fsae_electric_vehicle/imu_data.h
 f993303135a429e52c24041e639f5ef2 /src/catkin_ws/devel/include/fsae_electric_vehicle/steering_input.h
 89dc695df218857afeea531d25e99613 /src/catkin_ws/devel/include/fsae_electric_vehicle/suspension_offset.h
 25d5440687fff03674b3f0e14bebf249 /src/catkin_ws/devel/include/fsae_electric_vehicle/tire_pressure.h
@@ -14,6 +15,7 @@ f3e0b773e6b1e17c23a31a8eb8662c6f /src/catkin_ws/devel/lib/python2.7/dist-package
 448534771eedb97f5307c61c3025ce41 /src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_Num.py
 c6e9daf1442cf6a0addd9134a3704f3b /src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/__init__.py
 c0de6017d3508af6cf6b9c9d26970274 /src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_gravitational_forces.py
+8159ff44a3527eeda386ad379f73f26a /src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_imu_data.py
 2e093bdf745e0a9fc1f435d9b9715718 /src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_steering_input.py
 b552d87bf1c0ba22030c23d8ab591580 /src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_suspension_offset.py
 1ab2e9546d893f8740d54c1273d42942 /src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_tire_pressure.py
@@ -22,6 +24,7 @@ d26a822a5b00b2c514d0a16b5e88caba /src/catkin_ws/devel/lib/python2.7/dist-package
 59a4f23eb7de6d6bbb7b3b93d0dcfb6f /src/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp
 0d910e86fe55d35f72efbf36e588745b /src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/Num.lisp
 4d0f14d2e34a84d945f40293d6723a19 /src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/gravitational_forces.lisp
+82c85e7ca085adeb92b10c8a6f90398d /src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/imu_data.lisp
 b9732ec78741d3505e75267cdf8e8f9c /src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/steering_input.lisp
 d2f63dcb801f48e3bc030d171b3edd0c /src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/suspension_offset.lisp
 187f9f5d181531aa456c299603c532df /src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/tire_pressure.lisp
@@ -30,6 +33,7 @@ cd80e58e85979bbd6226cb5ec91a635a /src/catkin_ws/devel/share/common-lisp/ros/fsae
 b8485aefe1a43bb5e57c0b56c6ac6ab9 /src/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/AddTwoInts.js
 298ab89968d357e85d71d8bf24355298 /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/Num.js
 06afd9c6a5f21afc63b237d2a1460e5e /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/gravitational_forces.js
+efe65cf32b9d455ff3c1f762a5d378f0 /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/imu_data.js
 e527942107731749c37de8535d77371b /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/steering_input.js
 fdd9ddee461655d2a58cb6c0f5f1bb82 /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/suspension_offset.js
 c0596c93196017c5ed4a4c77f941d2d7 /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/tire_pressure.js
@@ -40,12 +44,13 @@ b0c35d07a06ad94ce1b4be7a777cd10b /src/catkin_ws/devel/share/roseus/ros/beginner_
 abedf0e4e9aa2e66e5e4362d3a29a402 /src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/manifest.l
 da58ae46cfb493c7d21a45e55b0b55bb /src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/Num.l
 c78c2d9e461b9d05132d258531fe0e99 /src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/gravitational_forces.l
+53086b60239ecfec0d663439ea709f32 /src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/imu_data.l
 e2bc3147c4f1470180f2d6238514472b /src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/steering_input.l
 e8078a5537026c85b47881692f86212c /src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/suspension_offset.l
 499618ded6c1e123688b6dd3299f9bfa /src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/tire_pressure.l
 a8712b01f784601db2215c4ee1adb399 /src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/wheel_velocity.l
 6d9359c6cf984768ca9b1800ddfc2530 CMakeFiles/clean_test_results
-b836cefb11b2c3fc4c8092fa10f96d2e fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gravitational_forces
+854d928379281ac13fa361b7169f1522 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data
 3b54625b82cc91ec77b4455495f10c1b fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input
 ea3176f58a0fc205fe51abe3c5552336 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset
 3bed9210b27af4894ee472dc4edbd7a2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure

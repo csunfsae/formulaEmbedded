@@ -19,11 +19,12 @@
 'use strict';
 const rosnodejs = require('rosnodejs');
 var io = require('socket.io-client')("https://api.matadormotorsports.racing");
-const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
-
 function listener() {
   rosnodejs.initNode('/listener_node')
     .then((rosNode) => {
+      rosnodejs.loadAllPackages().then(function(){
+        const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
+      });
       let sub = rosNode.subscribe('sinWave', std_msgs.wheel_velocity,
         (data) => { // define callback execution
             let now = new Date();

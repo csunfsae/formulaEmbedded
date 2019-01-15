@@ -684,7 +684,7 @@ vector
 time.h
 -
 
-/src/catkin_ws/devel/include/fsae_electric_vehicle/wheel_velocity.h
+/src/catkin_ws/devel/include/fsae_electric_vehicle/imu_data.h
 string
 -
 vector
@@ -705,8 +705,6 @@ ros/ros.h
 /src/catkin_ws/src/fsae_electric_vehicle/src/ros/ros.h
 std_msgs/String.h
 /src/catkin_ws/src/fsae_electric_vehicle/src/std_msgs/String.h
-fsae_electric_vehicle/wheel_velocity.h
-/src/catkin_ws/src/fsae_electric_vehicle/src/fsae_electric_vehicle/wheel_velocity.h
 sstream
 -
 string
@@ -715,6 +713,8 @@ iostream
 -
 RTIMULib2/RTIMULib/RTIMULib.h
 /src/catkin_ws/src/fsae_electric_vehicle/src/RTIMULib2/RTIMULib/RTIMULib.h
+fsae_electric_vehicle/imu_data.h
+/src/catkin_ws/src/fsae_electric_vehicle/src/fsae_electric_vehicle/imu_data.h
 
 /src/catkin_ws/src/fsae_electric_vehicle/src/RTIMULib2/RTIMULib/./RTMath.h
 RTIMUHal.h

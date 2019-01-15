@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "/src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_steering_input.py"
   "/src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_tire_pressure.py"
   "/src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_suspension_offset.py"
-  "/src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_gravitational_forces.py"
+  "/src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_imu_data.py"
   "/src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_wheel_velocity.py"
   "/src/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/__init__.py"
 )

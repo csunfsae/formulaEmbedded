@@ -56,7 +56,7 @@ include fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/steering_input.js
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/tire_pressure.js
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/suspension_offset.js
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/gravitational_forces.js
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/imu_data.js
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/wheel_velocity.js
 
 
@@ -75,10 +75,10 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/src/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from fsae_electric_vehicle/suspension_offset.msg"
 	cd /src/catkin_ws/build/fsae_electric_vehicle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /src/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg -Ifsae_electric_vehicle:/src/catkin_ws/src/fsae_electric_vehicle/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p fsae_electric_vehicle -o /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg
 
-/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/gravitational_forces.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/gravitational_forces.js: /src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/src/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from fsae_electric_vehicle/gravitational_forces.msg"
-	cd /src/catkin_ws/build/fsae_electric_vehicle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /src/catkin_ws/src/fsae_electric_vehicle/msg/gravitational_forces.msg -Ifsae_electric_vehicle:/src/catkin_ws/src/fsae_electric_vehicle/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p fsae_electric_vehicle -o /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg
+/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/imu_data.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/imu_data.js: /src/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/src/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from fsae_electric_vehicle/imu_data.msg"
+	cd /src/catkin_ws/build/fsae_electric_vehicle && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /src/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg -Ifsae_electric_vehicle:/src/catkin_ws/src/fsae_electric_vehicle/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p fsae_electric_vehicle -o /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg
 
 /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/wheel_velocity.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/wheel_velocity.js: /src/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg
@@ -89,7 +89,7 @@ fsae_electric_vehicle_generate_messages_nodejs: fsae_electric_vehicle/CMakeFiles
 fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/steering_input.js
 fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/tire_pressure.js
 fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/suspension_offset.js
-fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/gravitational_forces.js
+fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/imu_data.js
 fsae_electric_vehicle_generate_messages_nodejs: /src/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/wheel_velocity.js
 fsae_electric_vehicle_generate_messages_nodejs: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/build.make
 

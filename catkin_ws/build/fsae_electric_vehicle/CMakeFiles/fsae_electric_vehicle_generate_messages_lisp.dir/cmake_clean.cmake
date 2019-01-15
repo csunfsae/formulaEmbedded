@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "/src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/steering_input.lisp"
   "/src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/tire_pressure.lisp"
   "/src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/suspension_offset.lisp"
-  "/src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/gravitational_forces.lisp"
+  "/src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/imu_data.lisp"
   "/src/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/wheel_velocity.lisp"
 )
 

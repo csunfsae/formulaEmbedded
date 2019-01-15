@@ -7,16 +7,24 @@ import struct
 
 
 class gravitational_forces(genpy.Message):
-  _md5sum = "093e31f85644998fb59a959954c3fd8b"
+  _md5sum = "96e2fc03b6486059b9ae94e0a184b112"
   _type = "fsae_electric_vehicle/gravitational_forces"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """float32 x 
-float32 y 
-float32 z 
-string time
+  _full_text = """float32 gyro_x 
+float32 gyro_y 
+float32 gyro_z 
+string gyro_time
+float32 accel_x 
+float32 accel_y 
+float32 accel_z 
+string accel_time
+float32 compass_x 
+float32 compass_y 
+float32 compass_z 
+string compass_time
 """
-  __slots__ = ['x','y','z','time']
-  _slot_types = ['float32','float32','float32','string']
+  __slots__ = ['gyro_x','gyro_y','gyro_z','gyro_time','accel_x','accel_y','accel_z','accel_time','compass_x','compass_y','compass_z','compass_time']
+  _slot_types = ['float32','float32','float32','string','float32','float32','float32','string','float32','float32','float32','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +34,7 @@ string time
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       x,y,z,time
+       gyro_x,gyro_y,gyro_z,gyro_time,accel_x,accel_y,accel_z,accel_time,compass_x,compass_y,compass_z,compass_time
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -35,19 +43,43 @@ string time
     if args or kwds:
       super(gravitational_forces, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.x is None:
-        self.x = 0.
-      if self.y is None:
-        self.y = 0.
-      if self.z is None:
-        self.z = 0.
-      if self.time is None:
-        self.time = ''
+      if self.gyro_x is None:
+        self.gyro_x = 0.
+      if self.gyro_y is None:
+        self.gyro_y = 0.
+      if self.gyro_z is None:
+        self.gyro_z = 0.
+      if self.gyro_time is None:
+        self.gyro_time = ''
+      if self.accel_x is None:
+        self.accel_x = 0.
+      if self.accel_y is None:
+        self.accel_y = 0.
+      if self.accel_z is None:
+        self.accel_z = 0.
+      if self.accel_time is None:
+        self.accel_time = ''
+      if self.compass_x is None:
+        self.compass_x = 0.
+      if self.compass_y is None:
+        self.compass_y = 0.
+      if self.compass_z is None:
+        self.compass_z = 0.
+      if self.compass_time is None:
+        self.compass_time = ''
     else:
-      self.x = 0.
-      self.y = 0.
-      self.z = 0.
-      self.time = ''
+      self.gyro_x = 0.
+      self.gyro_y = 0.
+      self.gyro_z = 0.
+      self.gyro_time = ''
+      self.accel_x = 0.
+      self.accel_y = 0.
+      self.accel_z = 0.
+      self.accel_time = ''
+      self.compass_x = 0.
+      self.compass_y = 0.
+      self.compass_z = 0.
+      self.compass_time = ''
 
   def _get_types(self):
     """
@@ -62,8 +94,24 @@ string time
     """
     try:
       _x = self
-      buff.write(_get_struct_3f().pack(_x.x, _x.y, _x.z))
-      _x = self.time
+      buff.write(_get_struct_3f().pack(_x.gyro_x, _x.gyro_y, _x.gyro_z))
+      _x = self.gyro_time
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self
+      buff.write(_get_struct_3f().pack(_x.accel_x, _x.accel_y, _x.accel_z))
+      _x = self.accel_time
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self
+      buff.write(_get_struct_3f().pack(_x.compass_x, _x.compass_y, _x.compass_z))
+      _x = self.compass_time
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -82,16 +130,42 @@ string time
       _x = self
       start = end
       end += 12
-      (_x.x, _x.y, _x.z,) = _get_struct_3f().unpack(str[start:end])
+      (_x.gyro_x, _x.gyro_y, _x.gyro_z,) = _get_struct_3f().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       start = end
       end += length
       if python3:
-        self.time = str[start:end].decode('utf-8')
+        self.gyro_time = str[start:end].decode('utf-8')
       else:
-        self.time = str[start:end]
+        self.gyro_time = str[start:end]
+      _x = self
+      start = end
+      end += 12
+      (_x.accel_x, _x.accel_y, _x.accel_z,) = _get_struct_3f().unpack(str[start:end])
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.accel_time = str[start:end].decode('utf-8')
+      else:
+        self.accel_time = str[start:end]
+      _x = self
+      start = end
+      end += 12
+      (_x.compass_x, _x.compass_y, _x.compass_z,) = _get_struct_3f().unpack(str[start:end])
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.compass_time = str[start:end].decode('utf-8')
+      else:
+        self.compass_time = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -105,8 +179,24 @@ string time
     """
     try:
       _x = self
-      buff.write(_get_struct_3f().pack(_x.x, _x.y, _x.z))
-      _x = self.time
+      buff.write(_get_struct_3f().pack(_x.gyro_x, _x.gyro_y, _x.gyro_z))
+      _x = self.gyro_time
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self
+      buff.write(_get_struct_3f().pack(_x.accel_x, _x.accel_y, _x.accel_z))
+      _x = self.accel_time
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.pack('<I%ss'%length, length, _x))
+      _x = self
+      buff.write(_get_struct_3f().pack(_x.compass_x, _x.compass_y, _x.compass_z))
+      _x = self.compass_time
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -126,16 +216,42 @@ string time
       _x = self
       start = end
       end += 12
-      (_x.x, _x.y, _x.z,) = _get_struct_3f().unpack(str[start:end])
+      (_x.gyro_x, _x.gyro_y, _x.gyro_z,) = _get_struct_3f().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       start = end
       end += length
       if python3:
-        self.time = str[start:end].decode('utf-8')
+        self.gyro_time = str[start:end].decode('utf-8')
       else:
-        self.time = str[start:end]
+        self.gyro_time = str[start:end]
+      _x = self
+      start = end
+      end += 12
+      (_x.accel_x, _x.accel_y, _x.accel_z,) = _get_struct_3f().unpack(str[start:end])
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.accel_time = str[start:end].decode('utf-8')
+      else:
+        self.accel_time = str[start:end]
+      _x = self
+      start = end
+      end += 12
+      (_x.compass_x, _x.compass_y, _x.compass_z,) = _get_struct_3f().unpack(str[start:end])
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.compass_time = str[start:end].decode('utf-8')
+      else:
+        self.compass_time = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill

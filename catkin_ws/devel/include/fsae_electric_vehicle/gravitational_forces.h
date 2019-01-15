@@ -24,32 +24,72 @@ struct gravitational_forces_
   typedef gravitational_forces_<ContainerAllocator> Type;
 
   gravitational_forces_()
-    : x(0.0)
-    , y(0.0)
-    , z(0.0)
-    , time()  {
+    : gyro_x(0.0)
+    , gyro_y(0.0)
+    , gyro_z(0.0)
+    , gyro_time()
+    , accel_x(0.0)
+    , accel_y(0.0)
+    , accel_z(0.0)
+    , accel_time()
+    , compass_x(0.0)
+    , compass_y(0.0)
+    , compass_z(0.0)
+    , compass_time()  {
     }
   gravitational_forces_(const ContainerAllocator& _alloc)
-    : x(0.0)
-    , y(0.0)
-    , z(0.0)
-    , time(_alloc)  {
+    : gyro_x(0.0)
+    , gyro_y(0.0)
+    , gyro_z(0.0)
+    , gyro_time(_alloc)
+    , accel_x(0.0)
+    , accel_y(0.0)
+    , accel_z(0.0)
+    , accel_time(_alloc)
+    , compass_x(0.0)
+    , compass_y(0.0)
+    , compass_z(0.0)
+    , compass_time(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef float _x_type;
-  _x_type x;
+   typedef float _gyro_x_type;
+  _gyro_x_type gyro_x;
 
-   typedef float _y_type;
-  _y_type y;
+   typedef float _gyro_y_type;
+  _gyro_y_type gyro_y;
 
-   typedef float _z_type;
-  _z_type z;
+   typedef float _gyro_z_type;
+  _gyro_z_type gyro_z;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _time_type;
-  _time_type time;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _gyro_time_type;
+  _gyro_time_type gyro_time;
+
+   typedef float _accel_x_type;
+  _accel_x_type accel_x;
+
+   typedef float _accel_y_type;
+  _accel_y_type accel_y;
+
+   typedef float _accel_z_type;
+  _accel_z_type accel_z;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _accel_time_type;
+  _accel_time_type accel_time;
+
+   typedef float _compass_x_type;
+  _compass_x_type compass_x;
+
+   typedef float _compass_y_type;
+  _compass_y_type compass_y;
+
+   typedef float _compass_z_type;
+  _compass_z_type compass_z;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _compass_time_type;
+  _compass_time_type compass_time;
 
 
 
@@ -129,12 +169,12 @@ struct MD5Sum< ::fsae_electric_vehicle::gravitational_forces_<ContainerAllocator
 {
   static const char* value()
   {
-    return "093e31f85644998fb59a959954c3fd8b";
+    return "96e2fc03b6486059b9ae94e0a184b112";
   }
 
   static const char* value(const ::fsae_electric_vehicle::gravitational_forces_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x093e31f85644998fULL;
-  static const uint64_t static_value2 = 0xb59a959954c3fd8bULL;
+  static const uint64_t static_value1 = 0x96e2fc03b6486059ULL;
+  static const uint64_t static_value2 = 0xb9ae94e0a184b112ULL;
 };
 
 template<class ContainerAllocator>
@@ -153,10 +193,18 @@ struct Definition< ::fsae_electric_vehicle::gravitational_forces_<ContainerAlloc
 {
   static const char* value()
   {
-    return "float32 x \n\
-float32 y \n\
-float32 z \n\
-string time\n\
+    return "float32 gyro_x \n\
+float32 gyro_y \n\
+float32 gyro_z \n\
+string gyro_time\n\
+float32 accel_x \n\
+float32 accel_y \n\
+float32 accel_z \n\
+string accel_time\n\
+float32 compass_x \n\
+float32 compass_y \n\
+float32 compass_z \n\
+string compass_time\n\
 ";
   }
 
@@ -175,10 +223,18 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.x);
-      stream.next(m.y);
-      stream.next(m.z);
-      stream.next(m.time);
+      stream.next(m.gyro_x);
+      stream.next(m.gyro_y);
+      stream.next(m.gyro_z);
+      stream.next(m.gyro_time);
+      stream.next(m.accel_x);
+      stream.next(m.accel_y);
+      stream.next(m.accel_z);
+      stream.next(m.accel_time);
+      stream.next(m.compass_x);
+      stream.next(m.compass_y);
+      stream.next(m.compass_z);
+      stream.next(m.compass_time);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -197,14 +253,30 @@ struct Printer< ::fsae_electric_vehicle::gravitational_forces_<ContainerAllocato
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::fsae_electric_vehicle::gravitational_forces_<ContainerAllocator>& v)
   {
-    s << indent << "x: ";
-    Printer<float>::stream(s, indent + "  ", v.x);
-    s << indent << "y: ";
-    Printer<float>::stream(s, indent + "  ", v.y);
-    s << indent << "z: ";
-    Printer<float>::stream(s, indent + "  ", v.z);
-    s << indent << "time: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.time);
+    s << indent << "gyro_x: ";
+    Printer<float>::stream(s, indent + "  ", v.gyro_x);
+    s << indent << "gyro_y: ";
+    Printer<float>::stream(s, indent + "  ", v.gyro_y);
+    s << indent << "gyro_z: ";
+    Printer<float>::stream(s, indent + "  ", v.gyro_z);
+    s << indent << "gyro_time: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.gyro_time);
+    s << indent << "accel_x: ";
+    Printer<float>::stream(s, indent + "  ", v.accel_x);
+    s << indent << "accel_y: ";
+    Printer<float>::stream(s, indent + "  ", v.accel_y);
+    s << indent << "accel_z: ";
+    Printer<float>::stream(s, indent + "  ", v.accel_z);
+    s << indent << "accel_time: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.accel_time);
+    s << indent << "compass_x: ";
+    Printer<float>::stream(s, indent + "  ", v.compass_x);
+    s << indent << "compass_y: ";
+    Printer<float>::stream(s, indent + "  ", v.compass_y);
+    s << indent << "compass_z: ";
+    Printer<float>::stream(s, indent + "  ", v.compass_z);
+    s << indent << "compass_time: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.compass_time);
   }
 };
 

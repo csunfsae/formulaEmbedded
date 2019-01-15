@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "/src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/steering_input.l"
   "/src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/tire_pressure.l"
   "/src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/suspension_offset.l"
-  "/src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/gravitational_forces.l"
+  "/src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/imu_data.l"
   "/src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/wheel_velocity.l"
   "/src/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/manifest.l"
 )

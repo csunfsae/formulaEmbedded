@@ -1,8 +1,8 @@
 (cl:defpackage fsae_electric_vehicle-msg
   (:use )
   (:export
-   "<GRAVITATIONAL_FORCES>"
-   "GRAVITATIONAL_FORCES"
+   "<IMU_DATA>"
+   "IMU_DATA"
    "<STEERING_INPUT>"
    "STEERING_INPUT"
    "<SUSPENSION_OFFSET>"
