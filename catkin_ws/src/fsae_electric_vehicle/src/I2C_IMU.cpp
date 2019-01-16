@@ -2,7 +2,7 @@
  * CSUN FSAE EV 2018
  * ROS NODE: I2C_IMU
  * Topics Subscribed: None 
- * Topics Publishing: Gyro_Data, Accel_Data, Magno_Data, Temp_Data
+ * Topics Publishing: imu_data 
  * Tag: RN1 
  * Summary:
  *   The purpose of this node is to read data via I2C bus 1 using the RTIMULib2 library. Data should be pre 
@@ -37,7 +37,7 @@ int main(int argc, char **argv)
   //Setting up the IMU with the RTIMULib2 library Note: Our waveshare model conatins the 
   //MPU9255 but the MPU9250 will get the data for us as well
   RTIMUSettings *imu_settings = new RTIMUSettings();
-  imu_settings->m_fusionType = 0; 
+  imu_settings->m_fusionType = 1; 
 
   RTIMU *imu_pointer = RTIMU::createIMU(imu_settings);
   RTIMU_DATA* data = new RTIMU_DATA();
@@ -54,9 +54,9 @@ int main(int argc, char **argv)
       *data = imu_pointer->getIMUData(); 
     }
 
-    waveshare_msg.gyro_x = (data->gyro.x() * RTMATH_RAD_TO_DEGREE);
-    waveshare_msg.gyro_y = (data->gyro.y() * RTMATH_RAD_TO_DEGREE);
-    waveshare_msg.gyro_z = (data->gyro.z() * RTMATH_RAD_TO_DEGREE);
+    waveshare_msg.gyro_x = (data->fusionPose.x() * RTMATH_RAD_TO_DEGREE);
+    waveshare_msg.gyro_y = (data->fusionPose.y() * RTMATH_RAD_TO_DEGREE);
+    waveshare_msg.gyro_z = (data->fusionPose.y() * RTMATH_RAD_TO_DEGREE);
 
     waveshare_msg.accel_x = data->accel.x();
     waveshare_msg.accel_y = data->accel.y();
@@ -70,9 +70,9 @@ int main(int argc, char **argv)
 
     clear_screen();
     std::cout << "Gyro Values" << std::endl;
-    std::cout << "x: "<< data->gyro.x() * RTMATH_RAD_TO_DEGREE << std::endl;
-    std::cout << "y: "<< data->gyro.y() * RTMATH_RAD_TO_DEGREE << std::endl;
-    std::cout << "z: "<< data->gyro.z() * RTMATH_RAD_TO_DEGREE << std::endl;
+    std::cout << "x: "<< (data->fusionPose.x() * RTMATH_RAD_TO_DEGREE) << std::endl;
+    std::cout << "y: "<< (data->fusionPose.y() * RTMATH_RAD_TO_DEGREE) << std::endl;
+    std::cout << "z: "<< (data->fusionPose.z() * RTMATH_RAD_TO_DEGREE) << std::endl;
 
     std::cout << "Accel Values" << std::endl;
     std::cout << "x: "<< data->accel.x() << std::endl;
@@ -83,7 +83,6 @@ int main(int argc, char **argv)
     std::cout << "x: "<< data->compass.x() << std::endl;
     std::cout << "y: "<< data->compass.y() << std::endl;
     std::cout << "z: "<< data->compass.z() << std::endl;
-
 
     ros::spinOnce();
 
