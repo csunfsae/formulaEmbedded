@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nvidia/Github/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/wheel_velocity.h
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/wheel_velocity.h
 string
 -
 vector
@@ -22,11 +22,11 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/database_interface.cpp
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/database_interface.cpp
 ros/ros.h
-/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/ros/ros.h
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/ros/ros.h
 std_msgs/String.h
-/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/std_msgs/String.h
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/std_msgs/String.h
 sqlite3.h
 -
 ctime

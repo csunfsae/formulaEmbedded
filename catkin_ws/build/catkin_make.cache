@@ -1,2 +1,2 @@
 fsae_electric_vehicle
--DCATKIN_DEVEL_PREFIX=/home/nvidia/Github/jetsonTx2/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/Github/jetsonTx2/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/Desktop/jetsonTx2/catkin_ws/install -G Unix Makefiles

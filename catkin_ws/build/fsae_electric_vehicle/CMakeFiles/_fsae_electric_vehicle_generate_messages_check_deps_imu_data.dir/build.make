@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nvidia/Github/jetsonTx2/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/nvidia/Desktop/jetsonTx2/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nvidia/Github/jetsonTx2/catkin_ws/build
+CMAKE_BINARY_DIR = /home/nvidia/Desktop/jetsonTx2/catkin_ws/build
 
 # Utility rule file for _fsae_electric_vehicle_generate_messages_check_deps_imu_data.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/nvidia/Github/jetsonTx2/catkin_ws/build
 include fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/progress.make
 
 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data:
-	cd /home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py fsae_electric_vehicle /home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg 
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py fsae_electric_vehicle /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg 
 
 _fsae_electric_vehicle_generate_messages_check_deps_imu_data: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data
 _fsae_electric_vehicle_generate_messages_check_deps_imu_data: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/build.make
@@ -67,10 +67,10 @@ fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_
 .PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/build
 
 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/clean:
-	cd /home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && $(CMAKE_COMMAND) -P CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/cmake_clean.cmake
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && $(CMAKE_COMMAND) -P CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/cmake_clean.cmake
 .PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/clean
 
 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/depend:
-	cd /home/nvidia/Github/jetsonTx2/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Github/jetsonTx2/catkin_ws/src /home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle /home/nvidia/Github/jetsonTx2/catkin_ws/build /home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle /home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Desktop/jetsonTx2/catkin_ws/src /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle /home/nvidia/Desktop/jetsonTx2/catkin_ws/build /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_imu_data.dir/depend
 

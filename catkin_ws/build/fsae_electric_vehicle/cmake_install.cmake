@@ -1,8 +1,8 @@
-# Install script for directory: /home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle
+# Install script for directory: /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nvidia/Github/jetsonTx2/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nvidia/Desktop/jetsonTx2/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -46,9 +46,9 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so.8.0.0"
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so.8"
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so.8.0.0"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so.8"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libRTIMULib.so.8.0.0"
@@ -65,70 +65,71 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/." FILES_MATCHING REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/." FILES_MATCHING REGEX "/[^/]*\\.h$")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/msg" TYPE FILE FILES
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg"
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg"
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/temp_and_pressure.msg"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/cmake" TYPE FILE FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicle-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/cmake" TYPE FILE FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicle-msg-paths.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicle.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicle.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/cmake" TYPE FILE FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicle-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/cmake" TYPE FILE FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicle-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/cmake" TYPE FILE FILES
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicleConfig.cmake"
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicleConfig-version.cmake"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicleConfig.cmake"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/fsae_electric_vehicleConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle" TYPE FILE FILES "/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle" TYPE FILE FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/fsae_electric_vehicle" TYPE PROGRAM FILES
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/talker.js"
-    "/home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/listener.js"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/talker.js"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/listener.js"
     )
 endif()
 

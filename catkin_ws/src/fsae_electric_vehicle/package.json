@@ -16,6 +16,7 @@
     "url": "git://github.com/csunfsae/jetsonTx2"
   },
   "dependencies": {
-    "rosnodejs": "2.1.1"
+    "rosnodejs": "2.1.1",
+    "socket.io": "^2.2.0"
   }
 }

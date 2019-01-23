@@ -10,6 +10,8 @@
     (:file "_package_steering_input" :depends-on ("_package"))
     (:file "suspension_offset" :depends-on ("_package_suspension_offset"))
     (:file "_package_suspension_offset" :depends-on ("_package"))
+    (:file "temp_and_pressure" :depends-on ("_package_temp_and_pressure"))
+    (:file "_package_temp_and_pressure" :depends-on ("_package"))
     (:file "tire_pressure" :depends-on ("_package_tire_pressure"))
     (:file "_package_tire_pressure" :depends-on ("_package"))
     (:file "wheel_velocity" :depends-on ("_package_wheel_velocity"))

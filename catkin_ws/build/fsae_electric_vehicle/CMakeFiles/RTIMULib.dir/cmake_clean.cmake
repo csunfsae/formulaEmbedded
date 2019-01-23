@@ -26,10 +26,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/RTIMULib.dir/src/RTIMULib2/RTIMULib/IMUDrivers/RTHumidity.cpp.o"
   "CMakeFiles/RTIMULib.dir/src/RTIMULib2/RTIMULib/IMUDrivers/RTHumidityHTS221.cpp.o"
   "CMakeFiles/RTIMULib.dir/src/RTIMULib2/RTIMULib/IMUDrivers/RTHumidityHTU21D.cpp.o"
-  "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.pdb"
-  "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so"
-  "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so.8.0.0"
-  "/home/nvidia/Github/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so.8"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.pdb"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so.8.0.0"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/libRTIMULib.so.8"
 )
 
 # Per-language clean rules from dependency scanning.

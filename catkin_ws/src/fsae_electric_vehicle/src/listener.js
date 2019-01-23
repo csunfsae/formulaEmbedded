@@ -24,18 +24,30 @@ function listener() {
   console.log("test");
   rosnodejs.initNode('listener')
     .then((rosNode) => {
-      let sub = rosNode.subscribe('imu_data', std_msgs.imu_data,
+      let imu_data = rosNode.subscribe('imu_data', std_msgs.imu_data,
         (data) => { // define callback execution
-              console.log("test");
+              //console.log("test");
               let now = new Date();
-              console.log(data.gyro_x);
-              console.log(data.accel_x);
-              console.log(data.compass_x);
+              //console.log(data.gyro_x);
+              //console.log(data.accel_x);
+              //console.log(data.compass_x);
               io.emit("gyroscope", {time: now, x: data.gyro_x, y: data.gyro_y, z: data.gyro_z});
               io.emit("accelometer", {time: now, x: data.accel_x, y: data.accel_y, z: data.accel_z});
               io.emit("compass", {time: now, x: data.compass_x, y: data.compass_y, z: data.compass_z});
         }
       );
+      let temp_and_pressure = rosNode.subscribe('temp_and_pressure', std_msgs.temp_and_pressure,
+        (data) => {
+          let now = new Date();
+          console.log("temp_and_pressure");
+          console.log(data.temp); 
+          console.log(data.pressure); 
+          io.emit("temperature", {time: now, value: data.temperature});
+          io.emit("pressure", {time: now, value: data.pressure});
+        }   
+          
+      )
+      
     });
 }
 

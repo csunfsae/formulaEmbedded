@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/nvidia/Github/jetsonTx2/catkin_ws/build"
+export PWD="/home/nvidia/Desktop/jetsonTx2/catkin_ws/build"

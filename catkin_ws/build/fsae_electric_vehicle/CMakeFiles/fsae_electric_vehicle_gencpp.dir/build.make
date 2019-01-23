@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nvidia/Github/jetsonTx2/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/nvidia/Desktop/jetsonTx2/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nvidia/Github/jetsonTx2/catkin_ws/build
+CMAKE_BINARY_DIR = /home/nvidia/Desktop/jetsonTx2/catkin_ws/build
 
 # Utility rule file for fsae_electric_vehicle_gencpp.
 
@@ -63,10 +63,10 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/build: fsae_el
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/build
 
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/clean:
-	cd /home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && $(CMAKE_COMMAND) -P CMakeFiles/fsae_electric_vehicle_gencpp.dir/cmake_clean.cmake
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && $(CMAKE_COMMAND) -P CMakeFiles/fsae_electric_vehicle_gencpp.dir/cmake_clean.cmake
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/clean
 
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/depend:
-	cd /home/nvidia/Github/jetsonTx2/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Github/jetsonTx2/catkin_ws/src /home/nvidia/Github/jetsonTx2/catkin_ws/src/fsae_electric_vehicle /home/nvidia/Github/jetsonTx2/catkin_ws/build /home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle /home/nvidia/Github/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Desktop/jetsonTx2/catkin_ws/src /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle /home/nvidia/Desktop/jetsonTx2/catkin_ws/build /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/depend
 
