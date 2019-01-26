@@ -1,11 +1,11 @@
 * What is this? 
   The purpose of this project is to collect data in real time from on board senors from our formula style electric vehicle.
   This software is meant to:
-** Collect data from sensors
-** Filter Signal Data
-** Store Signal Data on our SOC
-** Communicate with the motor Controller
-** Relay data over a 4g LTE connection to our web server
+    - Collect data from sensors
+    - Filter Signal Data
+    - Store Signal Data on our SOC
+    - Communicate with the motor Controller
+    - Relay data over a 4g LTE connection to our web server
 
 * Wiki Site
    [[https://csunfsae.github.io][Wiki Site]]
