@@ -9,11 +9,8 @@ ENDIF(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
 # Project setup
 ########################################################################
 ENABLE_TESTING()
-
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/src/RTIMULib2)
-
 INCLUDE(${CMAKE_CURRENT_SOURCE_DIR}/src/RTIMULib2/RTIMULibVersion.txt)
-
 SET(LIBRTIMU_SRCS
     src/RTIMULib2/RTIMULib/RTFusion.cpp
     src/RTIMULib2/RTIMULib/RTFusionRTQF.cpp
