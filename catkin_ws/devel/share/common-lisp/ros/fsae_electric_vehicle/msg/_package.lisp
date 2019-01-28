@@ -1,6 +1,12 @@
 (cl:defpackage fsae_electric_vehicle-msg
   (:use )
   (:export
+   "<ACCELEROMETER>"
+   "ACCELEROMETER"
+   "<COMPASS>"
+   "COMPASS"
+   "<GYROSCOPE>"
+   "GYROSCOPE"
    "<IMU_DATA>"
    "IMU_DATA"
    "<STEERING_INPUT>"

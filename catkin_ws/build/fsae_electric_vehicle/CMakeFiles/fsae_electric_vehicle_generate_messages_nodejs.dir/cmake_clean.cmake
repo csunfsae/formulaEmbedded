@@ -4,8 +4,10 @@ file(REMOVE_RECURSE
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/steering_input.js"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/wheel_velocity.js"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/tire_pressure.js"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/gyroscope.js"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/suspension_offset.js"
-  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/imu_data.js"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/accelerometer.js"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/compass.js"
 )
 
 # Per-language clean rules from dependency scanning.

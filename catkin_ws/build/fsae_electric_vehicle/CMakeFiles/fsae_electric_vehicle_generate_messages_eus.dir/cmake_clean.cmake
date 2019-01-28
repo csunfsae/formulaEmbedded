@@ -4,8 +4,10 @@ file(REMOVE_RECURSE
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/steering_input.l"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/wheel_velocity.l"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/tire_pressure.l"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/gyroscope.l"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/suspension_offset.l"
-  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/imu_data.l"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/accelerometer.l"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/compass.l"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/manifest.l"
 )
 

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "fsae_electric_vehicle: 6 messages, 0 services")
+message(STATUS "fsae_electric_vehicle: 8 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ifsae_electric_vehicle:/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -37,14 +37,24 @@ add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filenam
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" ""
 )
 
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg" NAME_WE)
+add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg" ""
+)
+
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
 add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" ""
 )
 
-get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
 add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" ""
+)
+
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg" NAME_WE)
+add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg" ""
 )
 
 #
@@ -78,13 +88,25 @@ _generate_msg_cpp(fsae_electric_vehicle
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_cpp(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_cpp(fsae_electric_vehicle
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_cpp(fsae_electric_vehicle
-  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_cpp(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
@@ -112,9 +134,13 @@ get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/f
 add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -151,13 +177,25 @@ _generate_msg_eus(fsae_electric_vehicle
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_eus(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_eus(fsae_electric_vehicle
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_eus(fsae_electric_vehicle
-  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_eus(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
@@ -185,9 +223,13 @@ get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/f
 add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -224,13 +266,25 @@ _generate_msg_lisp(fsae_electric_vehicle
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_lisp(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_lisp(fsae_electric_vehicle
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_lisp(fsae_electric_vehicle
-  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_lisp(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
@@ -258,9 +312,13 @@ get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/f
 add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -297,13 +355,25 @@ _generate_msg_nodejs(fsae_electric_vehicle
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_nodejs(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_nodejs(fsae_electric_vehicle
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_nodejs(fsae_electric_vehicle
-  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_nodejs(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
@@ -331,9 +401,13 @@ get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/f
 add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -370,13 +444,25 @@ _generate_msg_py(fsae_electric_vehicle
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_py(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_py(fsae_electric_vehicle
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
 )
 _generate_msg_py(fsae_electric_vehicle
-  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_py(fsae_electric_vehicle
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
@@ -404,9 +490,13 @@ get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/f
 add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg" NAME_WE)
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

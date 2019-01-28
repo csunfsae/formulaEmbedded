@@ -59,7 +59,7 @@ project(fsae_electric_vehicle)
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg message_generation)
 
 ## Declare ROS messages and services
-add_message_files(FILES wheel_velocity.msg imu_data.msg steering_input.msg suspension_offset.msg tire_pressure.msg temp_and_pressure.msg)
+add_message_files(FILES wheel_velocity.msg steering_input.msg suspension_offset.msg tire_pressure.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg)
 #add_service_files(FILES AddTwoInts.srv)
 
 ## Generate added messages and services
@@ -83,17 +83,17 @@ add_executable(database_interface src/database_interface.cpp)
 target_link_libraries(database_interface ${catkin_LIBRARIES} sqlite3)
 add_dependencies(database_interface fsae_electric_vehicle_generate_messages_cpp)
 
-add_executable(I2C_IMU src/I2C_IMU.cpp)
-target_link_libraries(I2C_IMU ${catkin_LIBRARIES} RTIMULib)
-add_dependencies(I2C_IMU fsae_electric_vehicle_generate_messages_cpp)
+add_executable(INERTIAL_MEASUREMENT_UNIT src/INERTIAL_MEASUREMENT_UNIT.cpp)
+target_link_libraries(INERTIAL_MEASUREMENT_UNIT ${catkin_LIBRARIES} RTIMULib)
+add_dependencies(INERTIAL_MEASUREMENT_UNIT fsae_electric_vehicle_generate_messages_cpp)
 
-add_executable(temp_and_pressure src/temp_and_pressure.cpp)
-target_link_libraries(temp_and_pressure ${catkin_LIBRARIES})
-add_dependencies(temp_and_pressure fsae_electric_vehicle_generate_messages_cpp)
+add_executable(BAROMETRIC_PRESSURE_SENSOR src/BAROMETRIC_PRESSURE_SENSOR.cpp)
+target_link_libraries(BAROMETRIC_PRESSURE_SENSOR ${catkin_LIBRARIES})
+add_dependencies(BAROMETRIC_PRESSURE_SENSOR fsae_electric_vehicle_generate_messages_cpp)
 
 ##ALL ROS NODEJS CONFIGURATION
 install(PROGRAMS
    fsae_electric_vehicle/talker.js
-   fsae_electric_vehicle/listener.js
+   fsae_electric_vehicle/WEB_TRANSMIT.js
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

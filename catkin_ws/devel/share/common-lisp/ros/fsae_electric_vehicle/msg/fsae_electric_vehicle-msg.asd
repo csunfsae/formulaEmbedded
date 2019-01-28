@@ -4,6 +4,12 @@
 (defsystem "fsae_electric_vehicle-msg"
   :depends-on (:roslisp-msg-protocol :roslisp-utils )
   :components ((:file "_package")
+    (:file "accelerometer" :depends-on ("_package_accelerometer"))
+    (:file "_package_accelerometer" :depends-on ("_package"))
+    (:file "compass" :depends-on ("_package_compass"))
+    (:file "_package_compass" :depends-on ("_package"))
+    (:file "gyroscope" :depends-on ("_package_gyroscope"))
+    (:file "_package_gyroscope" :depends-on ("_package"))
     (:file "imu_data" :depends-on ("_package_imu_data"))
     (:file "_package_imu_data" :depends-on ("_package"))
     (:file "steering_input" :depends-on ("_package_steering_input"))

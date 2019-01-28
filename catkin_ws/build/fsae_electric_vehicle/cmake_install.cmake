@@ -71,11 +71,13 @@ endif()
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/fsae_electric_vehicle/msg" TYPE FILE FILES
     "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/wheel_velocity.msg"
-    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg"
     "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/steering_input.msg"
     "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg"
     "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg"
     "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/temp_and_pressure.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg"
     )
 endif()
 
@@ -129,7 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/fsae_electric_vehicle" TYPE PROGRAM FILES
     "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/talker.js"
-    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/listener.js"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/WEB_TRANSMIT.js"
     )
 endif()
 

@@ -4,8 +4,10 @@ file(REMOVE_RECURSE
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/steering_input.h"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/wheel_velocity.h"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/tire_pressure.h"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/gyroscope.h"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/suspension_offset.h"
-  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/imu_data.h"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/accelerometer.h"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/compass.h"
 )
 
 # Per-language clean rules from dependency scanning.

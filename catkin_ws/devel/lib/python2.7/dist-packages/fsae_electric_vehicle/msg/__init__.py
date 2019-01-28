@@ -1,3 +1,6 @@
+from ._accelerometer import *
+from ._compass import *
+from ._gyroscope import *
 from ._imu_data import *
 from ._steering_input import *
 from ._suspension_offset import *

@@ -57,8 +57,10 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /h
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/steering_input.h
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/wheel_velocity.h
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/tire_pressure.h
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/gyroscope.h
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/suspension_offset.h
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/imu_data.h
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/accelerometer.h
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/compass.h
 
 
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/temp_and_pressure.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
@@ -85,25 +87,39 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp: /h
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from fsae_electric_vehicle/tire_pressure.msg"
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle && /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/tire_pressure.msg -Ifsae_electric_vehicle:/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p fsae_electric_vehicle -o /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/gyroscope.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/gyroscope.h: /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/gyroscope.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from fsae_electric_vehicle/gyroscope.msg"
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle && /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg -Ifsae_electric_vehicle:/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p fsae_electric_vehicle -o /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/suspension_offset.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/suspension_offset.h: /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/suspension_offset.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from fsae_electric_vehicle/suspension_offset.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from fsae_electric_vehicle/suspension_offset.msg"
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle && /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension_offset.msg -Ifsae_electric_vehicle:/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p fsae_electric_vehicle -o /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle -e /opt/ros/kinetic/share/gencpp/cmake/..
 
-/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/imu_data.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/imu_data.h: /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg
-/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/imu_data.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from fsae_electric_vehicle/imu_data.msg"
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle && /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/imu_data.msg -Ifsae_electric_vehicle:/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p fsae_electric_vehicle -o /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle -e /opt/ros/kinetic/share/gencpp/cmake/..
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/accelerometer.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/accelerometer.h: /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/accelerometer.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from fsae_electric_vehicle/accelerometer.msg"
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle && /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg -Ifsae_electric_vehicle:/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p fsae_electric_vehicle -o /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/compass.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/compass.h: /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/compass.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating C++ code from fsae_electric_vehicle/compass.msg"
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle && /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/compass.msg -Ifsae_electric_vehicle:/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p fsae_electric_vehicle -o /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 fsae_electric_vehicle_generate_messages_cpp: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp
 fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/temp_and_pressure.h
 fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/steering_input.h
 fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/wheel_velocity.h
 fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/tire_pressure.h
+fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/gyroscope.h
 fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/suspension_offset.h
-fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/imu_data.h
+fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/accelerometer.h
+fsae_electric_vehicle_generate_messages_cpp: /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/compass.h
 fsae_electric_vehicle_generate_messages_cpp: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/build.make
 
 .PHONY : fsae_electric_vehicle_generate_messages_cpp
