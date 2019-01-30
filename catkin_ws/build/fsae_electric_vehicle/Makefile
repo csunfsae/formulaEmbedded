@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /home/nvidia/Desktop/jetsonTx2/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -65,6 +76,18 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -109,29 +132,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -179,6 +179,36 @@ _fsae_electric_vehicle_generate_messages_check_deps_gyroscope: fsae_electric_veh
 _fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast
+
+# Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/rule
+
+# Convenience name for target.
+_fsae_electric_vehicle_generate_messages_check_deps_pedals: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/rule
+
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_pedals
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_pedals/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_pedals/fast
+
+# Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+
+# Convenience name for target.
+BAROMETRIC_PRESSURE_SENSOR: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+
+.PHONY : BAROMETRIC_PRESSURE_SENSOR
+
+# fast build rule for target.
+BAROMETRIC_PRESSURE_SENSOR/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
+.PHONY : BAROMETRIC_PRESSURE_SENSOR/fast
 
 # Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity.dir/rule:
@@ -271,19 +301,34 @@ _fsae_electric_vehicle_generate_messages_check_deps_accelerometer/fast:
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_accelerometer/fast
 
 # Convenience name for target.
-fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/rule:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/rule
-.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/rule
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/rule
 
 # Convenience name for target.
-_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/rule
+_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/rule
 
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel
 
 # fast build rule for target.
-_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure/fast:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/build
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure/fast
+_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast
+
+# Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
@@ -466,21 +511,6 @@ fsae_electric_vehicle_gennodejs/fast:
 .PHONY : fsae_electric_vehicle_gennodejs/fast
 
 # Convenience name for target.
-fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/rule:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/rule
-.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/rule
-
-# Convenience name for target.
-_fsae_electric_vehicle_generate_messages_check_deps_steering_input: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/rule
-
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_input
-
-# fast build rule for target.
-_fsae_electric_vehicle_generate_messages_check_deps_steering_input/fast:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/build
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_input/fast
-
-# Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
@@ -556,34 +586,19 @@ rosgraph_msgs_generate_messages_eus/fast:
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
-.PHONY : fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/rule
 
 # Convenience name for target.
-dummyReader: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
+_fsae_electric_vehicle_generate_messages_check_deps_suspension: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/rule
 
-.PHONY : dummyReader
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_suspension
 
 # fast build rule for target.
-dummyReader/fast:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build
-.PHONY : dummyReader/fast
-
-# Convenience name for target.
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
-.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
-
-# Convenience name for target.
-fsae_electric_vehicle_genlisp: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
-
-.PHONY : fsae_electric_vehicle_genlisp
-
-# fast build rule for target.
-fsae_electric_vehicle_genlisp/fast:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build
-.PHONY : fsae_electric_vehicle_genlisp/fast
+_fsae_electric_vehicle_generate_messages_check_deps_suspension/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_suspension/fast
 
 # Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/rule:
@@ -706,6 +721,36 @@ fsae_electric_vehicle_genpy/fast:
 .PHONY : fsae_electric_vehicle_genpy/fast
 
 # Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
+
+# Convenience name for target.
+fsae_electric_vehicle_genlisp: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
+
+.PHONY : fsae_electric_vehicle_genlisp
+
+# fast build rule for target.
+fsae_electric_vehicle_genlisp/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build
+.PHONY : fsae_electric_vehicle_genlisp/fast
+
+# Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
+
+# Convenience name for target.
+dummyReader: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
+
+.PHONY : dummyReader
+
+# fast build rule for target.
+dummyReader/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build
+.PHONY : dummyReader/fast
+
+# Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/rule:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/rule
 .PHONY : fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/rule
@@ -721,19 +766,19 @@ INERTIAL_MEASUREMENT_UNIT/fast:
 .PHONY : INERTIAL_MEASUREMENT_UNIT/fast
 
 # Convenience name for target.
-fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
-.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/rule
 
 # Convenience name for target.
-BAROMETRIC_PRESSURE_SENSOR: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+VISHAY_POTENTIOMETER_PE30_LONG: fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/rule
 
-.PHONY : BAROMETRIC_PRESSURE_SENSOR
+.PHONY : VISHAY_POTENTIOMETER_PE30_LONG
 
 # fast build rule for target.
-BAROMETRIC_PRESSURE_SENSOR/fast:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
-.PHONY : BAROMETRIC_PRESSURE_SENSOR/fast
+VISHAY_POTENTIOMETER_PE30_LONG/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build.make fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build
+.PHONY : VISHAY_POTENTIOMETER_PE30_LONG/fast
 
 # Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/rule:
@@ -749,21 +794,6 @@ fsae_electric_vehicle_generate_messages_lisp: fsae_electric_vehicle/CMakeFiles/f
 fsae_electric_vehicle_generate_messages_lisp/fast:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build
 .PHONY : fsae_electric_vehicle_generate_messages_lisp/fast
-
-# Convenience name for target.
-fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
 
 src/BAROMETRIC_PRESSURE_SENSOR.o: src/BAROMETRIC_PRESSURE_SENSOR.cpp.o
 
@@ -1548,6 +1578,33 @@ src/RTIMULib2/RTIMULib/RTMath.cpp.s:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/RTIMULib.dir/build.make fsae_electric_vehicle/CMakeFiles/RTIMULib.dir/src/RTIMULib2/RTIMULib/RTMath.cpp.s
 .PHONY : src/RTIMULib2/RTIMULib/RTMath.cpp.s
 
+src/VISHAY_POTENTIOMETER_PE30_LONG.o: src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.o
+
+.PHONY : src/VISHAY_POTENTIOMETER_PE30_LONG.o
+
+# target to build an object file
+src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.o:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build.make fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.o
+.PHONY : src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.o
+
+src/VISHAY_POTENTIOMETER_PE30_LONG.i: src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.i
+
+.PHONY : src/VISHAY_POTENTIOMETER_PE30_LONG.i
+
+# target to preprocess a source file
+src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.i:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build.make fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.i
+.PHONY : src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.i
+
+src/VISHAY_POTENTIOMETER_PE30_LONG.s: src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.s
+
+.PHONY : src/VISHAY_POTENTIOMETER_PE30_LONG.s
+
+# target to generate assembly for a file
+src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.s:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build.make fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.s
+.PHONY : src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.s
+
 src/database_interface.o: src/database_interface.cpp.o
 
 .PHONY : src/database_interface.o
@@ -1635,7 +1692,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... rebuild_cache"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_pedals"
+	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity"
 	@echo "... fsae_electric_vehicle_generate_messages"
 	@echo "... list_install_components"
@@ -1643,7 +1703,9 @@ help:
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_temp_and_pressure"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_accelerometer"
-	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel"
+	@echo "... install"
+	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
@@ -1656,14 +1718,12 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... fsae_electric_vehicle_gennodejs"
-	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_steering_input"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... fsae_electric_vehicle_geneus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... RTIMULib"
 	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... dummyReader"
-	@echo "... fsae_electric_vehicle_genlisp"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension"
 	@echo "... fsae_electric_vehicle_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension_offset"
@@ -1672,16 +1732,15 @@ help:
 	@echo "... database_interface"
 	@echo "... fsae_electric_vehicle_generate_messages_py"
 	@echo "... fsae_electric_vehicle_genpy"
+	@echo "... fsae_electric_vehicle_genlisp"
+	@echo "... dummyReader"
 	@echo "... INERTIAL_MEASUREMENT_UNIT"
-	@echo "... BAROMETRIC_PRESSURE_SENSOR"
+	@echo "... VISHAY_POTENTIOMETER_PE30_LONG"
 	@echo "... fsae_electric_vehicle_generate_messages_lisp"
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... install"
 	@echo "... src/BAROMETRIC_PRESSURE_SENSOR.o"
 	@echo "... src/BAROMETRIC_PRESSURE_SENSOR.i"
 	@echo "... src/BAROMETRIC_PRESSURE_SENSOR.s"
@@ -1769,6 +1828,9 @@ help:
 	@echo "... src/RTIMULib2/RTIMULib/RTMath.o"
 	@echo "... src/RTIMULib2/RTIMULib/RTMath.i"
 	@echo "... src/RTIMULib2/RTIMULib/RTMath.s"
+	@echo "... src/VISHAY_POTENTIOMETER_PE30_LONG.o"
+	@echo "... src/VISHAY_POTENTIOMETER_PE30_LONG.i"
+	@echo "... src/VISHAY_POTENTIOMETER_PE30_LONG.s"
 	@echo "... src/database_interface.o"
 	@echo "... src/database_interface.i"
 	@echo "... src/database_interface.s"

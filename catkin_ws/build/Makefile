@@ -296,6 +296,32 @@ _fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast:
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast
 
 #=============================================================================
+# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_pedals
+
+# Build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_pedals: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_pedals
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_pedals
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_pedals/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_pedals/fast
+
+#=============================================================================
+# Target rules for targets named BAROMETRIC_PRESSURE_SENSOR
+
+# Build rule for target.
+BAROMETRIC_PRESSURE_SENSOR: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BAROMETRIC_PRESSURE_SENSOR
+.PHONY : BAROMETRIC_PRESSURE_SENSOR
+
+# fast build rule for target.
+BAROMETRIC_PRESSURE_SENSOR/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
+.PHONY : BAROMETRIC_PRESSURE_SENSOR/fast
+
+#=============================================================================
 # Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity
 
 # Build rule for target.
@@ -374,17 +400,30 @@ _fsae_electric_vehicle_generate_messages_check_deps_accelerometer/fast:
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_accelerometer/fast
 
 #=============================================================================
-# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure
+# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel
 
 # Build rule for target.
-_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure
+_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel
 
 # fast build rule for target.
-_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure/fast:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/build
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure/fast
+_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast
+
+#=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_eus
@@ -543,19 +582,6 @@ fsae_electric_vehicle_gennodejs/fast:
 .PHONY : fsae_electric_vehicle_gennodejs/fast
 
 #=============================================================================
-# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_steering_input
-
-# Build rule for target.
-_fsae_electric_vehicle_generate_messages_check_deps_steering_input: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_steering_input
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_input
-
-# fast build rule for target.
-_fsae_electric_vehicle_generate_messages_check_deps_steering_input/fast:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/build
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_input/fast
-
-#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -621,30 +647,17 @@ rosgraph_msgs_generate_messages_eus/fast:
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named dummyReader
+# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_suspension
 
 # Build rule for target.
-dummyReader: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dummyReader
-.PHONY : dummyReader
+_fsae_electric_vehicle_generate_messages_check_deps_suspension: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_suspension
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_suspension
 
 # fast build rule for target.
-dummyReader/fast:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build
-.PHONY : dummyReader/fast
-
-#=============================================================================
-# Target rules for targets named fsae_electric_vehicle_genlisp
-
-# Build rule for target.
-fsae_electric_vehicle_genlisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle_genlisp
-.PHONY : fsae_electric_vehicle_genlisp
-
-# fast build rule for target.
-fsae_electric_vehicle_genlisp/fast:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build
-.PHONY : fsae_electric_vehicle_genlisp/fast
+_fsae_electric_vehicle_generate_messages_check_deps_suspension/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_suspension/fast
 
 #=============================================================================
 # Target rules for targets named fsae_electric_vehicle_generate_messages_nodejs
@@ -751,6 +764,32 @@ fsae_electric_vehicle_genpy/fast:
 .PHONY : fsae_electric_vehicle_genpy/fast
 
 #=============================================================================
+# Target rules for targets named fsae_electric_vehicle_genlisp
+
+# Build rule for target.
+fsae_electric_vehicle_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle_genlisp
+.PHONY : fsae_electric_vehicle_genlisp
+
+# fast build rule for target.
+fsae_electric_vehicle_genlisp/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build
+.PHONY : fsae_electric_vehicle_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named dummyReader
+
+# Build rule for target.
+dummyReader: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dummyReader
+.PHONY : dummyReader
+
+# fast build rule for target.
+dummyReader/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build
+.PHONY : dummyReader/fast
+
+#=============================================================================
 # Target rules for targets named INERTIAL_MEASUREMENT_UNIT
 
 # Build rule for target.
@@ -764,17 +803,17 @@ INERTIAL_MEASUREMENT_UNIT/fast:
 .PHONY : INERTIAL_MEASUREMENT_UNIT/fast
 
 #=============================================================================
-# Target rules for targets named BAROMETRIC_PRESSURE_SENSOR
+# Target rules for targets named VISHAY_POTENTIOMETER_PE30_LONG
 
 # Build rule for target.
-BAROMETRIC_PRESSURE_SENSOR: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BAROMETRIC_PRESSURE_SENSOR
-.PHONY : BAROMETRIC_PRESSURE_SENSOR
+VISHAY_POTENTIOMETER_PE30_LONG: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 VISHAY_POTENTIOMETER_PE30_LONG
+.PHONY : VISHAY_POTENTIOMETER_PE30_LONG
 
 # fast build rule for target.
-BAROMETRIC_PRESSURE_SENSOR/fast:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
-.PHONY : BAROMETRIC_PRESSURE_SENSOR/fast
+VISHAY_POTENTIOMETER_PE30_LONG/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build.make fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build
+.PHONY : VISHAY_POTENTIOMETER_PE30_LONG/fast
 
 #=============================================================================
 # Target rules for targets named fsae_electric_vehicle_generate_messages_lisp
@@ -788,19 +827,6 @@ fsae_electric_vehicle_generate_messages_lisp: cmake_check_build_system
 fsae_electric_vehicle_generate_messages_lisp/fast:
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build
 .PHONY : fsae_electric_vehicle_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
 
 # Help Target
 help:
@@ -825,13 +851,16 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_pedals"
+	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity"
 	@echo "... fsae_electric_vehicle_generate_messages"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_temp_and_pressure"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_accelerometer"
-	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel"
+	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
@@ -844,14 +873,12 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... fsae_electric_vehicle_gennodejs"
-	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_steering_input"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... fsae_electric_vehicle_geneus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... RTIMULib"
 	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... dummyReader"
-	@echo "... fsae_electric_vehicle_genlisp"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension"
 	@echo "... fsae_electric_vehicle_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension_offset"
@@ -860,10 +887,11 @@ help:
 	@echo "... database_interface"
 	@echo "... fsae_electric_vehicle_generate_messages_py"
 	@echo "... fsae_electric_vehicle_genpy"
+	@echo "... fsae_electric_vehicle_genlisp"
+	@echo "... dummyReader"
 	@echo "... INERTIAL_MEASUREMENT_UNIT"
-	@echo "... BAROMETRIC_PRESSURE_SENSOR"
+	@echo "... VISHAY_POTENTIOMETER_PE30_LONG"
 	@echo "... fsae_electric_vehicle_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_lisp"
 .PHONY : help
 
 

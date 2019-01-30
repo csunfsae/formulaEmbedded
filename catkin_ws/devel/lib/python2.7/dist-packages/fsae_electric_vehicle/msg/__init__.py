@@ -2,7 +2,10 @@ from ._accelerometer import *
 from ._compass import *
 from ._gyroscope import *
 from ._imu_data import *
+from ._pedals import *
 from ._steering_input import *
+from ._steering_wheel import *
+from ._suspension import *
 from ._suspension_offset import *
 from ._temp_and_pressure import *
 from ._tire_pressure import *

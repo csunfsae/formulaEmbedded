@@ -246,7 +246,7 @@ gtest/preinstall: gtest/gtest/preinstall
 gtest/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=79,80,81 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=86,87,88 "Built target gmock"
 .PHONY : gtest/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -278,7 +278,7 @@ clean: gtest/CMakeFiles/gmock.dir/clean
 gtest/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=82,83,84,85 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=89,90,91,92 "Built target gmock_main"
 .PHONY : gtest/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -329,7 +329,7 @@ gtest/gtest/preinstall:
 gtest/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=86,87 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=93,94 "Built target gtest"
 .PHONY : gtest/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -361,7 +361,7 @@ clean: gtest/gtest/CMakeFiles/gtest.dir/clean
 gtest/gtest/CMakeFiles/gtest_main.dir/all: gtest/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=88,89 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=95,96 "Built target gtest_main"
 .PHONY : gtest/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -390,25 +390,29 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 # Directory level rules for directory fsae_electric_vehicle
 
 # Convenience name for "all" pass in the directory.
+fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all
 fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages.dir/all
 fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/sinWave.dir/all
 fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/RTIMULib.dir/all
-fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all
 fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/database_interface.dir/all
+fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all
 fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/all
-fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all
+fsae_electric_vehicle/all: fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/all
 
 .PHONY : fsae_electric_vehicle/all
 
 # Convenience name for "clean" pass in the directory.
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/clean
+fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/clean
+fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_temp_and_pressure.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_accelerometer.dir/clean
-fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/clean
+fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/clean
+fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_py.dir/clean
@@ -421,14 +425,12 @@ fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehi
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gennodejs.dir/clean
-fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_geneus.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/RTIMULib.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean
-fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean
+fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/roscpp_generate_messages_py.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir/clean
@@ -437,10 +439,11 @@ fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehi
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/database_interface.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/clean
+fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean
+fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/clean
-fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean
+fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/clean
 fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/clean
-fsae_electric_vehicle/clean: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 .PHONY : fsae_electric_vehicle/clean
 
@@ -478,6 +481,75 @@ fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_
 
 # clean rule for target.
 clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir
+
+# All Build rule for target.
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/all:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/depend
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num= "Built target _fsae_electric_vehicle_generate_messages_check_deps_pedals"
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/all
+
+# Build rule for subdir invocation for target.
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/rule
+
+# Convenience name for target.
+_fsae_electric_vehicle_generate_messages_check_deps_pedals: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/rule
+
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_pedals
+
+# clean rule for target.
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/clean:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/clean
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/clean
+
+# clean rule for target.
+clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir
+
+# All Build rule for target.
+fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/depend
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=1,2 "Built target BAROMETRIC_PRESSURE_SENSOR"
+.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all
+
+# Include target in all.
+all: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
+.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+
+# Convenience name for target.
+BAROMETRIC_PRESSURE_SENSOR: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+
+.PHONY : BAROMETRIC_PRESSURE_SENSOR
+
+# clean rule for target.
+fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean
+.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean
+
+# clean rule for target.
+clean: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean
 
 .PHONY : clean
 
@@ -534,7 +606,7 @@ all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages.di
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 42
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 47
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages.dir/rule
@@ -683,34 +755,66 @@ clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir
+# Target rules for target fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir
 
 # All Build rule for target.
-fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/all:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/depend
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num= "Built target _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure"
-.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/all
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/all:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/depend
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num= "Built target _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel"
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/all
 
 # Build rule for subdir invocation for target.
-fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/rule: cmake_check_build_system
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
-.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/rule
 
 # Convenience name for target.
-_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/rule
+_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/rule
 
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_tire_pressure
-
-# clean rule for target.
-fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/clean:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/clean
-.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/clean
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel
 
 # clean rule for target.
-clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/clean
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/clean:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/clean
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/clean
+
+# clean rule for target.
+clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
+.PHONY : fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# clean rule for target.
+fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 
@@ -817,7 +921,7 @@ clean: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 fsae_electric_vehicle/CMakeFiles/sinWave.dir/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/sinWave.dir/build.make fsae_electric_vehicle/CMakeFiles/sinWave.dir/depend
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/sinWave.dir/build.make fsae_electric_vehicle/CMakeFiles/sinWave.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=90,91 "Built target sinWave"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=97,98 "Built target sinWave"
 .PHONY : fsae_electric_vehicle/CMakeFiles/sinWave.dir/all
 
 # Include target in all.
@@ -827,7 +931,7 @@ all: fsae_electric_vehicle/CMakeFiles/sinWave.dir/all
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/sinWave.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/sinWave.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/sinWave.dir/rule
@@ -948,22 +1052,23 @@ clean: fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_temp_and_pressure.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_accelerometer.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_compass.dir/all
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/depend
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=37,38,39,40,41,42,43,44 "Built target fsae_electric_vehicle_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47 "Built target fsae_electric_vehicle_generate_messages_cpp"
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/rule
@@ -988,22 +1093,23 @@ clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_
 
 # All Build rule for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_temp_and_pressure.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_accelerometer.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_compass.dir/all
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/depend
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=45,46,47,48,49,50,51,52,53 "Built target fsae_electric_vehicle_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=48,49,50,51,52,53,54,55,56,57 "Built target fsae_electric_vehicle_generate_messages_eus"
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_eus.dir/rule
@@ -1099,7 +1205,7 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gennodejs.dir/all: fsae_e
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gennodejs.dir/rule
@@ -1116,38 +1222,6 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gennodejs.dir/clean:
 
 # clean rule for target.
 clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gennodejs.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir
-
-# All Build rule for target.
-fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/all:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/depend
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num= "Built target _fsae_electric_vehicle_generate_messages_check_deps_steering_input"
-.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/all
-
-# Build rule for subdir invocation for target.
-fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
-.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/rule
-
-# Convenience name for target.
-_fsae_electric_vehicle_generate_messages_check_deps_steering_input: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/rule
-
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_input
-
-# clean rule for target.
-fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/clean:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/clean
-.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/clean
-
-# clean rule for target.
-clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/clean
 
 .PHONY : clean
 
@@ -1195,7 +1269,7 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_geneus.dir/all: fsae_elec
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_geneus.dir/rule
@@ -1317,71 +1391,34 @@ clean: fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target fsae_electric_vehicle/CMakeFiles/dummyReader.dir
+# Target rules for target fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir
 
 # All Build rule for target.
-fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/depend
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=35,36 "Built target dummyReader"
-.PHONY : fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all
-
-# Include target in all.
-all: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all
-
-.PHONY : all
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/all:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/depend
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num= "Built target _fsae_electric_vehicle_generate_messages_check_deps_suspension"
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/all
 
 # Build rule for subdir invocation for target.
-fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 10
-	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
-.PHONY : fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/rule
 
 # Convenience name for target.
-dummyReader: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
+_fsae_electric_vehicle_generate_messages_check_deps_suspension: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/rule
 
-.PHONY : dummyReader
-
-# clean rule for target.
-fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean
-.PHONY : fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_suspension
 
 # clean rule for target.
-clean: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir
-
-# All Build rule for target.
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/depend
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num= "Built target fsae_electric_vehicle_genlisp"
-.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/all
-
-# Build rule for subdir invocation for target.
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 8
-	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
-.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
-
-# Convenience name for target.
-fsae_electric_vehicle_genlisp: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
-
-.PHONY : fsae_electric_vehicle_genlisp
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/clean:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/clean
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/clean
 
 # clean rule for target.
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean
-.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean
-
-# clean rule for target.
-clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean
+clean: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/clean
 
 .PHONY : clean
 
@@ -1390,22 +1427,23 @@ clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean
 
 # All Build rule for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_temp_and_pressure.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_accelerometer.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_compass.dir/all
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/depend
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=62,63,64,65,66,67,68,69 "Built target fsae_electric_vehicle_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=67,68,69,70,71,72,73,74,75 "Built target fsae_electric_vehicle_generate_messages_nodejs"
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_nodejs.dir/rule
@@ -1533,7 +1571,7 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/all: fsae_elec
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/rule
@@ -1560,7 +1598,7 @@ clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir/clean
 fsae_electric_vehicle/CMakeFiles/database_interface.dir/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/database_interface.dir/build.make fsae_electric_vehicle/CMakeFiles/database_interface.dir/depend
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/database_interface.dir/build.make fsae_electric_vehicle/CMakeFiles/database_interface.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=33,34 "Built target database_interface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=35,36 "Built target database_interface"
 .PHONY : fsae_electric_vehicle/CMakeFiles/database_interface.dir/all
 
 # Include target in all.
@@ -1570,7 +1608,7 @@ all: fsae_electric_vehicle/CMakeFiles/database_interface.dir/all
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/database_interface.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/database_interface.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/database_interface.dir/rule
@@ -1595,22 +1633,23 @@ clean: fsae_electric_vehicle/CMakeFiles/database_interface.dir/clean
 
 # All Build rule for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_temp_and_pressure.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_accelerometer.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_py.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_compass.dir/all
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/depend
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=70,71,72,73,74,75,76,77,78 "Built target fsae_electric_vehicle_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=76,77,78,79,80,81,82,83,84,85 "Built target fsae_electric_vehicle_generate_messages_py"
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_py.dir/rule
@@ -1642,7 +1681,7 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/all: fsae_elect
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule
@@ -1659,6 +1698,75 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/clean:
 
 # clean rule for target.
 clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir
+
+# All Build rule for target.
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/depend
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num= "Built target fsae_electric_vehicle_genlisp"
+.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
+.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
+
+# Convenience name for target.
+fsae_electric_vehicle_genlisp: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
+
+.PHONY : fsae_electric_vehicle_genlisp
+
+# clean rule for target.
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean
+.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean
+
+# clean rule for target.
+clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target fsae_electric_vehicle/CMakeFiles/dummyReader.dir
+
+# All Build rule for target.
+fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/depend
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=37,38 "Built target dummyReader"
+.PHONY : fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all
+
+# Include target in all.
+all: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/dummyReader.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
+.PHONY : fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
+
+# Convenience name for target.
+dummyReader: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/rule
+
+.PHONY : dummyReader
+
+# clean rule for target.
+fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/dummyReader.dir/build.make fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean
+.PHONY : fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean
+
+# clean rule for target.
+clean: fsae_electric_vehicle/CMakeFiles/dummyReader.dir/clean
 
 .PHONY : clean
 
@@ -1680,7 +1788,7 @@ all: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/all
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 39
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/rule
@@ -1701,39 +1809,39 @@ clean: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir
+# Target rules for target fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir
 
 # All Build rule for target.
-fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/depend
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=1,2 "Built target BAROMETRIC_PRESSURE_SENSOR"
-.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all
+fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/all: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_cpp.dir/all
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build.make fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/depend
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build.make fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=33,34 "Built target VISHAY_POTENTIOMETER_PE30_LONG"
+.PHONY : fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/all
 
 # Include target in all.
-all: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all
+all: fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 10
-	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/all
+fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
-.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/rule
 
 # Convenience name for target.
-BAROMETRIC_PRESSURE_SENSOR: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+VISHAY_POTENTIOMETER_PE30_LONG: fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/rule
 
-.PHONY : BAROMETRIC_PRESSURE_SENSOR
-
-# clean rule for target.
-fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean
-.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean
+.PHONY : VISHAY_POTENTIOMETER_PE30_LONG
 
 # clean rule for target.
-clean: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean
+fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/clean:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/build.make fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/clean
+.PHONY : fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/clean
+
+# clean rule for target.
+clean: fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/clean
 
 .PHONY : clean
 
@@ -1742,22 +1850,23 @@ clean: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/clean
 
 # All Build rule for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_temp_and_pressure.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_accelerometer.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_tire_pressure.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_input.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir/all
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_compass.dir/all
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/depend
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=54,55,56,57,58,59,60,61 "Built target fsae_electric_vehicle_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=58,59,60,61,62,63,64,65,66 "Built target fsae_electric_vehicle_generate_messages_lisp"
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/rule
@@ -1774,38 +1883,6 @@ fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.di
 
 # clean rule for target.
 clean: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
-.PHONY : fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles 0
-.PHONY : fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# clean rule for target.
-fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-.PHONY : fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-
-# clean rule for target.
-clean: fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 
