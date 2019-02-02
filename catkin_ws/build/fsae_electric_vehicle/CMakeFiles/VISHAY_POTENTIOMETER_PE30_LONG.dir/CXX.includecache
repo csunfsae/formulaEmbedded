@@ -31,6 +31,8 @@ sstream
 -
 string
 -
+typeinfo
+-
 iostream
 -
 sys/types.h
