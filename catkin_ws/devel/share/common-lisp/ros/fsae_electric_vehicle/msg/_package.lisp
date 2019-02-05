@@ -5,6 +5,8 @@
    "ACCELEROMETER"
    "<COMPASS>"
    "COMPASS"
+   "<GPS>"
+   "GPS"
    "<GYROSCOPE>"
    "GYROSCOPE"
    "<IMU_DATA>"

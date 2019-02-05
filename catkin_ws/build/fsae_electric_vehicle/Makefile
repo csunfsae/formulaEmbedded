@@ -67,6 +67,39 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -100,39 +133,6 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/progress.marks
@@ -164,21 +164,6 @@ preinstall/fast:
 depend:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule
-.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule
-
-# Convenience name for target.
-_fsae_electric_vehicle_generate_messages_check_deps_gyroscope: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule
-
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope
-
-# fast build rule for target.
-_fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast:
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast
 
 # Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir/rule:
@@ -421,6 +406,21 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir/rule
+
+# Convenience name for target.
+_fsae_electric_vehicle_generate_messages_check_deps_gps: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir/rule
+
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gps
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_gps/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gps/fast
+
+# Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
@@ -631,6 +631,21 @@ roscpp_generate_messages_py/fast:
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule
+
+# Convenience name for target.
+_fsae_electric_vehicle_generate_messages_check_deps_gyroscope: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule
+
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast
+
+# Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir/rule:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir/rule
 .PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir/rule
@@ -721,6 +736,36 @@ fsae_electric_vehicle_genpy/fast:
 .PHONY : fsae_electric_vehicle_genpy/fast
 
 # Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/ADS7828.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/ADS7828.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/ADS7828.dir/rule
+
+# Convenience name for target.
+ADS7828: fsae_electric_vehicle/CMakeFiles/ADS7828.dir/rule
+
+.PHONY : ADS7828
+
+# fast build rule for target.
+ADS7828/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/ADS7828.dir/build.make fsae_electric_vehicle/CMakeFiles/ADS7828.dir/build
+.PHONY : ADS7828/fast
+
+# Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/rule:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/rule
+
+# Convenience name for target.
+Analog_Sensor: fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/rule
+
+.PHONY : Analog_Sensor
+
+# fast build rule for target.
+Analog_Sensor/fast:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/build.make fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/build
+.PHONY : Analog_Sensor/fast
+
+# Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
 .PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genlisp.dir/rule
@@ -794,6 +839,60 @@ fsae_electric_vehicle_generate_messages_lisp: fsae_electric_vehicle/CMakeFiles/f
 fsae_electric_vehicle_generate_messages_lisp/fast:
 	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build
 .PHONY : fsae_electric_vehicle_generate_messages_lisp/fast
+
+src/ADS7828.o: src/ADS7828.cpp.o
+
+.PHONY : src/ADS7828.o
+
+# target to build an object file
+src/ADS7828.cpp.o:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/ADS7828.dir/build.make fsae_electric_vehicle/CMakeFiles/ADS7828.dir/src/ADS7828.cpp.o
+.PHONY : src/ADS7828.cpp.o
+
+src/ADS7828.i: src/ADS7828.cpp.i
+
+.PHONY : src/ADS7828.i
+
+# target to preprocess a source file
+src/ADS7828.cpp.i:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/ADS7828.dir/build.make fsae_electric_vehicle/CMakeFiles/ADS7828.dir/src/ADS7828.cpp.i
+.PHONY : src/ADS7828.cpp.i
+
+src/ADS7828.s: src/ADS7828.cpp.s
+
+.PHONY : src/ADS7828.s
+
+# target to generate assembly for a file
+src/ADS7828.cpp.s:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/ADS7828.dir/build.make fsae_electric_vehicle/CMakeFiles/ADS7828.dir/src/ADS7828.cpp.s
+.PHONY : src/ADS7828.cpp.s
+
+src/Analog_Sensor.o: src/Analog_Sensor.cpp.o
+
+.PHONY : src/Analog_Sensor.o
+
+# target to build an object file
+src/Analog_Sensor.cpp.o:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/build.make fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/src/Analog_Sensor.cpp.o
+.PHONY : src/Analog_Sensor.cpp.o
+
+src/Analog_Sensor.i: src/Analog_Sensor.cpp.i
+
+.PHONY : src/Analog_Sensor.i
+
+# target to preprocess a source file
+src/Analog_Sensor.cpp.i:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/build.make fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/src/Analog_Sensor.cpp.i
+.PHONY : src/Analog_Sensor.cpp.i
+
+src/Analog_Sensor.s: src/Analog_Sensor.cpp.s
+
+.PHONY : src/Analog_Sensor.s
+
+# target to generate assembly for a file
+src/Analog_Sensor.cpp.s:
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/build.make fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/src/Analog_Sensor.cpp.s
+.PHONY : src/Analog_Sensor.cpp.s
 
 src/BAROMETRIC_PRESSURE_SENSOR.o: src/BAROMETRIC_PRESSURE_SENSOR.cpp.o
 
@@ -1693,7 +1792,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... install/local"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_pedals"
 	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity"
@@ -1712,6 +1813,7 @@ help:
 	@echo "... sinWave"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gps"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... fsae_electric_vehicle_generate_messages_cpp"
 	@echo "... fsae_electric_vehicle_generate_messages_eus"
@@ -1726,21 +1828,27 @@ help:
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension"
 	@echo "... fsae_electric_vehicle_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension_offset"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_compass"
 	@echo "... fsae_electric_vehicle_gencpp"
 	@echo "... database_interface"
 	@echo "... fsae_electric_vehicle_generate_messages_py"
 	@echo "... fsae_electric_vehicle_genpy"
+	@echo "... ADS7828"
+	@echo "... Analog_Sensor"
 	@echo "... fsae_electric_vehicle_genlisp"
 	@echo "... dummyReader"
 	@echo "... INERTIAL_MEASUREMENT_UNIT"
 	@echo "... VISHAY_POTENTIOMETER_PE30_LONG"
 	@echo "... fsae_electric_vehicle_generate_messages_lisp"
 	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... test"
-	@echo "... edit_cache"
+	@echo "... src/ADS7828.o"
+	@echo "... src/ADS7828.i"
+	@echo "... src/ADS7828.s"
+	@echo "... src/Analog_Sensor.o"
+	@echo "... src/Analog_Sensor.i"
+	@echo "... src/Analog_Sensor.s"
 	@echo "... src/BAROMETRIC_PRESSURE_SENSOR.o"
 	@echo "... src/BAROMETRIC_PRESSURE_SENSOR.i"
 	@echo "... src/BAROMETRIC_PRESSURE_SENSOR.s"

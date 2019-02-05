@@ -56,7 +56,7 @@ project(fsae_electric_vehicle)
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg message_generation)
 
 ## Declare ROS messages and services
-add_message_files(FILES wheel_velocity.msg steering_wheel.msg suspension_offset.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg suspension.msg pedals.msg)
+add_message_files(FILES wheel_velocity.msg steering_wheel.msg suspension_offset.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg suspension.msg pedals.msg gps.msg)
 #add_service_files(FILES AddTwoInts.srv)
 
 ## Generate added messages and services
@@ -67,6 +67,9 @@ catkin_package(CATKIN_DEPENDS message_runtime)
 
 ## Build sinWave and database_interface
 include_directories(include ${catkin_INCLUDE_DIRS})
+
+add_executable(Analog_Sensor src/Analog_Sensor.cpp)
+add_executable(ADS7828 src/ADS7828.cpp)
 
 add_executable(dummyReader src/dummyReader.cpp)
 target_link_libraries(dummyReader ${catkin_LIBRARIES})
@@ -91,9 +94,10 @@ add_dependencies(BAROMETRIC_PRESSURE_SENSOR fsae_electric_vehicle_generate_messa
 add_executable(VISHAY_POTENTIOMETER_PE30_LONG src/VISHAY_POTENTIOMETER_PE30_LONG.cpp)
 target_link_libraries(VISHAY_POTENTIOMETER_PE30_LONG ${catkin_LIBRARIES})
 add_dependencies(VISHAY_POTENTIOMETER_PE30_LONG fsae_electric_vehicle_generate_messages_cpp)
+
 ##ALL ROS NODEJS CONFIGURATION
 install(PROGRAMS
-   fsae_electric_vehicle/talker.js
-   fsae_electric_vehicle/WEB_TRANSMIT.js
+   fsae_electric_vehicle/server.js
+   fsae_electric_vehicle/client.js
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

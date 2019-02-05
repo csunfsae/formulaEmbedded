@@ -22,6 +22,18 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.h
+stdio.h
+-
+string
+-
+iostream
+-
+Analog_Sensor.h
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.h
+
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.h
+
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/VISHAY_POTENTIOMETER_PE30_LONG.cpp
 ros/ros.h
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/ros/ros.h
@@ -53,6 +65,8 @@ fcntl.h
 -
 fsae_electric_vehicle/steering_wheel.h
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/fsae_electric_vehicle/steering_wheel.h
+../include/ADS7828.h
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.h
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h

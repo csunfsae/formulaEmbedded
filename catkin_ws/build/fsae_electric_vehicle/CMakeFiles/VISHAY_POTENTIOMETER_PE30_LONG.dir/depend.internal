@@ -3,6 +3,8 @@
 
 fsae_electric_vehicle/CMakeFiles/VISHAY_POTENTIOMETER_PE30_LONG.dir/src/VISHAY_POTENTIOMETER_PE30_LONG.cpp.o
  /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/steering_wheel.h
+ /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.h
+ /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.h
  /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/VISHAY_POTENTIOMETER_PE30_LONG.cpp
  /opt/ros/kinetic/include/ros/advertise_options.h
  /opt/ros/kinetic/include/ros/advertise_service_options.h

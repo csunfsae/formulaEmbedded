@@ -283,19 +283,6 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
-# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_gyroscope
-
-# Build rule for target.
-_fsae_electric_vehicle_generate_messages_check_deps_gyroscope: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_gyroscope
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope
-
-# fast build rule for target.
-_fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build
-.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast
-
-#=============================================================================
 # Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_pedals
 
 # Build rule for target.
@@ -504,6 +491,19 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_gps
+
+# Build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_gps: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_gps
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gps
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_gps/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gps/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -686,6 +686,19 @@ roscpp_generate_messages_py/fast:
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_gyroscope
+
+# Build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_gyroscope: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_gyroscope
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_gyroscope/fast
+
+#=============================================================================
 # Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_suspension_offset
 
 # Build rule for target.
@@ -762,6 +775,32 @@ fsae_electric_vehicle_genpy: cmake_check_build_system
 fsae_electric_vehicle_genpy/fast:
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build
 .PHONY : fsae_electric_vehicle_genpy/fast
+
+#=============================================================================
+# Target rules for targets named ADS7828
+
+# Build rule for target.
+ADS7828: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ADS7828
+.PHONY : ADS7828
+
+# fast build rule for target.
+ADS7828/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/ADS7828.dir/build.make fsae_electric_vehicle/CMakeFiles/ADS7828.dir/build
+.PHONY : ADS7828/fast
+
+#=============================================================================
+# Target rules for targets named Analog_Sensor
+
+# Build rule for target.
+Analog_Sensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Analog_Sensor
+.PHONY : Analog_Sensor
+
+# fast build rule for target.
+Analog_Sensor/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/build.make fsae_electric_vehicle/CMakeFiles/Analog_Sensor.dir/build
+.PHONY : Analog_Sensor/fast
 
 #=============================================================================
 # Target rules for targets named fsae_electric_vehicle_genlisp
@@ -850,7 +889,6 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_pedals"
 	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity"
@@ -867,6 +905,7 @@ help:
 	@echo "... sinWave"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gps"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... fsae_electric_vehicle_generate_messages_cpp"
 	@echo "... fsae_electric_vehicle_generate_messages_eus"
@@ -881,12 +920,15 @@ help:
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension"
 	@echo "... fsae_electric_vehicle_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension_offset"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_compass"
 	@echo "... fsae_electric_vehicle_gencpp"
 	@echo "... database_interface"
 	@echo "... fsae_electric_vehicle_generate_messages_py"
 	@echo "... fsae_electric_vehicle_genpy"
+	@echo "... ADS7828"
+	@echo "... Analog_Sensor"
 	@echo "... fsae_electric_vehicle_genlisp"
 	@echo "... dummyReader"
 	@echo "... INERTIAL_MEASUREMENT_UNIT"

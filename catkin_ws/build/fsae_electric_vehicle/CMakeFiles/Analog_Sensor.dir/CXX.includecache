@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.h
+
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/Analog_Sensor.cpp
+stdio.h
+-
+iostream
+-
+sstream
+-
+string
+-
+sys/ioctl.h
+-
+linux/i2c.h
+-
+linux/i2c-dev.h
+-
+stdlib.h
+-
+unistd.h
+-
+fcntl.h
+-
+algorithm
+-
+../include/Analog_Sensor.h
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.h
+
