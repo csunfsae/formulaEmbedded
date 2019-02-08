@@ -57,38 +57,38 @@ include fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/progress.
 # Include the compile flags for this target's objects.
 include fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/flags.make
 
-fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/flags.make
-fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o: /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/INERTIAL_MEASUREMENT_UNIT.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o"
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o -c /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/INERTIAL_MEASUREMENT_UNIT.cpp
+fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/flags.make
+fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o: /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o"
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o -c /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp
 
-fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.i"
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/INERTIAL_MEASUREMENT_UNIT.cpp > CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.i
+fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.i"
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp > CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.i
 
-fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.s"
-	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/INERTIAL_MEASUREMENT_UNIT.cpp -o CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.s
+fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.s"
+	cd /home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp -o CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.s
 
-fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o.requires:
+fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o.requires:
 
-.PHONY : fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o.requires
+.PHONY : fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o.requires
 
-fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o.provides: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o.requires
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build.make fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o.provides.build
-.PHONY : fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o.provides
+fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o.provides: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o.requires
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build.make fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o.provides.build
+.PHONY : fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o.provides
 
-fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o.provides.build: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o
+fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o.provides.build: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o
 
 
 # Object files for target INERTIAL_MEASUREMENT_UNIT
 INERTIAL_MEASUREMENT_UNIT_OBJECTS = \
-"CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o"
+"CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o"
 
 # External object files for target INERTIAL_MEASUREMENT_UNIT
 INERTIAL_MEASUREMENT_UNIT_EXTERNAL_OBJECTS =
 
-/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/fsae_electric_vehicle/INERTIAL_MEASUREMENT_UNIT: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o
+/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/fsae_electric_vehicle/INERTIAL_MEASUREMENT_UNIT: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/fsae_electric_vehicle/INERTIAL_MEASUREMENT_UNIT: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build.make
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/fsae_electric_vehicle/INERTIAL_MEASUREMENT_UNIT: /opt/ros/kinetic/lib/libroscpp.so
 /home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/lib/fsae_electric_vehicle/INERTIAL_MEASUREMENT_UNIT: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
@@ -119,7 +119,7 @@ fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build: /home/nvid
 
 .PHONY : fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build
 
-fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/requires: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/INERTIAL_MEASUREMENT_UNIT.cpp.o.requires
+fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/requires: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o.requires
 
 .PHONY : fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/requires
 

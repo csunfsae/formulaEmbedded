@@ -25,11 +25,17 @@ struct gps_
 
   gps_()
     : latitude(0.0)
-    , longitude(0.0)  {
+    , longitude(0.0)
+    , sats(0.0)
+    , alt(0.0)
+    , time(0.0)  {
     }
   gps_(const ContainerAllocator& _alloc)
     : latitude(0.0)
-    , longitude(0.0)  {
+    , longitude(0.0)
+    , sats(0.0)
+    , alt(0.0)
+    , time(0.0)  {
   (void)_alloc;
     }
 
@@ -40,6 +46,15 @@ struct gps_
 
    typedef float _longitude_type;
   _longitude_type longitude;
+
+   typedef float _sats_type;
+  _sats_type sats;
+
+   typedef float _alt_type;
+  _alt_type alt;
+
+   typedef float _time_type;
+  _time_type time;
 
 
 
@@ -119,12 +134,12 @@ struct MD5Sum< ::fsae_electric_vehicle::gps_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "9aeb2245d9611f300beeb62a0151d3f3";
+    return "1b894526e44406bfa9b2c59093e9562c";
   }
 
   static const char* value(const ::fsae_electric_vehicle::gps_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x9aeb2245d9611f30ULL;
-  static const uint64_t static_value2 = 0x0beeb62a0151d3f3ULL;
+  static const uint64_t static_value1 = 0x1b894526e44406bfULL;
+  static const uint64_t static_value2 = 0xa9b2c59093e9562cULL;
 };
 
 template<class ContainerAllocator>
@@ -145,6 +160,9 @@ struct Definition< ::fsae_electric_vehicle::gps_<ContainerAllocator> >
   {
     return "float32 latitude\n\
 float32 longitude\n\
+float32 sats\n\
+float32 alt\n\
+float32 time\n\
 ";
   }
 
@@ -165,6 +183,9 @@ namespace serialization
     {
       stream.next(m.latitude);
       stream.next(m.longitude);
+      stream.next(m.sats);
+      stream.next(m.alt);
+      stream.next(m.time);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -187,6 +208,12 @@ struct Printer< ::fsae_electric_vehicle::gps_<ContainerAllocator> >
     Printer<float>::stream(s, indent + "  ", v.latitude);
     s << indent << "longitude: ";
     Printer<float>::stream(s, indent + "  ", v.longitude);
+    s << indent << "sats: ";
+    Printer<float>::stream(s, indent + "  ", v.sats);
+    s << indent << "alt: ";
+    Printer<float>::stream(s, indent + "  ", v.alt);
+    s << indent << "time: ";
+    Printer<float>::stream(s, indent + "  ", v.time);
   }
 };
 

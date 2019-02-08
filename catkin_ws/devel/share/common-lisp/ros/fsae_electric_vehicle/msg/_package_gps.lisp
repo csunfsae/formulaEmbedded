@@ -3,4 +3,10 @@
           LATITUDE
           LONGITUDE-VAL
           LONGITUDE
+          SATS-VAL
+          SATS
+          ALT-VAL
+          ALT
+          TIME-VAL
+          TIME
 ))

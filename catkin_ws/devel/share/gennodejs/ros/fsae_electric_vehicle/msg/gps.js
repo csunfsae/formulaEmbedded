@@ -20,6 +20,9 @@ class gps {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.latitude = null;
       this.longitude = null;
+      this.sats = null;
+      this.alt = null;
+      this.time = null;
     }
     else {
       if (initObj.hasOwnProperty('latitude')) {
@@ -34,6 +37,24 @@ class gps {
       else {
         this.longitude = 0.0;
       }
+      if (initObj.hasOwnProperty('sats')) {
+        this.sats = initObj.sats
+      }
+      else {
+        this.sats = 0.0;
+      }
+      if (initObj.hasOwnProperty('alt')) {
+        this.alt = initObj.alt
+      }
+      else {
+        this.alt = 0.0;
+      }
+      if (initObj.hasOwnProperty('time')) {
+        this.time = initObj.time
+      }
+      else {
+        this.time = 0.0;
+      }
     }
   }
 
@@ -43,6 +64,12 @@ class gps {
     bufferOffset = _serializer.float32(obj.latitude, buffer, bufferOffset);
     // Serialize message field [longitude]
     bufferOffset = _serializer.float32(obj.longitude, buffer, bufferOffset);
+    // Serialize message field [sats]
+    bufferOffset = _serializer.float32(obj.sats, buffer, bufferOffset);
+    // Serialize message field [alt]
+    bufferOffset = _serializer.float32(obj.alt, buffer, bufferOffset);
+    // Serialize message field [time]
+    bufferOffset = _serializer.float32(obj.time, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -54,11 +81,17 @@ class gps {
     data.latitude = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [longitude]
     data.longitude = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [sats]
+    data.sats = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [alt]
+    data.alt = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [time]
+    data.time = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 8;
+    return 20;
   }
 
   static datatype() {
@@ -68,7 +101,7 @@ class gps {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '9aeb2245d9611f300beeb62a0151d3f3';
+    return '1b894526e44406bfa9b2c59093e9562c';
   }
 
   static messageDefinition() {
@@ -76,6 +109,9 @@ class gps {
     return `
     float32 latitude
     float32 longitude
+    float32 sats
+    float32 alt
+    float32 time
     
     `;
   }
@@ -98,6 +134,27 @@ class gps {
     }
     else {
       resolved.longitude = 0.0
+    }
+
+    if (msg.sats !== undefined) {
+      resolved.sats = msg.sats;
+    }
+    else {
+      resolved.sats = 0.0
+    }
+
+    if (msg.alt !== undefined) {
+      resolved.alt = msg.alt;
+    }
+    else {
+      resolved.alt = 0.0
+    }
+
+    if (msg.time !== undefined) {
+      resolved.time = msg.time;
+    }
+    else {
+      resolved.time = 0.0
     }
 
     return resolved;

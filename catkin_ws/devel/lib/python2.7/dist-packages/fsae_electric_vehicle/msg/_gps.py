@@ -7,14 +7,17 @@ import struct
 
 
 class gps(genpy.Message):
-  _md5sum = "9aeb2245d9611f300beeb62a0151d3f3"
+  _md5sum = "1b894526e44406bfa9b2c59093e9562c"
   _type = "fsae_electric_vehicle/gps"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """float32 latitude
 float32 longitude
+float32 sats
+float32 alt
+float32 time
 """
-  __slots__ = ['latitude','longitude']
-  _slot_types = ['float32','float32']
+  __slots__ = ['latitude','longitude','sats','alt','time']
+  _slot_types = ['float32','float32','float32','float32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -24,7 +27,7 @@ float32 longitude
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       latitude,longitude
+       latitude,longitude,sats,alt,time
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -37,9 +40,18 @@ float32 longitude
         self.latitude = 0.
       if self.longitude is None:
         self.longitude = 0.
+      if self.sats is None:
+        self.sats = 0.
+      if self.alt is None:
+        self.alt = 0.
+      if self.time is None:
+        self.time = 0.
     else:
       self.latitude = 0.
       self.longitude = 0.
+      self.sats = 0.
+      self.alt = 0.
+      self.time = 0.
 
   def _get_types(self):
     """
@@ -54,7 +66,7 @@ float32 longitude
     """
     try:
       _x = self
-      buff.write(_get_struct_2f().pack(_x.latitude, _x.longitude))
+      buff.write(_get_struct_5f().pack(_x.latitude, _x.longitude, _x.sats, _x.alt, _x.time))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -67,8 +79,8 @@ float32 longitude
       end = 0
       _x = self
       start = end
-      end += 8
-      (_x.latitude, _x.longitude,) = _get_struct_2f().unpack(str[start:end])
+      end += 20
+      (_x.latitude, _x.longitude, _x.sats, _x.alt, _x.time,) = _get_struct_5f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -82,7 +94,7 @@ float32 longitude
     """
     try:
       _x = self
-      buff.write(_get_struct_2f().pack(_x.latitude, _x.longitude))
+      buff.write(_get_struct_5f().pack(_x.latitude, _x.longitude, _x.sats, _x.alt, _x.time))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -96,8 +108,8 @@ float32 longitude
       end = 0
       _x = self
       start = end
-      end += 8
-      (_x.latitude, _x.longitude,) = _get_struct_2f().unpack(str[start:end])
+      end += 20
+      (_x.latitude, _x.longitude, _x.sats, _x.alt, _x.time,) = _get_struct_5f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -106,9 +118,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2f = None
-def _get_struct_2f():
-    global _struct_2f
-    if _struct_2f is None:
-        _struct_2f = struct.Struct("<2f")
-    return _struct_2f
+_struct_5f = None
+def _get_struct_5f():
+    global _struct_5f
+    if _struct_5f is None:
+        _struct_5f = struct.Struct("<5f")
+    return _struct_5f
