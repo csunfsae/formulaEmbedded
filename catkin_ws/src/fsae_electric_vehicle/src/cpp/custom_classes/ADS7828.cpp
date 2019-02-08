@@ -70,5 +70,5 @@
 
   int ADS7828::get_sensor_data(int num){
     return this->sensor_list[num]->get_data();
-  }; 
+  };
 
