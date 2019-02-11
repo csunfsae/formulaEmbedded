@@ -27,8 +27,8 @@ int main(int argc, char **argv)
   std::string path = "/dev/i2c-0";
   int address = 0x49;
   ADS7828* adc_1 = new ADS7828(path, address); 
-  adc_1->add_potentiometer();
-  adc_1->add_potentiometer();
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
   //Basic ROS setup for the node
   ros::init(argc, argv, "VISHAY_POTENTIOMETER_PE30_LONG");
   ros::NodeHandle n;

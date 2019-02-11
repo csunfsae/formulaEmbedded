@@ -27,7 +27,7 @@
      perror("Failed to open i2c bus");
      exit(1);
    }
-  };  
+  };
 
   void ADS7828::update(){
     int kount = 0;
@@ -38,7 +38,7 @@
     char buffer[1] = {0};
     while((this->sensor_list[kount] != NULL) || (kount < 2)){
       buffer[0] = {(COMMANDS_BUFFER[kount])};
-      write(this->acquired_bus, buffer,1); 
+      write(this->acquired_bus, buffer,1);
       if (read(this->acquired_bus,this->data_buffer,2) != 2) {
         /* ERROR HANDLING: i2c transaction failed */
         std::cout << this->data_buffer[0] << std::endl;
@@ -51,11 +51,18 @@
     }
   };
 
-  void ADS7828::add_potentiometer(){
-    Analog_Sensor* new_potentiometer = new Analog_Sensor();
+  void ADS7828::calculate(){
+    int kount = 0;
+    while((this->sensor_list[kount] != NULL) || (kount < 2)){
+      this->sensor_list[kount]->calculate_units();
+      kount++;
+    }
+  };
+
+  void ADS7828::add_sensor(int lower_limit, int upper_limit){
+    Analog_Sensor* new_potentiometer = new Analog_Sensor(lower_limit, upper_limit);
     ADS7828::add_sensor(new_potentiometer);
   }
-
   void ADS7828::add_sensor(Analog_Sensor* sensor){
     //IM WRITING THIS LIKE THIS BECUASE I WANT A FIXED ARRAY SIZE
     for(int kount=0;kount<8;kount++){

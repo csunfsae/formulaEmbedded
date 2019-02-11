@@ -13,6 +13,6 @@ class Analog_Sensor{
   int get_data();
   void set_units(int units);
   int get_units();
-  void calculate_units(int raw_data);
+  void calculate_units();
 };
 #endif

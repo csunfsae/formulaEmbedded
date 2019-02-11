@@ -37,8 +37,8 @@
     return this->units;
   }
 
-  void Analog_Sensor::calculate_units(int raw_data){
-    int calculated_units = this->upper_limit*(4096/raw_data);
+  void Analog_Sensor::calculate_units(){
+    int calculated_units = (this->upper_limit*(4096/this->data))+this->lower_limit;
     Analog_Sensor::set_units(calculated_units);
   }
 

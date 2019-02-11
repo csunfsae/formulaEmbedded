@@ -30,23 +30,25 @@ class ADS7828{
   int data_buffer[1];
   Analog_Sensor* sensor_list[8];
   char COMMANDS_BUFFER[8] = {
-                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH0),                
-                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH1),                
-                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH2),                
-                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH3),                
-                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH4),                
-                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH5),                
-                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH6),               
+
+                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH0),
+                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH1),
+                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH2),
+                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH3),
+                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH4),
+                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH5),
+                            (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH6),
   };
   public:
     ADS7828();
     ADS7828(std::string i2c_bus_name, int address);
     void update();
     void add_potentiometer();
-    void add_potentiometer(int lower_limit, int upper_limit);
+    //These should be mechanical limits
+    void add_sensor(int lower_limit, int upper_limit);
     void add_sensor(Analog_Sensor* sensor);
     int get_sensor_data(int num);
-    void calculate_units();
+    void calculate();
     int get_units(int num);
 };
 #endif
