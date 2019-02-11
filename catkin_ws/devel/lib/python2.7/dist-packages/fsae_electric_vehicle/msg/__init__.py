@@ -1,5 +1,6 @@
 from ._accelerometer import *
 from ._compass import *
+from ._gps import *
 from ._gyroscope import *
 from ._imu_data import *
 from ._pedals import *

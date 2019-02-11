@@ -56,7 +56,7 @@ project(fsae_electric_vehicle)
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg message_generation)
 
 ## Declare ROS messages and services
-add_message_files(FILES wheel_velocity.msg steering_wheel.msg suspension_offset.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg suspension.msg pedals.msg)
+add_message_files(FILES wheel_velocity.msg steering_wheel.msg suspension_offset.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg suspension.msg pedals.msg gps.msg)
 #add_service_files(FILES AddTwoInts.srv)
 
 ## Generate added messages and services
@@ -68,32 +68,29 @@ catkin_package(CATKIN_DEPENDS message_runtime)
 ## Build sinWave and database_interface
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(dummyReader src/dummyReader.cpp)
-target_link_libraries(dummyReader ${catkin_LIBRARIES})
-add_dependencies(dummyReader fsae_electric_vehicle_generate_messages_cpp)
-
-add_executable(sinWave src/sinWave.cpp)
-target_link_libraries(sinWave ${catkin_LIBRARIES})
-add_dependencies(sinWave fsae_electric_vehicle_generate_messages_cpp)
-
-add_executable(database_interface src/database_interface.cpp)
-target_link_libraries(database_interface ${catkin_LIBRARIES} sqlite3)
-add_dependencies(database_interface fsae_electric_vehicle_generate_messages_cpp)
-
-add_executable(INERTIAL_MEASUREMENT_UNIT src/INERTIAL_MEASUREMENT_UNIT.cpp)
+add_executable(INERTIAL_MEASUREMENT_UNIT src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp)
 target_link_libraries(INERTIAL_MEASUREMENT_UNIT ${catkin_LIBRARIES} RTIMULib)
 add_dependencies(INERTIAL_MEASUREMENT_UNIT fsae_electric_vehicle_generate_messages_cpp)
 
-add_executable(BAROMETRIC_PRESSURE_SENSOR src/BAROMETRIC_PRESSURE_SENSOR.cpp)
+add_executable(BAROMETRIC_PRESSURE_SENSOR src/cpp/BAROMETRIC_PRESSURE_SENSOR.cpp)
 target_link_libraries(BAROMETRIC_PRESSURE_SENSOR ${catkin_LIBRARIES})
 add_dependencies(BAROMETRIC_PRESSURE_SENSOR fsae_electric_vehicle_generate_messages_cpp)
 
-add_executable(VISHAY_POTENTIOMETER_PE30_LONG src/VISHAY_POTENTIOMETER_PE30_LONG.cpp)
-target_link_libraries(VISHAY_POTENTIOMETER_PE30_LONG ${catkin_LIBRARIES})
-add_dependencies(VISHAY_POTENTIOMETER_PE30_LONG fsae_electric_vehicle_generate_messages_cpp)
+add_executable(ANALOG_DIGITAL_CONVERTER_0x49 src/cpp/ANALOG_DIGITAL_CONVERTER_0x49.cpp src/cpp/custom_classes/ADS7828.cpp src/cpp/custom_classes/Analog_Sensor.cpp)
+target_link_libraries(ANALOG_DIGITAL_CONVERTER_0x49 ${catkin_LIBRARIES})
+add_dependencies(ANALOG_DIGITAL_CONVERTER_0x49 fsae_electric_vehicle_generate_messages_cpp)
+
 ##ALL ROS NODEJS CONFIGURATION
 install(PROGRAMS
-   fsae_electric_vehicle/talker.js
-   fsae_electric_vehicle/WEB_TRANSMIT.js
+   fsae_electric_vehicle/nodejs/server.js
+   fsae_electric_vehicle/nodejs/client.js
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+catkin_install_python(
+  PROGRAMS
+  src/python/GPS.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+

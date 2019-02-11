@@ -11,6 +11,7 @@ let tire_pressure = require('./tire_pressure.js');
 let temp_and_pressure = require('./temp_and_pressure.js');
 let steering_wheel = require('./steering_wheel.js');
 let suspension = require('./suspension.js');
+let gps = require('./gps.js');
 let accelerometer = require('./accelerometer.js');
 let suspension_offset = require('./suspension_offset.js');
 
@@ -25,6 +26,7 @@ module.exports = {
   temp_and_pressure: temp_and_pressure,
   steering_wheel: steering_wheel,
   suspension: suspension,
+  gps: gps,
   accelerometer: accelerometer,
   suspension_offset: suspension_offset,
 };

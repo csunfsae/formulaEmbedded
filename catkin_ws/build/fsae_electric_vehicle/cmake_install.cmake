@@ -79,6 +79,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gyroscope.msg"
     "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/suspension.msg"
     "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/pedals.msg"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg"
     )
 endif()
 
@@ -131,8 +132,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/fsae_electric_vehicle" TYPE PROGRAM FILES
-    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/talker.js"
-    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/WEB_TRANSMIT.js"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/nodejs/server.js"
+    "/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/nodejs/client.js"
     )
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/fsae_electric_vehicle" TYPE PROGRAM FILES "/home/nvidia/Desktop/jetsonTx2/catkin_ws/build/fsae_electric_vehicle/catkin_generated/installspace/GPS.py")
 endif()
 

@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/temp_and_pressure.lisp"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/wheel_velocity.lisp"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/pedals.lisp"
+  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/gps.lisp"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/gyroscope.lisp"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/suspension.lisp"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/suspension_offset.lisp"
