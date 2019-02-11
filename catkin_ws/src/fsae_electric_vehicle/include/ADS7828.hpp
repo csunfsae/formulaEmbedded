@@ -39,13 +39,14 @@ class ADS7828{
                             (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH6),               
   };
   public:
-  ADS7828();
-  ADS7828(std::string i2c_bus_name, int address);
-  void update();
-  void add_potentiometer();
-  void add_potentiometer(int lower_limit, int upper_limit);
-  void add_sensor(Analog_Sensor* sensor);
-  int get_sensor_data(int num);
-  void calculate_units();
-  int get_units(int num);
+    ADS7828();
+    ADS7828(std::string i2c_bus_name, int address);
+    void update();
+    void add_potentiometer();
+    void add_potentiometer(int lower_limit, int upper_limit);
+    void add_sensor(Analog_Sensor* sensor);
+    int get_sensor_data(int num);
+    void calculate_units();
+    int get_units(int num);
+};
 #endif

@@ -24,8 +24,8 @@
    for(int kount=0;kount<8;kount++)
      this->sensor_list[kount]=NULL;
    if(((this->acquired_bus) = open(this->i2c_bus_name.c_str(), O_RDWR)) < 0){
-    perror("Failed to open i2c bus");
-    exit(1);
+     perror("Failed to open i2c bus");
+     exit(1);
    }
   };  
 
