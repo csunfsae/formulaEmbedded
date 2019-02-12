@@ -4,7 +4,6 @@ file(REMOVE_RECURSE
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/temp_and_pressure.js"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/wheel_velocity.js"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/pedals.js"
-  "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/gps.js"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/gyroscope.js"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/suspension.js"
   "/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/suspension_offset.js"
