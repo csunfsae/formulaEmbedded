@@ -30,7 +30,6 @@ class ADS7828{
   int data_buffer[1];
   Analog_Sensor* sensor_list[8];
   char COMMANDS_BUFFER[8] = {
-
                             (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH0),
                             (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH1),
                             (ADS7828_CONFIG_SD_SINGLE | ADS7828_CONFIG_PD_REFOFF_ADON | ADS7828_CONFIG_CS_CH2),

@@ -8,8 +8,6 @@
     (:file "_package_accelerometer" :depends-on ("_package"))
     (:file "compass" :depends-on ("_package_compass"))
     (:file "_package_compass" :depends-on ("_package"))
-    (:file "gps" :depends-on ("_package_gps"))
-    (:file "_package_gps" :depends-on ("_package"))
     (:file "gyroscope" :depends-on ("_package_gyroscope"))
     (:file "_package_gyroscope" :depends-on ("_package"))
     (:file "imu_data" :depends-on ("_package_imu_data"))

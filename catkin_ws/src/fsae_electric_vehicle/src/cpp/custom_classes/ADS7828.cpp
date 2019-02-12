@@ -44,7 +44,7 @@
         std::cout << this->data_buffer[0] << std::endl;
         printf("Failed to read from the i2c bus.\n");
         printf("\n\n");
-      } else { 
+      } else {
         this->sensor_list[kount]->set_data((((this->data_buffer[0] & 0x0F)*256) + this->data_buffer[1]));
       }
       kount++;
