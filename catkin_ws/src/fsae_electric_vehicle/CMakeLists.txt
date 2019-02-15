@@ -53,8 +53,8 @@ ENDIF(UNIX)
 
 project(fsae_electric_vehicle)
 ## Find catkin and any catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg message_generation)
-
+find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg message_generation roslaunch)
+roslaunch_add_file_check(src/launch)
 ## Declare ROS messages and services
 add_message_files(FILES wheel_velocity.msg steering_wheel.msg suspension_offset.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg suspension.msg pedals.msg gps.msg)
 #add_service_files(FILES AddTwoInts.srv)
@@ -79,6 +79,10 @@ add_dependencies(BAROMETRIC_PRESSURE_SENSOR fsae_electric_vehicle_generate_messa
 add_executable(ANALOG_DIGITAL_CONVERTER_0x49 src/cpp/ANALOG_DIGITAL_CONVERTER_0x49.cpp src/cpp/custom_classes/ADS7828.cpp src/cpp/custom_classes/Analog_Sensor.cpp)
 target_link_libraries(ANALOG_DIGITAL_CONVERTER_0x49 ${catkin_LIBRARIES})
 add_dependencies(ANALOG_DIGITAL_CONVERTER_0x49 fsae_electric_vehicle_generate_messages_cpp)
+
+add_executable(WHEEL_SPEED_DEVICE src/cpp/WHEEL_SPEED_DEVICE.cpp)
+target_link_libraries(WHEEL_SPEED_DEVICE ${catkin_LIBRARIES})
+add_dependencies(WHEEL_SPEED_DEVICE fsae_electric_vehicle_generate_messages_cpp)
 
 ##ALL ROS NODEJS CONFIGURATION
 install(PROGRAMS

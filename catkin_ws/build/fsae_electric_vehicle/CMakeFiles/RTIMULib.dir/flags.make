@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -std=gnu++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"fsae_electric_vehicle\" -DRTIMULib_EXPORTS
 
-CXX_INCLUDES = -I/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include -I/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/RTIMULib2 -I/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/include -I/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/RTIMULib2 -I/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

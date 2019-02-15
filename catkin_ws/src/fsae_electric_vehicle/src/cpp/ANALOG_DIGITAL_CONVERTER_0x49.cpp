@@ -4,6 +4,9 @@
  * Topics Subscribed: None 
  * Topics Publishing: steering_wheel 
  * Tag: 
+ * TODO FIX ITERATION OVER SENSORS 
+ * TODO TEST SENSOR UNIT CONVERSION
+ * TODO ARDUINO INTERGRATION
 */
 #include "ros/ros.h"
 #include "std_msgs/String.h"

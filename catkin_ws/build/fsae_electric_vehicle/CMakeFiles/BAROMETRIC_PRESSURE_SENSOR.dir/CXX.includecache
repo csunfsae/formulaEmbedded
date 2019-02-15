@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nvidia/Desktop/jetsonTx2/catkin_ws/devel/include/fsae_electric_vehicle/temp_and_pressure.h
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/temp_and_pressure.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/cpp/BAROMETRIC_PRESSURE_SENSOR.cpp
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/BAROMETRIC_PRESSURE_SENSOR.cpp
 stdio.h
 -
 string
@@ -40,13 +40,13 @@ fcntl.h
 math.h
 -
 std_msgs/String.h
-/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/cpp/std_msgs/String.h
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/std_msgs/String.h
 sstream
 -
 ros/ros.h
-/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/cpp/ros/ros.h
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/ros/ros.h
 fsae_electric_vehicle/temp_and_pressure.h
-/home/nvidia/Desktop/jetsonTx2/catkin_ws/src/fsae_electric_vehicle/src/cpp/fsae_electric_vehicle/temp_and_pressure.h
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/fsae_electric_vehicle/temp_and_pressure.h
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h
