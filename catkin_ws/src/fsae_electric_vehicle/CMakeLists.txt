@@ -80,9 +80,9 @@ add_executable(ANALOG_DIGITAL_CONVERTER_0x49 src/cpp/ANALOG_DIGITAL_CONVERTER_0x
 target_link_libraries(ANALOG_DIGITAL_CONVERTER_0x49 ${catkin_LIBRARIES})
 add_dependencies(ANALOG_DIGITAL_CONVERTER_0x49 fsae_electric_vehicle_generate_messages_cpp)
 
-add_executable(WHEEL_SPEED_DEVICE src/cpp/WHEEL_SPEED_DEVICE.cpp)
-target_link_libraries(WHEEL_SPEED_DEVICE ${catkin_LIBRARIES})
-add_dependencies(WHEEL_SPEED_DEVICE fsae_electric_vehicle_generate_messages_cpp)
+#add_executable(WHEEL_SPEED_DEVICE src/cpp/WHEEL_SPEED_DEVICE.cpp)
+#target_link_libraries(WHEEL_SPEED_DEVICE ${catkin_LIBRARIES})
+#add_dependencies(WHEEL_SPEED_DEVICE fsae_electric_vehicle_generate_messages_cpp)
 
 ##ALL ROS NODEJS CONFIGURATION
 install(PROGRAMS
