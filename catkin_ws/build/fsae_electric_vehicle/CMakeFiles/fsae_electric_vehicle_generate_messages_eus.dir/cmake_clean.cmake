@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/accelerometer.l"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/suspension.l"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/steering_wheel.l"
+  "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/analog_sensor.l"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/suspension_offset.l"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/wheel_velocity.l"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/gyroscope.l"

@@ -36,8 +36,15 @@ function listener() {
             io.emit("location", {lat: data.latitude, long: data.longitude, sats: data.sats, alt: data.alt, time: now});
         });
           
+        let steering_wheel = rosNode.subscribe('steering_wheel', std_msgs.analog_sensor , (data)=>{
+            let now = new Date();
+            console.log(data);
+        });
       
-      
+        let accelerator = rosNode.subscribe('accelerator', std_msgs.analog_sensor , (data)=>{
+            let now = new Date();
+            console.log(data);
+        });
     });
 }
 

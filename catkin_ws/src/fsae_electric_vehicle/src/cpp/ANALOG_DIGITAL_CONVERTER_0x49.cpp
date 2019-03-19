@@ -22,7 +22,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include "fsae_electric_vehicle/steering_wheel.h"
+#include "fsae_electric_vehicle/analog_sensor.h"
 #include "../../include/ADS7828.hpp"
 
 int main(int argc, char **argv)
@@ -33,17 +33,30 @@ int main(int argc, char **argv)
   adc_1->add_sensor(0,360);
   adc_1->add_sensor(0,360);
   //Basic ROS setup for the node
-  ros::init(argc, argv, "VISHAY_POTENTIOMETER_PE30_LONG");
+  ros::init(argc, argv, "ANALOG_DIGITAL_CONVERTER_0x49");
   ros::NodeHandle n;
   std::cout << adc_1->get_sensor_data(0) << std::endl;
-  fsae_electric_vehicle::steering_wheel steering_wheel_msg; 
-  ros::Publisher steering_wheel_topic = n.advertise<fsae_electric_vehicle::steering_wheel>("steering_wheel", 1000);
+  fsae_electric_vehicle::analog_sensor front_left_msg;
+  fsae_electric_vehicle::analog_sensor front_right_msg;
+  fsae_electric_vehicle::analog_sensor back_left_msg;
+  fsae_electric_vehicle::analog_sensor back_right_msg;
+  fsae_electric_vehicle::analog_sensor steering_wheel_msg;
+  fsae_electric_vehicle::analog_sensor accelerator_msg;
+  fsae_electric_vehicle::analog_sensor brake_msg;
+
+  ros::Publisher steering_wheel_topic = n.advertise<fsae_electric_vehicle::analog_sensor>("steering_wheel", 1000);
+  ros::Publisher accelerator_topic = n.advertise<fsae_electric_vehicle::analog_sensor>("accelerator", 1000);
+
   ros::Rate loop_rate(500);
 
   while(ros::ok()){
     adc_1->update();
     std::cout << "adc 0: " << adc_1->get_sensor_data(0) << std::endl;
     std::cout << "adc 1: " << adc_1->get_sensor_data(1) << std::endl;
+    accelerator_msg.value = adc_1->get_sensor_data(0);
+    steering_wheel_msg.value = adc_1->get_sensor_data(1);
+    steering_wheel_topic.publish(steering_wheel_msg);
+    accelerator_topic.publish(accelerator_msg);
     ros::spinOnce();
     loop_rate.sleep();
   }

@@ -283,6 +283,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named BAROMETRIC_PRESSURE_SENSOR
+
+# Build rule for target.
+BAROMETRIC_PRESSURE_SENSOR: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BAROMETRIC_PRESSURE_SENSOR
+.PHONY : BAROMETRIC_PRESSURE_SENSOR
+
+# fast build rule for target.
+BAROMETRIC_PRESSURE_SENSOR/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
+.PHONY : BAROMETRIC_PRESSURE_SENSOR/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -294,6 +307,19 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 std_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named CAN_BUS
+
+# Build rule for target.
+CAN_BUS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CAN_BUS
+.PHONY : CAN_BUS
+
+# fast build rule for target.
+CAN_BUS/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/build.make fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/build
+.PHONY : CAN_BUS/fast
 
 #=============================================================================
 # Target rules for targets named _run_tests_fsae_electric_vehicle_roslaunch-check
@@ -764,19 +790,6 @@ _fsae_electric_vehicle_generate_messages_check_deps_pedals/fast:
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_pedals/fast
 
 #=============================================================================
-# Target rules for targets named BAROMETRIC_PRESSURE_SENSOR
-
-# Build rule for target.
-BAROMETRIC_PRESSURE_SENSOR: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BAROMETRIC_PRESSURE_SENSOR
-.PHONY : BAROMETRIC_PRESSURE_SENSOR
-
-# fast build rule for target.
-BAROMETRIC_PRESSURE_SENSOR/fast:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
-.PHONY : BAROMETRIC_PRESSURE_SENSOR/fast
-
-#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -814,6 +827,19 @@ _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel: cmake_check_
 _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast:
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast
+
+#=============================================================================
+# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor
+
+# Build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor/fast
 
 #=============================================================================
 # Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_compass
@@ -915,7 +941,9 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... CAN_BUS"
 	@echo "... _run_tests_fsae_electric_vehicle_roslaunch-check"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension_offset"
 	@echo "... _run_tests_fsae_electric_vehicle_roslaunch-check_src_launch"
@@ -952,10 +980,10 @@ help:
 	@echo "... run_tests_fsae_electric_vehicle_roslaunch-check_src_launch"
 	@echo "... clean_test_results_fsae_electric_vehicle"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_pedals"
-	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gps"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_compass"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
 	@echo "... fsae_electric_vehicle_gencpp"

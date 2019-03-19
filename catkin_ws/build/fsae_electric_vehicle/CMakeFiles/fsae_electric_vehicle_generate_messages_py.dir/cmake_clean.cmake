@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_accelerometer.py"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_suspension.py"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_steering_wheel.py"
+  "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_analog_sensor.py"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_suspension_offset.py"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_wheel_velocity.py"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_gyroscope.py"

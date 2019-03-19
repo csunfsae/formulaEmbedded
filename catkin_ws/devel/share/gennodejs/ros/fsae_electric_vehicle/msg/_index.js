@@ -4,6 +4,7 @@
 let compass = require('./compass.js');
 let steering_input = require('./steering_input.js');
 let gyroscope = require('./gyroscope.js');
+let analog_sensor = require('./analog_sensor.js');
 let pedals = require('./pedals.js');
 let wheel_velocity = require('./wheel_velocity.js');
 let imu_data = require('./imu_data.js');
@@ -19,6 +20,7 @@ module.exports = {
   compass: compass,
   steering_input: steering_input,
   gyroscope: gyroscope,
+  analog_sensor: analog_sensor,
   pedals: pedals,
   wheel_velocity: wheel_velocity,
   imu_data: imu_data,

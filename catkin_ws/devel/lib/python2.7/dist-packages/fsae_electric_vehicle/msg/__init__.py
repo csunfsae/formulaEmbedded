@@ -1,4 +1,5 @@
 from ._accelerometer import *
+from ._analog_sensor import *
 from ._compass import *
 from ._gps import *
 from ._gyroscope import *

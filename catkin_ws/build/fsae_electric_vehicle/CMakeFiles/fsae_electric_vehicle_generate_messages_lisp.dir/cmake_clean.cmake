@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/accelerometer.lisp"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/suspension.lisp"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/steering_wheel.lisp"
+  "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/analog_sensor.lisp"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/suspension_offset.lisp"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/wheel_velocity.lisp"
   "/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/gyroscope.lisp"

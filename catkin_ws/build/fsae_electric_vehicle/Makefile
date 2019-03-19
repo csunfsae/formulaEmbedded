@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule:
+	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+
+# Convenience name for target.
+BAROMETRIC_PRESSURE_SENSOR: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
+
+.PHONY : BAROMETRIC_PRESSURE_SENSOR
+
+# fast build rule for target.
+BAROMETRIC_PRESSURE_SENSOR/fast:
+	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
+.PHONY : BAROMETRIC_PRESSURE_SENSOR/fast
+
+# Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
 	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
@@ -179,6 +194,21 @@ std_msgs_generate_messages_lisp: fsae_electric_vehicle/CMakeFiles/std_msgs_gener
 std_msgs_generate_messages_lisp/fast:
 	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/rule:
+	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/rule
+
+# Convenience name for target.
+CAN_BUS: fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/rule
+
+.PHONY : CAN_BUS
+
+# fast build rule for target.
+CAN_BUS/fast:
+	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/build.make fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/build
+.PHONY : CAN_BUS/fast
 
 # Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/_run_tests_fsae_electric_vehicle_roslaunch-check.dir/rule:
@@ -721,21 +751,6 @@ _fsae_electric_vehicle_generate_messages_check_deps_pedals/fast:
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_pedals/fast
 
 # Convenience name for target.
-fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule:
-	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
-.PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
-
-# Convenience name for target.
-BAROMETRIC_PRESSURE_SENSOR: fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
-
-.PHONY : BAROMETRIC_PRESSURE_SENSOR
-
-# fast build rule for target.
-BAROMETRIC_PRESSURE_SENSOR/fast:
-	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build
-.PHONY : BAROMETRIC_PRESSURE_SENSOR/fast
-
-# Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
 	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
@@ -779,6 +794,21 @@ _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel: fsae_electri
 _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast:
 	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir/build
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast
+
+# Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir/rule:
+	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir/rule
+
+# Convenience name for target.
+_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir/rule
+
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor/fast:
+	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor/fast
 
 # Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_compass.dir/rule:
@@ -1653,6 +1683,33 @@ src/cpp/BAROMETRIC_PRESSURE_SENSOR.cpp.s:
 	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/build.make fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/src/cpp/BAROMETRIC_PRESSURE_SENSOR.cpp.s
 .PHONY : src/cpp/BAROMETRIC_PRESSURE_SENSOR.cpp.s
 
+src/cpp/CAN_BUS.o: src/cpp/CAN_BUS.cpp.o
+
+.PHONY : src/cpp/CAN_BUS.o
+
+# target to build an object file
+src/cpp/CAN_BUS.cpp.o:
+	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/build.make fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/src/cpp/CAN_BUS.cpp.o
+.PHONY : src/cpp/CAN_BUS.cpp.o
+
+src/cpp/CAN_BUS.i: src/cpp/CAN_BUS.cpp.i
+
+.PHONY : src/cpp/CAN_BUS.i
+
+# target to preprocess a source file
+src/cpp/CAN_BUS.cpp.i:
+	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/build.make fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/src/cpp/CAN_BUS.cpp.i
+.PHONY : src/cpp/CAN_BUS.cpp.i
+
+src/cpp/CAN_BUS.s: src/cpp/CAN_BUS.cpp.s
+
+.PHONY : src/cpp/CAN_BUS.s
+
+# target to generate assembly for a file
+src/cpp/CAN_BUS.cpp.s:
+	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/build.make fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir/src/cpp/CAN_BUS.cpp.s
+.PHONY : src/cpp/CAN_BUS.cpp.s
+
 src/cpp/INERTIAL_MEASUREMENT_UNIT.o: src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.o
 
 .PHONY : src/cpp/INERTIAL_MEASUREMENT_UNIT.o
@@ -1744,8 +1801,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... install/local"
+	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... install"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... CAN_BUS"
 	@echo "... _run_tests_fsae_electric_vehicle_roslaunch-check"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_suspension_offset"
 	@echo "... _run_tests_fsae_electric_vehicle_roslaunch-check_src_launch"
@@ -1783,10 +1842,10 @@ help:
 	@echo "... run_tests_fsae_electric_vehicle_roslaunch-check_src_launch"
 	@echo "... clean_test_results_fsae_electric_vehicle"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_pedals"
-	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gps"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_compass"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
 	@echo "... fsae_electric_vehicle_gencpp"
@@ -1881,6 +1940,9 @@ help:
 	@echo "... src/cpp/BAROMETRIC_PRESSURE_SENSOR.o"
 	@echo "... src/cpp/BAROMETRIC_PRESSURE_SENSOR.i"
 	@echo "... src/cpp/BAROMETRIC_PRESSURE_SENSOR.s"
+	@echo "... src/cpp/CAN_BUS.o"
+	@echo "... src/cpp/CAN_BUS.i"
+	@echo "... src/cpp/CAN_BUS.s"
 	@echo "... src/cpp/INERTIAL_MEASUREMENT_UNIT.o"
 	@echo "... src/cpp/INERTIAL_MEASUREMENT_UNIT.i"
 	@echo "... src/cpp/INERTIAL_MEASUREMENT_UNIT.s"

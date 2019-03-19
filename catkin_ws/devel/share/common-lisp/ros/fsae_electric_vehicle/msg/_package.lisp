@@ -3,6 +3,8 @@
   (:export
    "<ACCELEROMETER>"
    "ACCELEROMETER"
+   "<ANALOG_SENSOR>"
+   "ANALOG_SENSOR"
    "<COMPASS>"
    "COMPASS"
    "<GPS>"

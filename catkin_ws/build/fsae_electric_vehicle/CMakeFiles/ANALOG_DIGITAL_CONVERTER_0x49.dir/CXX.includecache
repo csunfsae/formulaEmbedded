@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/steering_wheel.h
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/analog_sensor.h
 string
 -
 vector
@@ -63,8 +63,8 @@ unistd.h
 -
 fcntl.h
 -
-fsae_electric_vehicle/steering_wheel.h
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/fsae_electric_vehicle/steering_wheel.h
+fsae_electric_vehicle/analog_sensor.h
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/fsae_electric_vehicle/analog_sensor.h
 ../../include/ADS7828.hpp
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.hpp
 

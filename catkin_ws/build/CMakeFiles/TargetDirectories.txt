@@ -32,8 +32,10 @@
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/edit_cache.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/test.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/install/local.dir
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/install.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_run_tests_fsae_electric_vehicle_roslaunch-check.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_run_tests_fsae_electric_vehicle_roslaunch-check_src_launch.dir
@@ -71,10 +73,10 @@
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/run_tests_fsae_electric_vehicle_roslaunch-check_src_launch.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_pedals.dir
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_compass.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir
 /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir

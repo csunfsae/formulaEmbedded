@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/Can_Util.h
+linux/can.h
+-
+
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/custom_classes/Can_Util.c
+../../../include/Can_Util.h
+/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/Can_Util.h
+stdio.h
+-
+

@@ -6,6 +6,8 @@
   :components ((:file "_package")
     (:file "accelerometer" :depends-on ("_package_accelerometer"))
     (:file "_package_accelerometer" :depends-on ("_package"))
+    (:file "analog_sensor" :depends-on ("_package_analog_sensor"))
+    (:file "_package_analog_sensor" :depends-on ("_package"))
     (:file "compass" :depends-on ("_package_compass"))
     (:file "_package_compass" :depends-on ("_package"))
     (:file "gps" :depends-on ("_package_gps"))
