@@ -1,14 +1,14 @@
 {
   "development": {
-    "storage": "../db/nodeDB.sqlite",
+    "storage": "/home/nvidia/Desktop/nodeDB.sqlite",
     "dialect": "sqlite"
   },
   "test": {
-    "storage": "../db/nodeDB.sqlite",
+    "storage": "./nodeDB.sqlite",
     "dialect": "sqlite"
   },
   "production": {
-    "storage": "../db/nodeDB.sqlite",
+    "storage": "./nodeDB.sqlite",
     "dialect": "sqlite"
   }
 }
