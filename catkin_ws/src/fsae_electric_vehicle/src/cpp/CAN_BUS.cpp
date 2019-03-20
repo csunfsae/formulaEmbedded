@@ -1,5 +1,3 @@
-/* A simple SocketCAN example */
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -10,6 +8,8 @@
 #include <net/if.h>
 #include <linux/can.h>
 #include <linux/can/raw.h>
+#include <cstdio>
+#include <inttypes.h>
 
 int soc;
 int read_can_port;
@@ -62,7 +62,6 @@ int send_port(struct can_frame *frame)
     }
 }
 
-/* this is just an example, run in a thread */
 void read_port()
 {
     struct can_frame frame_rd;
@@ -87,8 +86,14 @@ void read_port()
                 recvbytes = read(soc, &frame_rd, sizeof(struct can_frame));
                 if(recvbytes)
                 {
-                  //printf(“dlc = %d, data = %s\n”, frame_rd.can_dlc,frame_rd.data);
-                  std::cout << "dlc=" << frame_rd.can_dlc << " data=" << frame_rd.data << std::endl;
+                  //printf("dlc = %d, data=%d\n", frame_rd.can_dlc,frame_rd.data);
+                  printf("Can ID = %x ", frame_rd.can_id);
+                  printf("dlc = %d ", frame_rd.can_dlc);
+                  printf("data= ");
+                  for(int data=0;data<frame_rd.can_dlc;data++){
+                    printf("%x ", frame_rd.data[data]);
+                  }
+                  printf("\n");
                 }
             }
         }
@@ -105,7 +110,7 @@ int close_port()
 
 int main(void)
 {
-  open_port("vcan0");
+  open_port("can0");
   read_port();
   return 0;
 }

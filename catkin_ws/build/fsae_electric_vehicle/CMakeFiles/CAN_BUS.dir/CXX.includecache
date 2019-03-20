@@ -27,4 +27,8 @@ linux/can.h
 -
 linux/can/raw.h
 -
+cstdio
+-
+inttypes.h
+-
 
