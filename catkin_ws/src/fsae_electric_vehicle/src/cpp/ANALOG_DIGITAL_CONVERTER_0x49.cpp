@@ -30,12 +30,20 @@ int main(int argc, char **argv)
   std::string path = "/dev/i2c-0";
   int address = 0x49;
   ADS7828* adc_1 = new ADS7828(path, address); 
+  //............................................................................................
+  //.............ADDING SUPPORT FOR 8 ANALOG SENSORS MAINLY FOR TESTING ON ALL PORTS............
+  //............................................................................................
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
   adc_1->add_sensor(0,360);
   adc_1->add_sensor(0,360);
   //Basic ROS setup for the node
   ros::init(argc, argv, "ANALOG_DIGITAL_CONVERTER_0x49");
   ros::NodeHandle n;
-  std::cout << adc_1->get_sensor_data(0) << std::endl;
   fsae_electric_vehicle::analog_sensor front_left_msg;
   fsae_electric_vehicle::analog_sensor front_right_msg;
   fsae_electric_vehicle::analog_sensor back_left_msg;
@@ -51,8 +59,17 @@ int main(int argc, char **argv)
 
   while(ros::ok()){
     adc_1->update();
+    //............................................................................................
+    //.............Just printing the values only channels 0 and 1 are sent to the web currently...
+    //............................................................................................
     std::cout << "adc 0: " << adc_1->get_sensor_data(0) << std::endl;
     std::cout << "adc 1: " << adc_1->get_sensor_data(1) << std::endl;
+    std::cout << "adc 2: " << adc_1->get_sensor_data(2) << std::endl;
+    std::cout << "adc 3: " << adc_1->get_sensor_data(3) << std::endl;
+    std::cout << "adc 4: " << adc_1->get_sensor_data(4) << std::endl;
+    std::cout << "adc 5: " << adc_1->get_sensor_data(5) << std::endl;
+    std::cout << "adc 6: " << adc_1->get_sensor_data(6) << std::endl;
+    std::cout << "adc 7: " << adc_1->get_sensor_data(7) << std::endl;
     accelerator_msg.value = adc_1->get_sensor_data(0);
     steering_wheel_msg.value = adc_1->get_sensor_data(1);
     steering_wheel_topic.publish(steering_wheel_msg);
