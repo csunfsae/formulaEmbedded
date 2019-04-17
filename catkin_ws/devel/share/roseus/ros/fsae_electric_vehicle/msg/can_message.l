@@ -20,12 +20,12 @@
   (:init
    (&key
     ((:data __data) "")
-    ((:id __id) 0.0)
+    ((:id __id) "")
     ((:time __time) "")
     )
    (send-super :init)
    (setq _data (string __data))
-   (setq _id (float __id))
+   (setq _id (string __id))
    (setq _time (string __time))
    self)
   (:data
@@ -42,8 +42,8 @@
    (+
     ;; string _data
     4 (length _data)
-    ;; float32 _id
-    4
+    ;; string _id
+    4 (length _id)
     ;; string _time
     4 (length _time)
     ))
@@ -53,8 +53,8 @@
               (make-string-output-stream (send self :serialization-length)))))
      ;; string _data
        (write-long (length _data) s) (princ _data s)
-     ;; float32 _id
-       (sys::poke _id (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; string _id
+       (write-long (length _id) s) (princ _id s)
      ;; string _time
        (write-long (length _time) s) (princ _time s)
      ;;
@@ -63,24 +63,24 @@
    (buf &optional (ptr- 0))
    ;; string _data
      (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _data (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
-   ;; float32 _id
-     (setq _id (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; string _id
+     (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _id (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
    ;; string _time
      (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _time (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
    ;;
    self)
   )
 
-(setf (get fsae_electric_vehicle::can_message :md5sum-) "fc80d264dda87225b525426d51b299ce")
+(setf (get fsae_electric_vehicle::can_message :md5sum-) "4469ab7103c32359ec36b532f4efe53b")
 (setf (get fsae_electric_vehicle::can_message :datatype-) "fsae_electric_vehicle/can_message")
 (setf (get fsae_electric_vehicle::can_message :definition-)
       "string data 
-float32 id 
+string id 
 string time
 ")
 
 
 
-(provide :fsae_electric_vehicle/can_message "fc80d264dda87225b525426d51b299ce")
+(provide :fsae_electric_vehicle/can_message "4469ab7103c32359ec36b532f4efe53b")
 
 

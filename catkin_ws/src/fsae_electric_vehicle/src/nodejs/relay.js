@@ -13,15 +13,15 @@ class ioMessage{
         this.log();
         this.emit();
     }
-  log(){
-    models.log.create({
-      message_type: this.type,
-      msg: this.json
-    });
-  }
-  emit(){
-    io.emit(this.type, this.json);
-  }
+    log(){
+        models.log.create({
+            message_type: this.type,
+            msg: this.json
+        });
+    }
+    emit(){
+        io.emit(this.type, this.json);
+    }
 };
 
 function relay() {

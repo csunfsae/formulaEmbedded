@@ -50,10 +50,11 @@ int open_port(const char *port)
     return 0;
 }
 
-int send_port(struct can_frame *frame)
+int send_port(const std_msgs::String::ConstPtr& msg)
 {
+    struct can_frame *frame;
     int retval;
-   retval = write(soc, frame, sizeof(struct can_frame));
+    retval = write(soc, frame, sizeof(struct can_frame));
     if (retval != sizeof(struct can_frame))
     {
         return (-1);
@@ -87,8 +88,13 @@ fsae_electric_vehicle::can_message read_port(fsae_electric_vehicle::can_message 
             recvbytes = read(soc, &frame_rd, sizeof(struct can_frame));
             if(recvbytes)
             {
-              can_message.id = frame_rd.can_id;
+
               char stuff[8]; 
+              sprintf(stuff, "%x", frame_rd.can_id);
+              std::cout << stuff << std::endl;
+              std::string temp;
+              temp.append(stuff);
+              can_message.id = temp;
               for(int x=0;x<8;x++){
                 sprintf(stuff, "%x", frame_rd.data[x]);
                 can_data_string.append(stuff);
@@ -112,9 +118,10 @@ int main(int argc, char **argv)
 {
   fsae_electric_vehicle::can_message can_message;
 
-  ros::init(argc, argv, "CAN_BUS");
+  ros::init(argc, argv, "can_bus");
   ros::NodeHandle n;
-  ros::Publisher CAN_BUS = n.advertise<fsae_electric_vehicle::can_message>("CAN_BUS", 1000);
+  ros::Publisher CAN_BUS = n.advertise<fsae_electric_vehicle::can_message>("can_bus", 1000);
+  ros::Subscriber CAN_BUS_COMMANDS = n.subscribe("CAN_BUS_COMMANDS", 1000, chatterCallback);
   open_port("can0");
   while(ros::ok()){
     can_message = read_port(can_message);

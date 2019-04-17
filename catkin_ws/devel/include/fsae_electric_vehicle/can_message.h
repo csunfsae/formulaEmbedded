@@ -25,12 +25,12 @@ struct can_message_
 
   can_message_()
     : data()
-    , id(0.0)
+    , id()
     , time()  {
     }
   can_message_(const ContainerAllocator& _alloc)
     : data(_alloc)
-    , id(0.0)
+    , id(_alloc)
     , time(_alloc)  {
   (void)_alloc;
     }
@@ -40,7 +40,7 @@ struct can_message_
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _data_type;
   _data_type data;
 
-   typedef float _id_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _id_type;
   _id_type id;
 
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _time_type;
@@ -124,12 +124,12 @@ struct MD5Sum< ::fsae_electric_vehicle::can_message_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "fc80d264dda87225b525426d51b299ce";
+    return "4469ab7103c32359ec36b532f4efe53b";
   }
 
   static const char* value(const ::fsae_electric_vehicle::can_message_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xfc80d264dda87225ULL;
-  static const uint64_t static_value2 = 0xb525426d51b299ceULL;
+  static const uint64_t static_value1 = 0x4469ab7103c32359ULL;
+  static const uint64_t static_value2 = 0xec36b532f4efe53bULL;
 };
 
 template<class ContainerAllocator>
@@ -149,7 +149,7 @@ struct Definition< ::fsae_electric_vehicle::can_message_<ContainerAllocator> >
   static const char* value()
   {
     return "string data \n\
-float32 id \n\
+string id \n\
 string time\n\
 ";
   }
@@ -193,7 +193,7 @@ struct Printer< ::fsae_electric_vehicle::can_message_<ContainerAllocator> >
     s << indent << "data: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.data);
     s << indent << "id: ";
-    Printer<float>::stream(s, indent + "  ", v.id);
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.id);
     s << indent << "time: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.time);
   }

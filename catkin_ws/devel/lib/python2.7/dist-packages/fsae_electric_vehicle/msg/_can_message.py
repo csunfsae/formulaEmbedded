@@ -7,14 +7,14 @@ import struct
 
 
 class can_message(genpy.Message):
-  _md5sum = "fc80d264dda87225b525426d51b299ce"
+  _md5sum = "4469ab7103c32359ec36b532f4efe53b"
   _type = "fsae_electric_vehicle/can_message"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """string data 
-float32 id 
+string id 
 string time"""
   __slots__ = ['data','id','time']
-  _slot_types = ['string','float32','string']
+  _slot_types = ['string','string','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -36,12 +36,12 @@ string time"""
       if self.data is None:
         self.data = ''
       if self.id is None:
-        self.id = 0.
+        self.id = ''
       if self.time is None:
         self.time = ''
     else:
       self.data = ''
-      self.id = 0.
+      self.id = ''
       self.time = ''
 
   def _get_types(self):
@@ -62,7 +62,12 @@ string time"""
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_f().pack(self.id))
+      _x = self.id
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self.time
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -90,7 +95,13 @@ string time"""
         self.data = str[start:end]
       start = end
       end += 4
-      (self.id,) = _get_struct_f().unpack(str[start:end])
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.id = str[start:end].decode('utf-8')
+      else:
+        self.id = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -118,7 +129,12 @@ string time"""
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_f().pack(self.id))
+      _x = self.id
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self.time
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -147,7 +163,13 @@ string time"""
         self.data = str[start:end]
       start = end
       end += 4
-      (self.id,) = _get_struct_f().unpack(str[start:end])
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.id = str[start:end].decode('utf-8')
+      else:
+        self.id = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -165,9 +187,3 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_f = None
-def _get_struct_f():
-    global _struct_f
-    if _struct_f is None:
-        _struct_f = struct.Struct("<f")
-    return _struct_f

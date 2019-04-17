@@ -33,7 +33,7 @@ class can_message {
         this.id = initObj.id
       }
       else {
-        this.id = 0.0;
+        this.id = '';
       }
       if (initObj.hasOwnProperty('time')) {
         this.time = initObj.time
@@ -49,7 +49,7 @@ class can_message {
     // Serialize message field [data]
     bufferOffset = _serializer.string(obj.data, buffer, bufferOffset);
     // Serialize message field [id]
-    bufferOffset = _serializer.float32(obj.id, buffer, bufferOffset);
+    bufferOffset = _serializer.string(obj.id, buffer, bufferOffset);
     // Serialize message field [time]
     bufferOffset = _serializer.string(obj.time, buffer, bufferOffset);
     return bufferOffset;
@@ -62,7 +62,7 @@ class can_message {
     // Deserialize message field [data]
     data.data = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [id]
-    data.id = _deserializer.float32(buffer, bufferOffset);
+    data.id = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [time]
     data.time = _deserializer.string(buffer, bufferOffset);
     return data;
@@ -71,6 +71,7 @@ class can_message {
   static getMessageSize(object) {
     let length = 0;
     length += object.data.length;
+    length += object.id.length;
     length += object.time.length;
     return length + 12;
   }
@@ -82,14 +83,14 @@ class can_message {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'fc80d264dda87225b525426d51b299ce';
+    return '4469ab7103c32359ec36b532f4efe53b';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     string data 
-    float32 id 
+    string id 
     string time
     `;
   }
@@ -111,7 +112,7 @@ class can_message {
       resolved.id = msg.id;
     }
     else {
-      resolved.id = 0.0
+      resolved.id = ''
     }
 
     if (msg.time !== undefined) {

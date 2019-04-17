@@ -15,8 +15,8 @@
    (id
     :reader id
     :initarg :id
-    :type cl:float
-    :initform 0.0)
+    :type cl:string
+    :initform "")
    (time
     :reader time
     :initarg :time
@@ -54,11 +54,12 @@
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
   (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'data))
-  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'id))))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'id))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'id))
   (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'time))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
@@ -76,12 +77,14 @@
       (cl:setf (cl:slot-value msg 'data) (cl:make-string __ros_str_len))
       (cl:dotimes (__ros_str_idx __ros_str_len msg)
         (cl:setf (cl:char (cl:slot-value msg 'data) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
-    (cl:let ((bits 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
-    (cl:setf (cl:slot-value msg 'id) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((__ros_str_len 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'id) (cl:make-string __ros_str_len))
+      (cl:dotimes (__ros_str_idx __ros_str_len msg)
+        (cl:setf (cl:char (cl:slot-value msg 'id) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
     (cl:let ((__ros_str_len 0))
       (cl:setf (cl:ldb (cl:byte 8 0) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
@@ -100,20 +103,20 @@
   "fsae_electric_vehicle/can_message")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<can_message>)))
   "Returns md5sum for a message object of type '<can_message>"
-  "fc80d264dda87225b525426d51b299ce")
+  "4469ab7103c32359ec36b532f4efe53b")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'can_message)))
   "Returns md5sum for a message object of type 'can_message"
-  "fc80d264dda87225b525426d51b299ce")
+  "4469ab7103c32359ec36b532f4efe53b")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<can_message>)))
   "Returns full string definition for message of type '<can_message>"
-  (cl:format cl:nil "string data ~%float32 id ~%string time~%~%"))
+  (cl:format cl:nil "string data ~%string id ~%string time~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'can_message)))
   "Returns full string definition for message of type 'can_message"
-  (cl:format cl:nil "string data ~%float32 id ~%string time~%~%"))
+  (cl:format cl:nil "string data ~%string id ~%string time~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <can_message>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'data))
-     4
+     4 (cl:length (cl:slot-value msg 'id))
      4 (cl:length (cl:slot-value msg 'time))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <can_message>))
