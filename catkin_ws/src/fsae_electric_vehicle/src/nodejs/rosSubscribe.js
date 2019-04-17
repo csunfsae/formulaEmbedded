@@ -36,6 +36,9 @@ function rosSubscribe(ioMessage) {
             let accelerator = rosNode.subscribe('accelerator', std_msgs.analog_sensor, (data) => {
                 console.log(data);
             });
+            let can_data = rosNode.subscribe('can_bus', std_msgs.can_message, (data) => {
+                new ioMesssage("can_bus", {id: data.id, data:data.data, device:"canbus"});
+            }
         });
 }
 
