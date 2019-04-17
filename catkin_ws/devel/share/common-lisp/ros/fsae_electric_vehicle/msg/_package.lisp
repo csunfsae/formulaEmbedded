@@ -5,6 +5,8 @@
    "ACCELEROMETER"
    "<ANALOG_SENSOR>"
    "ANALOG_SENSOR"
+   "<CAN_MESSAGE>"
+   "CAN_MESSAGE"
    "<COMPASS>"
    "COMPASS"
    "<GPS>"

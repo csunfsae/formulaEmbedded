@@ -15,6 +15,7 @@ let suspension = require('./suspension.js');
 let gps = require('./gps.js');
 let accelerometer = require('./accelerometer.js');
 let suspension_offset = require('./suspension_offset.js');
+let can_message = require('./can_message.js');
 
 module.exports = {
   compass: compass,
@@ -31,4 +32,5 @@ module.exports = {
   gps: gps,
   accelerometer: accelerometer,
   suspension_offset: suspension_offset,
+  can_message: can_message,
 };
