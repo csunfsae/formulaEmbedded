@@ -87,7 +87,7 @@ add_dependencies(CAN_BUS fsae_electric_vehicle_generate_messages_cpp)
 ##ALL ROS NODEJS CONFIGURATION
 install(PROGRAMS
    fsae_electric_vehicle/nodejs/server.js
-   fsae_electric_vehicle/nodejs/client.js
+   fsae_electric_vehicle/nodejs/relay.js
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

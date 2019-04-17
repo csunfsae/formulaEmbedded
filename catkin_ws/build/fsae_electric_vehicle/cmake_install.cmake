@@ -135,7 +135,7 @@ endif()
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/fsae_electric_vehicle" TYPE PROGRAM FILES
     "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/nodejs/server.js"
-    "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/nodejs/client.js"
+    "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/fsae_electric_vehicle/nodejs/relay.js"
     )
 endif()
 
