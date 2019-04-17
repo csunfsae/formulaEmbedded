@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/analog_sensor.h
+/home/nvidia/Github/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/analog_sensor.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.hpp
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.hpp
 stdio.h
 -
 string
@@ -32,13 +32,13 @@ iostream
 Analog_Sensor.hpp
 -
 
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.hpp
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.hpp
 
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/ANALOG_DIGITAL_CONVERTER_0x49.cpp
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/ANALOG_DIGITAL_CONVERTER_0x49.cpp
 ros/ros.h
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/ros/ros.h
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/ros/ros.h
 std_msgs/String.h
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/std_msgs/String.h
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/std_msgs/String.h
 sstream
 -
 string
@@ -64,11 +64,11 @@ unistd.h
 fcntl.h
 -
 fsae_electric_vehicle/analog_sensor.h
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/fsae_electric_vehicle/analog_sensor.h
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/fsae_electric_vehicle/analog_sensor.h
 ../../include/ADS7828.hpp
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.hpp
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.hpp
 
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/custom_classes/ADS7828.cpp
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/custom_classes/ADS7828.cpp
 stdio.h
 -
 iostream
@@ -94,11 +94,11 @@ algorithm
 bits/stdc++.h
 -
 ../../../include/Analog_Sensor.hpp
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.hpp
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.hpp
 ../../../include/ADS7828.hpp
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.hpp
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/ADS7828.hpp
 
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/custom_classes/Analog_Sensor.cpp
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/src/cpp/custom_classes/Analog_Sensor.cpp
 stdio.h
 -
 iostream
@@ -122,7 +122,7 @@ fcntl.h
 algorithm
 -
 ../../../include/Analog_Sensor.hpp
-/home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.hpp
+/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/include/Analog_Sensor.hpp
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h

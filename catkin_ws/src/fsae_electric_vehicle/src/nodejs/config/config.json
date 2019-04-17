@@ -1,6 +1,6 @@
 {
   "development": {
-    "storage": "/home/nvidia/Desktop/nodeDB.sqlite",
+    "storage": "/media/nvidia/formulaSD/blackbox.db",
     "dialect": "sqlite"
   },
   "test": {

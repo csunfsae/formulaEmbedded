@@ -56,7 +56,7 @@ project(fsae_electric_vehicle)
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg message_generation roslaunch)
 roslaunch_add_file_check(src/launch)
 ## Declare ROS messages and services
-add_message_files(FILES wheel_velocity.msg steering_wheel.msg suspension_offset.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg suspension.msg pedals.msg gps.msg analog_sensor.msg)
+add_message_files(FILES wheel_velocity.msg steering_wheel.msg suspension_offset.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg suspension.msg pedals.msg gps.msg analog_sensor.msg can_message.msg)
 #add_service_files(FILES AddTwoInts.srv)
 
 ## Generate added messages and services

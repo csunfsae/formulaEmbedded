@@ -8,6 +8,8 @@
     (:file "_package_accelerometer" :depends-on ("_package"))
     (:file "analog_sensor" :depends-on ("_package_analog_sensor"))
     (:file "_package_analog_sensor" :depends-on ("_package"))
+    (:file "can_message" :depends-on ("_package_can_message"))
+    (:file "_package_can_message" :depends-on ("_package"))
     (:file "compass" :depends-on ("_package_compass"))
     (:file "_package_compass" :depends-on ("_package"))
     (:file "gps" :depends-on ("_package_gps"))

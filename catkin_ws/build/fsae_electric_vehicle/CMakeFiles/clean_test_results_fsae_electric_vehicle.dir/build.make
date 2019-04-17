@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nvidia/Desktop/formulaEmbedded/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/nvidia/Github/formulaEmbedded/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build
+CMAKE_BINARY_DIR = /home/nvidia/Github/formulaEmbedded/catkin_ws/build
 
 # Utility rule file for clean_test_results_fsae_electric_vehicle.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build
 include fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/progress.make
 
 fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle:
-	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle && /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/test_results/fsae_electric_vehicle
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle && /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/nvidia/Github/formulaEmbedded/catkin_ws/build/test_results/fsae_electric_vehicle
 
 clean_test_results_fsae_electric_vehicle: fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle
 clean_test_results_fsae_electric_vehicle: fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/build.make
@@ -67,10 +67,10 @@ fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/bu
 .PHONY : fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/build
 
 fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/clean:
-	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/cmake_clean.cmake
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/cmake_clean.cmake
 .PHONY : fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/clean
 
 fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/depend:
-	cd /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Desktop/formulaEmbedded/catkin_ws/src /home/nvidia/Desktop/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle /home/nvidia/Desktop/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/Github/formulaEmbedded/catkin_ws/src /home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle /home/nvidia/Github/formulaEmbedded/catkin_ws/build /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle.dir/depend
 

@@ -1,5 +1,6 @@
 /* A simple SocketCAN example */
 
+#include "ros/ros.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -10,6 +11,7 @@
 #include <net/if.h>
 #include <linux/can.h>
 #include <linux/can/raw.h>
+#include "fsae_electric_vehicle/can_message.h"
 
 int soc;
 int read_can_port;
@@ -63,39 +65,42 @@ int send_port(struct can_frame *frame)
 }
 
 /* this is just an example, run in a thread */
-void read_port()
+fsae_electric_vehicle::can_message read_port(fsae_electric_vehicle::can_message can_message)
 {
     struct can_frame frame_rd;
     int recvbytes = 0;
-
+    std::string can_data_string = "";
     read_can_port = 1;
-    while(read_can_port)
-    {
-        struct timeval timeout = {1, 0};
-        fd_set readSet;
-        FD_ZERO(&readSet);
-        FD_SET(soc, &readSet);
+    struct timeval timeout = {1, 0};
+    fd_set readSet;
+    FD_ZERO(&readSet);
+    FD_SET(soc, &readSet);
 
-        if (select((soc + 1), &readSet, NULL, NULL, &timeout) >= 0)
+    if (select((soc + 1), &readSet, NULL, NULL, &timeout) >= 0)
+    {
+        if (!read_can_port)
         {
-            if (!read_can_port)
+          return can_message;
+        }
+        if (FD_ISSET(soc, &readSet))
+        {
+            recvbytes = read(soc, &frame_rd, sizeof(struct can_frame));
+            if(recvbytes)
             {
-                break;
-            }
-            if (FD_ISSET(soc, &readSet))
-            {
-                recvbytes = read(soc, &frame_rd, sizeof(struct can_frame));
-                if(recvbytes)
-                {
-                  //printf(“dlc = %d, data = %s\n”, frame_rd.can_dlc,frame_rd.data);
-                  std::cout << "dlc=" << frame_rd.can_dlc << " data=" << frame_rd.data << std::endl;
-                }
+              can_message.id = frame_rd.can_id;
+              char stuff[8]; 
+              for(int x=0;x<8;x++){
+                sprintf(stuff, "%x", frame_rd.data[x]);
+                can_data_string.append(stuff);
+              }
+              std::cout << can_data_string << std::endl;
+              can_message.data = can_data_string;
             }
         }
-
     }
-
+    return can_message;
 }
+
 
 int close_port()
 {
@@ -103,9 +108,18 @@ int close_port()
     return 0;
 }
 
-int main(void)
+int main(int argc, char **argv)
 {
-  open_port("vcan0");
-  read_port();
+  fsae_electric_vehicle::can_message can_message;
+
+  ros::init(argc, argv, "CAN_BUS");
+  ros::NodeHandle n;
+  ros::Publisher CAN_BUS = n.advertise<fsae_electric_vehicle::can_message>("CAN_BUS", 1000);
+  open_port("can0");
+  while(ros::ok()){
+    can_message = read_port(can_message);
+    CAN_BUS.publish(can_message);
+  }
+
   return 0;
 }
