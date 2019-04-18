@@ -17,6 +17,7 @@
   "dependencies": {
     "bunyan": "^1.8.12",
     "dtrace-provider": "^0.8.7",
+    "express": "^4.16.4",
     "rosnodejs": "^3.0.0",
     "sequelize": "^5.3.0",
     "socket.io": "^2.2.0",

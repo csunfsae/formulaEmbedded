@@ -60,12 +60,17 @@ void send_port(const fsae_electric_vehicle::can_message& msg)
 
     frame->can_id = 0x201;
     frame->can_dlc = 3;
+    std::cout << msg.id << std::endl;
+    std::cout << msg.data << std::endl;
     //    std::cout << can_data << std::endl;
     char can_data_array[8];
+    for(int y=0;y<8;y++)
+      can_data_array[y] = 'c';
     //    frame->data = can_data;
 
     int retval;
     retval = write(soc, frame, sizeof(struct can_frame));
+    std::cout << retval << std::endl;
     return;
 }
 
@@ -127,6 +132,7 @@ int main(int argc, char **argv)
   ros::Publisher CAN_BUS = n.advertise<fsae_electric_vehicle::can_message>("can_bus", 1000);
   ros::Subscriber CAN_BUS_COMMANDS = n.subscribe("can_bus_commands", 1000, send_port);
   open_port("can0");
+  ros::spin();
   while(ros::ok()){
     can_message = read_port(can_message);
     CAN_BUS.publish(can_message);
