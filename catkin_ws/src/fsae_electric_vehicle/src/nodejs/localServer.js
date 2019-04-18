@@ -21,12 +21,12 @@ class ioMessage {
 };
 
 function app() {
-  rosSubscribe(ioMessage, 'localServer');
-  rosnodejs.initNode('ioPublish')
-    .then((nh) => {
+  rosnodejs.initNode('localServer')
+    .then((rosNode) => {
+      rosSubscribe(rosNode, ioMessage);
       io.on('connection', function (client) {
         client.on('accelerate', function (data) {
-          const pub = nh.advertise('can_bus', std_msgs.can_message);
+          const pub = rosNode.advertise('can_bus', std_msgs.can_message);
           const msg = new std_msgs.can_message();
           msg.id = '201';
           msg.data = `31${data.value}`;

@@ -25,7 +25,10 @@ class ioMessage{
 };
 
 function relay() {
-  rosSubscribe(ioMessage, 'relay');
+    rosnodejs.initNode('relay')
+        .then((rosNode) => {
+            rosSubscribe(rosNode, ioMessage);
+        });
 }
 
 if (require.main === module) {
