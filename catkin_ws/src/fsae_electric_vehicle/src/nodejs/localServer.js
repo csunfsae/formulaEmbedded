@@ -4,7 +4,9 @@ const server = require('http').createServer()
 const io = require('socket.io')(server)
 const ioClient = require('socket.io-client')("https://api.matadormotorsports.racing");
 const rosSubscribe = require('./rosSubscribe');
-const rosPublish = require('./rosPublish');
+
+const rosnodejs = require('rosnodejs');
+const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
 
 
 class ioMessage {
@@ -20,18 +22,20 @@ class ioMessage {
 
 function app() {
   rosSubscribe(ioMessage);
-  rosPublish(io);
-  io.on('connection', function (client) {
-    client.on('drivermsg', function (data) {
-      ioMessage('drivermsg', { msg: data.msg })
+  rosnodejs.initNode('ioPublish')
+    .then((nh) => {
+      io.on('connection', function (client) {
+        client.on('accelerate', function (data) {
+          const pub = nh.advertise('can_bus', std_msgs.can_message);
+          const msg = new std_msgs.can_message();
+          msg.id = '201';
+          msg.data = `31${data.value}`;
+          setInterval(() => {
+            pub.publish(msg);
+          }, 1000);
+        });
+      });
     });
-    client.on('eaToggle', function (data) {
-      ioMessage('eaToggle', { toggle: True })
-    });
-    client.on('remoteLocation', function (data) {
-      ioMessage('remoteLocation', { remote: data.location })
-    });
-  });
 }
 if(require.main === module){
   app();
