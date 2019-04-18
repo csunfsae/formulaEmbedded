@@ -52,40 +52,38 @@ int open_port(const char *port)
 void send_port(const fsae_electric_vehicle::can_message& msg)
 {
     struct can_frame *frame;
-    int retval;
-    unsigned char data[8];
+    std::stringstream data_in_bits;
+    int can_data;
 
-    if(msg.data == "start"){
-      frame->can_id = 0x201;
-      frame->can_dlc = 8;
-      data[0] = 0x31;
-      data[1] = 0x01;
-      data[2] = 0x00;
-      data[2] = 0x00;
-      data[3] = 0x00;
-      data[4] = 0x00;
-      data[5] = 0x00;
-      data[6] = 0x00;
-      data[7] = 0x00;
-      for(int x=0;x<8;x++)
-        frame->data[x] = data[x];
-      retval = write(soc, frame, sizeof(struct can_frame));
-    }else if(msg.data == "stop"){
-      frame->can_id = 0x201;
-      frame->can_dlc = 8;
-      data[0] = 0x31;
-      data[1] = 0x00;
-      data[2] = 0x00;
-      data[2] = 0x00;
-      data[3] = 0x00;
-      data[4] = 0x00;
-      data[5] = 0x00;
-      data[6] = 0x00;
-      data[7] = 0x00;
-      for(int x=0;x<8;x++)
-        frame->data[x] = data[x];
-      retval = write(soc, frame, sizeof(struct can_frame));
+    data_in_bits << msg.data;
+    data_in_bits >> std::hex >> can_data;
+
+    frame->can_id = 0x201;
+    frame->can_dlc = 8;
+    unsigned char can_data_array[8] = {'a','a','a','a','a','a','a','a'};
+    std::string hex_values;
+    char convert_hex;
+    std::cout << msg.data << std::endl;
+
+    unsigned int test;
+
+
+    for(int y=0;y<8;y=y+2){
+      //hex_values += msg.data[y];
+      // std::cout << msg.data[y];
+      // std::cout << msg.data[(y+1)] << std::endl;
+      //hex_values += msg.data[y+1];
+      //std::cout << hex_values << std::endl;
+      //std::istringstream converter(hex_values);
+      // std::stringstream conversion(hex_values);
+      //converter >> std::hex >> convert_hex;
+      // conversion >> test;
+      // can_data_array[y] = test;
+      frame->data[y] = 0xAA;
     }
+    int retval;
+    retval = write(soc, frame, sizeof(struct can_frame));
+    return;
 }
 
 /* this is just an example, run in a thread */

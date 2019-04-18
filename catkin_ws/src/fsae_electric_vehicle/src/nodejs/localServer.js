@@ -33,10 +33,8 @@ function app() {
            const pub = rosNode.advertise('can_bus_commands', std_msgs.can_message);
            const msg = new std_msgs.can_message();
            msg.id = '201';
-           msg.data = `31${data.value}`;
-           setInterval(() => {
-             pub.publish(msg);
-           }, 1000);
+           msg.data = data.action;
+           pub.publish(msg);
          });
       });
     server.listen(3000, () => console.log('Example app listening on port 3000!'));
