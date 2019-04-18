@@ -2,7 +2,7 @@
 'use strict';
 const server = require('http').createServer()
 const io = require('socket.io')(server)
-
+const ioClient = require('socket.io-client')("https://api.matadormotorsports.racing");
 class ioMessage {
   constructor(type, json) {
     this.json = json;
@@ -10,12 +10,13 @@ class ioMessage {
     this.emit();
   }
   emit() {
-    io.emit(this.type, this.json);
+    ioClient.emit(this.type, this.json);
   }
 };
 
 function app() {
   require('./rosSubscribe')(ioMessage);
+  require('rosPublish')(io);
   io.on('connection', function (client) {
     client.on('drivermsg', function (data) {
       ioMessage('drivermsg', { msg: data.msg })
