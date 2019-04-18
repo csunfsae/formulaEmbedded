@@ -54,21 +54,27 @@ void send_port(const fsae_electric_vehicle::can_message& msg)
     struct can_frame *frame;
     int retval;
     unsigned char data[8];
-
+    std::cout << msg.data << std::endl;
     if(msg.data == "start"){
       frame->can_id = 0x201;
-      frame->can_dlc = 8;
+      frame->can_dlc = 3;
       data[0] = 0x31;
-      data[1] = 0x01;
-      data[2] = 0x00;
+      data[1] = 0xFF;
+      data[2] = 0xAA;
       data[2] = 0x00;
       data[3] = 0x00;
       data[4] = 0x00;
       data[5] = 0x00;
       data[6] = 0x00;
       data[7] = 0x00;
-      for(int x=0;x<8;x++)
-        frame->data[x] = data[x];
+      frame->data[0] = data[0];
+      frame->data[1] = data[1];
+      frame->data[2] = data[2];
+      frame->data[3] = data[3];
+      frame->data[4] = data[4];
+      frame->data[5] = data[5];
+      frame->data[6] = data[6];
+      frame->data[7] = data[7];
       retval = write(soc, frame, sizeof(struct can_frame));
     }else if(msg.data == "stop"){
       frame->can_id = 0x201;
@@ -82,8 +88,14 @@ void send_port(const fsae_electric_vehicle::can_message& msg)
       data[5] = 0x00;
       data[6] = 0x00;
       data[7] = 0x00;
-      for(int x=0;x<8;x++)
-        frame->data[x] = data[x];
+      frame->data[0] = data[0];
+      frame->data[1] = data[1];
+      frame->data[2] = data[2];
+      frame->data[3] = data[3];
+      frame->data[4] = data[4];
+      frame->data[5] = data[5];
+      frame->data[6] = data[6];
+      frame->data[7] = data[7];
       retval = write(soc, frame, sizeof(struct can_frame));
     }
 }
