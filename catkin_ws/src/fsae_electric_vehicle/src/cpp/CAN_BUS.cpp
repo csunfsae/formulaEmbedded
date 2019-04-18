@@ -54,14 +54,15 @@ void send_port(const fsae_electric_vehicle::can_message& msg)
     struct can_frame *frame;
     int retval;
     unsigned char data[8];
+    uint16_t target=3218;
     std::cout << msg.data << std::endl;
+
     if(msg.data == "start"){
       frame->can_id = 0x201;
-      frame->can_dlc = 3;
+      frame->can_dlc = 8;
       data[0] = 0x31;
-      data[1] = 0xFF;
-      data[2] = 0xAA;
-      data[2] = 0x00;
+      data[1] = target & 0xFF;
+      data[2] = (target >> 8);
       data[3] = 0x00;
       data[4] = 0x00;
       data[5] = 0x00;
@@ -81,7 +82,6 @@ void send_port(const fsae_electric_vehicle::can_message& msg)
       frame->can_dlc = 8;
       data[0] = 0x31;
       data[1] = 0x00;
-      data[2] = 0x00;
       data[2] = 0x00;
       data[3] = 0x00;
       data[4] = 0x00;

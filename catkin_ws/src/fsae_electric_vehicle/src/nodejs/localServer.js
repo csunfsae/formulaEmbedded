@@ -30,10 +30,12 @@ function app() {
       rosSubscribe(rosNode, ioMessage);
       io.on('connection', function (client) {
          client.on('accelerate', function (data) {
+           console.log(data);
            const pub = rosNode.advertise('can_bus_commands', std_msgs.can_message);
            const msg = new std_msgs.can_message();
            msg.id = '201';
            msg.data = data.action;
+           console.log(msg);
            pub.publish(msg);
          });
       });
