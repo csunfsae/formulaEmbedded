@@ -1,5 +1,7 @@
 function rosSubscribe(rosNode, ioMessage) {
+    const rosnodejs = require('rosnodejs');
     const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
+
     let compass = rosNode.subscribe('compass', std_msgs.compass,
         (data) => {
             new ioMessage("compass", { x: data.x, y: data.y, z: data.z, device: "MPU-9255" });

@@ -1,13 +1,11 @@
 #! /usr/bin/env node
 'use strict';
-const server = require('http').createServer()
-const io = require('socket.io')(server)
+const io = require('socket.io')(3000);
 const ioClient = require('socket.io-client')("https://api.matadormotorsports.racing");
-const rosSubscribe = require('./rosSubscribe');
 
+const rosSubscribe = require('./rosSubscribe');
 const rosnodejs = require('rosnodejs');
 const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
-
 
 class ioMessage {
   constructor(type, json) {
