@@ -21,7 +21,7 @@ class ioMessage {
 };
 
 function app() {
-  rosSubscribe(ioMessage);
+  rosSubscribe(ioMessage, 'localServer');
   rosnodejs.initNode('ioPublish')
     .then((nh) => {
       io.on('connection', function (client) {

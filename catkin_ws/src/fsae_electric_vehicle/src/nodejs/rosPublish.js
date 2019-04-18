@@ -1,8 +1,8 @@
-function rosPublish(io) {
+function rosPublish(io, nodeName) {
     const rosnodejs = require('rosnodejs');
     const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
     
-    rosnodejs.initNode('ioPublish')
+    rosnodejs.initNode(nodeName)
         .then((nh) => {
             io.on('connection', function (client) {
                 client.on('accelerate', function (data) {

@@ -25,7 +25,7 @@ class ioMessage{
 };
 
 function relay() {
-  rosSubscribe(ioMessage);
+  rosSubscribe(ioMessage, 'relay');
 }
 
 if (require.main === module) {
