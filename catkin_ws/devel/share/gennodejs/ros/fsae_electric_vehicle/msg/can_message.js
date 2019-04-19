@@ -58,7 +58,7 @@ class can_message {
     // Serialize message field [id]
     bufferOffset = _serializer.string(obj.id, buffer, bufferOffset);
     // Serialize message field [speed]
-    bufferOffset = _serializer.uint16(obj.speed, buffer, bufferOffset);
+    bufferOffset = _serializer.int16(obj.speed, buffer, bufferOffset);
     // Serialize message field [time]
     bufferOffset = _serializer.string(obj.time, buffer, bufferOffset);
     return bufferOffset;
@@ -73,7 +73,7 @@ class can_message {
     // Deserialize message field [id]
     data.id = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [speed]
-    data.speed = _deserializer.uint16(buffer, bufferOffset);
+    data.speed = _deserializer.int16(buffer, bufferOffset);
     // Deserialize message field [time]
     data.time = _deserializer.string(buffer, bufferOffset);
     return data;
@@ -94,7 +94,7 @@ class can_message {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'b2d733c337efe8cd22725896c238de5d';
+    return '4355bdec9ee92cbc70a49698caf25582';
   }
 
   static messageDefinition() {
@@ -102,7 +102,7 @@ class can_message {
     return `
     string data 
     string id 
-    uint16 speed
+    int16 speed
     string time
     `;
   }

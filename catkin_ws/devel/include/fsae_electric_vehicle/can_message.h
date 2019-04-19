@@ -45,7 +45,7 @@ struct can_message_
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _id_type;
   _id_type id;
 
-   typedef uint16_t _speed_type;
+   typedef int16_t _speed_type;
   _speed_type speed;
 
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _time_type;
@@ -129,12 +129,12 @@ struct MD5Sum< ::fsae_electric_vehicle::can_message_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "b2d733c337efe8cd22725896c238de5d";
+    return "4355bdec9ee92cbc70a49698caf25582";
   }
 
   static const char* value(const ::fsae_electric_vehicle::can_message_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xb2d733c337efe8cdULL;
-  static const uint64_t static_value2 = 0x22725896c238de5dULL;
+  static const uint64_t static_value1 = 0x4355bdec9ee92cbcULL;
+  static const uint64_t static_value2 = 0x70a49698caf25582ULL;
 };
 
 template<class ContainerAllocator>
@@ -155,7 +155,7 @@ struct Definition< ::fsae_electric_vehicle::can_message_<ContainerAllocator> >
   {
     return "string data \n\
 string id \n\
-uint16 speed\n\
+int16 speed\n\
 string time\n\
 ";
   }
@@ -202,7 +202,7 @@ struct Printer< ::fsae_electric_vehicle::can_message_<ContainerAllocator> >
     s << indent << "id: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.id);
     s << indent << "speed: ";
-    Printer<uint16_t>::stream(s, indent + "  ", v.speed);
+    Printer<int16_t>::stream(s, indent + "  ", v.speed);
     s << indent << "time: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.time);
   }

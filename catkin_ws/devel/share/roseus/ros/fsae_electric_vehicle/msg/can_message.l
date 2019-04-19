@@ -49,7 +49,7 @@
     4 (length _data)
     ;; string _id
     4 (length _id)
-    ;; uint16 _speed
+    ;; int16 _speed
     2
     ;; string _time
     4 (length _time)
@@ -62,7 +62,7 @@
        (write-long (length _data) s) (princ _data s)
      ;; string _id
        (write-long (length _id) s) (princ _id s)
-     ;; uint16 _speed
+     ;; int16 _speed
        (write-word _speed s)
      ;; string _time
        (write-long (length _time) s) (princ _time s)
@@ -74,7 +74,7 @@
      (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _data (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
    ;; string _id
      (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _id (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
-   ;; uint16 _speed
+   ;; int16 _speed
      (setq _speed (sys::peek buf ptr- :short)) (incf ptr- 2)
    ;; string _time
      (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _time (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
@@ -82,17 +82,17 @@
    self)
   )
 
-(setf (get fsae_electric_vehicle::can_message :md5sum-) "b2d733c337efe8cd22725896c238de5d")
+(setf (get fsae_electric_vehicle::can_message :md5sum-) "4355bdec9ee92cbc70a49698caf25582")
 (setf (get fsae_electric_vehicle::can_message :datatype-) "fsae_electric_vehicle/can_message")
 (setf (get fsae_electric_vehicle::can_message :definition-)
       "string data 
 string id 
-uint16 speed
+int16 speed
 string time
 ")
 
 
 
-(provide :fsae_electric_vehicle/can_message "b2d733c337efe8cd22725896c238de5d")
+(provide :fsae_electric_vehicle/can_message "4355bdec9ee92cbc70a49698caf25582")
 
 

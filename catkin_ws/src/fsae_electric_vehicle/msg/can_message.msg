@@ -1,4 +1,4 @@
 string data 
 string id 
-uint16 speed
+int16 speed
 string time

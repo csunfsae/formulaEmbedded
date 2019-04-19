@@ -29,7 +29,7 @@ function app() {
     .then((rosNode) => {
       rosSubscribe(rosNode, ioMessage);
       io.on('connection', function (client) {
-         client.on('accelerate', function (data) {
+         client.on('can_bus', function (data) {
            console.log(data);
            const pub = rosNode.advertise('can_bus_commands', std_msgs.can_message);
            const msg = new std_msgs.can_message();

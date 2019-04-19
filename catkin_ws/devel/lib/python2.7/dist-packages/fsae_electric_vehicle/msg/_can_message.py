@@ -7,15 +7,15 @@ import struct
 
 
 class can_message(genpy.Message):
-  _md5sum = "b2d733c337efe8cd22725896c238de5d"
+  _md5sum = "4355bdec9ee92cbc70a49698caf25582"
   _type = "fsae_electric_vehicle/can_message"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """string data 
 string id 
-uint16 speed
+int16 speed
 string time"""
   __slots__ = ['data','id','speed','time']
-  _slot_types = ['string','string','uint16','string']
+  _slot_types = ['string','string','int16','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -72,7 +72,7 @@ string time"""
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_H().pack(self.speed))
+      buff.write(_get_struct_h().pack(self.speed))
       _x = self.time
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -109,7 +109,7 @@ string time"""
         self.id = str[start:end]
       start = end
       end += 2
-      (self.speed,) = _get_struct_H().unpack(str[start:end])
+      (self.speed,) = _get_struct_h().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -143,7 +143,7 @@ string time"""
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_H().pack(self.speed))
+      buff.write(_get_struct_h().pack(self.speed))
       _x = self.time
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -181,7 +181,7 @@ string time"""
         self.id = str[start:end]
       start = end
       end += 2
-      (self.speed,) = _get_struct_H().unpack(str[start:end])
+      (self.speed,) = _get_struct_h().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -199,9 +199,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_H = None
-def _get_struct_H():
-    global _struct_H
-    if _struct_H is None:
-        _struct_H = struct.Struct("<H")
-    return _struct_H
+_struct_h = None
+def _get_struct_h():
+    global _struct_h
+    if _struct_h is None:
+        _struct_h = struct.Struct("<h")
+    return _struct_h
