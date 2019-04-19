@@ -20,7 +20,7 @@ class ioMessage {
     this.emit();
   }
   emit() {
-    ioClient.emit(this.type, this.json);
+    io.emit(this.type, this.json);
   }
 };
 

@@ -1,6 +1,8 @@
 <launch>
   <node pkg="fsae_electric_vehicle" type="BAROMETRIC_PRESSURE_SENSOR" name="BAROMETRIC_PRESSURE_SENSOR"/>
   <node pkg="fsae_electric_vehicle" type="INERTIAL_MEASUREMENT_UNIT" name="INERTIAL_MEASUREMENT_UNIT"/>
+  <node pkg="fsae_electric_vehicle" type="CAN_BUS" name="CAN_BUS"/>
+  <node pkg="fsae_electric_vehicle" type="localServer.js" name="LOCAL_SERVER"/>
   <node pkg="fsae_electric_vehicle" type="relay.js" name="RELAY"/>
   <node pkg="fsae_electric_vehicle" type="GPS.py" name="GPS"/>
 </launch>
