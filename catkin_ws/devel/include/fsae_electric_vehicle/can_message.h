@@ -26,11 +26,13 @@ struct can_message_
   can_message_()
     : data()
     , id()
+    , speed(0)
     , time()  {
     }
   can_message_(const ContainerAllocator& _alloc)
     : data(_alloc)
     , id(_alloc)
+    , speed(0)
     , time(_alloc)  {
   (void)_alloc;
     }
@@ -42,6 +44,9 @@ struct can_message_
 
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _id_type;
   _id_type id;
+
+   typedef uint16_t _speed_type;
+  _speed_type speed;
 
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _time_type;
   _time_type time;
@@ -124,12 +129,12 @@ struct MD5Sum< ::fsae_electric_vehicle::can_message_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "4469ab7103c32359ec36b532f4efe53b";
+    return "b2d733c337efe8cd22725896c238de5d";
   }
 
   static const char* value(const ::fsae_electric_vehicle::can_message_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x4469ab7103c32359ULL;
-  static const uint64_t static_value2 = 0xec36b532f4efe53bULL;
+  static const uint64_t static_value1 = 0xb2d733c337efe8cdULL;
+  static const uint64_t static_value2 = 0x22725896c238de5dULL;
 };
 
 template<class ContainerAllocator>
@@ -150,6 +155,7 @@ struct Definition< ::fsae_electric_vehicle::can_message_<ContainerAllocator> >
   {
     return "string data \n\
 string id \n\
+uint16 speed\n\
 string time\n\
 ";
   }
@@ -171,6 +177,7 @@ namespace serialization
     {
       stream.next(m.data);
       stream.next(m.id);
+      stream.next(m.speed);
       stream.next(m.time);
     }
 
@@ -194,6 +201,8 @@ struct Printer< ::fsae_electric_vehicle::can_message_<ContainerAllocator> >
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.data);
     s << indent << "id: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.id);
+    s << indent << "speed: ";
+    Printer<uint16_t>::stream(s, indent + "  ", v.speed);
     s << indent << "time: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.time);
   }

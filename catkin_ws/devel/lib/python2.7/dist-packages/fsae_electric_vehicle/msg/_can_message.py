@@ -7,14 +7,15 @@ import struct
 
 
 class can_message(genpy.Message):
-  _md5sum = "4469ab7103c32359ec36b532f4efe53b"
+  _md5sum = "b2d733c337efe8cd22725896c238de5d"
   _type = "fsae_electric_vehicle/can_message"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """string data 
 string id 
+uint16 speed
 string time"""
-  __slots__ = ['data','id','time']
-  _slot_types = ['string','string','string']
+  __slots__ = ['data','id','speed','time']
+  _slot_types = ['string','string','uint16','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -24,7 +25,7 @@ string time"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       data,id,time
+       data,id,speed,time
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -37,11 +38,14 @@ string time"""
         self.data = ''
       if self.id is None:
         self.id = ''
+      if self.speed is None:
+        self.speed = 0
       if self.time is None:
         self.time = ''
     else:
       self.data = ''
       self.id = ''
+      self.speed = 0
       self.time = ''
 
   def _get_types(self):
@@ -68,6 +72,7 @@ string time"""
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(_get_struct_H().pack(self.speed))
       _x = self.time
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -103,6 +108,9 @@ string time"""
       else:
         self.id = str[start:end]
       start = end
+      end += 2
+      (self.speed,) = _get_struct_H().unpack(str[start:end])
+      start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       start = end
@@ -135,6 +143,7 @@ string time"""
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
+      buff.write(_get_struct_H().pack(self.speed))
       _x = self.time
       length = len(_x)
       if python3 or type(_x) == unicode:
@@ -171,6 +180,9 @@ string time"""
       else:
         self.id = str[start:end]
       start = end
+      end += 2
+      (self.speed,) = _get_struct_H().unpack(str[start:end])
+      start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       start = end
@@ -187,3 +199,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
+_struct_H = None
+def _get_struct_H():
+    global _struct_H
+    if _struct_H is None:
+        _struct_H = struct.Struct("<H")
+    return _struct_H

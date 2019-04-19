@@ -20,6 +20,7 @@ class can_message {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.data = null;
       this.id = null;
+      this.speed = null;
       this.time = null;
     }
     else {
@@ -34,6 +35,12 @@ class can_message {
       }
       else {
         this.id = '';
+      }
+      if (initObj.hasOwnProperty('speed')) {
+        this.speed = initObj.speed
+      }
+      else {
+        this.speed = 0;
       }
       if (initObj.hasOwnProperty('time')) {
         this.time = initObj.time
@@ -50,6 +57,8 @@ class can_message {
     bufferOffset = _serializer.string(obj.data, buffer, bufferOffset);
     // Serialize message field [id]
     bufferOffset = _serializer.string(obj.id, buffer, bufferOffset);
+    // Serialize message field [speed]
+    bufferOffset = _serializer.uint16(obj.speed, buffer, bufferOffset);
     // Serialize message field [time]
     bufferOffset = _serializer.string(obj.time, buffer, bufferOffset);
     return bufferOffset;
@@ -63,6 +72,8 @@ class can_message {
     data.data = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [id]
     data.id = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [speed]
+    data.speed = _deserializer.uint16(buffer, bufferOffset);
     // Deserialize message field [time]
     data.time = _deserializer.string(buffer, bufferOffset);
     return data;
@@ -73,7 +84,7 @@ class can_message {
     length += object.data.length;
     length += object.id.length;
     length += object.time.length;
-    return length + 12;
+    return length + 14;
   }
 
   static datatype() {
@@ -83,7 +94,7 @@ class can_message {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '4469ab7103c32359ec36b532f4efe53b';
+    return 'b2d733c337efe8cd22725896c238de5d';
   }
 
   static messageDefinition() {
@@ -91,6 +102,7 @@ class can_message {
     return `
     string data 
     string id 
+    uint16 speed
     string time
     `;
   }
@@ -113,6 +125,13 @@ class can_message {
     }
     else {
       resolved.id = ''
+    }
+
+    if (msg.speed !== undefined) {
+      resolved.speed = msg.speed;
+    }
+    else {
+      resolved.speed = 0
     }
 
     if (msg.time !== undefined) {

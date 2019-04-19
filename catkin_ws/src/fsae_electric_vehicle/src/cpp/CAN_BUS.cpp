@@ -54,8 +54,14 @@ void send_port(const fsae_electric_vehicle::can_message& msg)
     struct can_frame *frame;
     int retval;
     unsigned char data[8];
-    uint16_t target=3218;
-    std::cout << msg.data << std::endl;
+    uint16_t target=4100;
+    float percentage = (float)msg.speed;
+    if(percentage == 0){
+      target = 4100;
+    }else{
+      target = target * (percentage/100);
+    }
+    std::cout << target << std::endl;
 
     if(msg.data == "start"){
       frame->can_id = 0x201;

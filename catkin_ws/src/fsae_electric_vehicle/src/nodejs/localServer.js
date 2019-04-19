@@ -35,6 +35,7 @@ function app() {
            const msg = new std_msgs.can_message();
            msg.id = '201';
            msg.data = data.action;
+           msg.speed = data.value;
            console.log(msg);
            pub.publish(msg);
          });

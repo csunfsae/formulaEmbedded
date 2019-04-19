@@ -3,6 +3,8 @@
           DATA
           ID-VAL
           ID
+          SPEED-VAL
+          SPEED
           TIME-VAL
           TIME
 ))

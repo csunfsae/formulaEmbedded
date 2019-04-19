@@ -17,6 +17,11 @@
     :initarg :id
     :type cl:string
     :initform "")
+   (speed
+    :reader speed
+    :initarg :speed
+    :type cl:fixnum
+    :initform 0)
    (time
     :reader time
     :initarg :time
@@ -42,6 +47,11 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:id-val is deprecated.  Use fsae_electric_vehicle-msg:id instead.")
   (id m))
 
+(cl:ensure-generic-function 'speed-val :lambda-list '(m))
+(cl:defmethod speed-val ((m <can_message>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:speed-val is deprecated.  Use fsae_electric_vehicle-msg:speed instead.")
+  (speed m))
+
 (cl:ensure-generic-function 'time-val :lambda-list '(m))
 (cl:defmethod time-val ((m <can_message>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader fsae_electric_vehicle-msg:time-val is deprecated.  Use fsae_electric_vehicle-msg:time instead.")
@@ -60,6 +70,8 @@
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
   (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'id))
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'speed)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'speed)) ostream)
   (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'time))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
@@ -85,6 +97,8 @@
       (cl:setf (cl:slot-value msg 'id) (cl:make-string __ros_str_len))
       (cl:dotimes (__ros_str_idx __ros_str_len msg)
         (cl:setf (cl:char (cl:slot-value msg 'id) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'speed)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'speed)) (cl:read-byte istream))
     (cl:let ((__ros_str_len 0))
       (cl:setf (cl:ldb (cl:byte 8 0) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
@@ -103,20 +117,21 @@
   "fsae_electric_vehicle/can_message")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<can_message>)))
   "Returns md5sum for a message object of type '<can_message>"
-  "4469ab7103c32359ec36b532f4efe53b")
+  "b2d733c337efe8cd22725896c238de5d")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'can_message)))
   "Returns md5sum for a message object of type 'can_message"
-  "4469ab7103c32359ec36b532f4efe53b")
+  "b2d733c337efe8cd22725896c238de5d")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<can_message>)))
   "Returns full string definition for message of type '<can_message>"
-  (cl:format cl:nil "string data ~%string id ~%string time~%~%"))
+  (cl:format cl:nil "string data ~%string id ~%uint16 speed~%string time~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'can_message)))
   "Returns full string definition for message of type 'can_message"
-  (cl:format cl:nil "string data ~%string id ~%string time~%~%"))
+  (cl:format cl:nil "string data ~%string id ~%uint16 speed~%string time~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <can_message>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'data))
      4 (cl:length (cl:slot-value msg 'id))
+     2
      4 (cl:length (cl:slot-value msg 'time))
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <can_message>))
@@ -124,5 +139,6 @@
   (cl:list 'can_message
     (cl:cons ':data (data msg))
     (cl:cons ':id (id msg))
+    (cl:cons ':speed (speed msg))
     (cl:cons ':time (time msg))
 ))
