@@ -34,6 +34,12 @@ int main(int argc, char **argv)
   //.............ADDING SUPPORT FOR 8 ANALOG SENSORS MAINLY FOR TESTING ON ALL PORTS............
   //............................................................................................
   adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
+  adc_1->add_sensor(0,360);
   //Basic ROS setup for the node
   ros::init(argc, argv, "ANALOG_DIGITAL_CONVERTER_0x49");
   ros::NodeHandle n;
@@ -54,7 +60,13 @@ int main(int argc, char **argv)
     //............................................................................................
     //.............Just printing the values only channels 0 and 1 are sent to the web currently...
     //............................................................................................
-    std::cout << "adc 0: " << adc_1->get_sensor_data(0) << std::endl << std::endl << std::endl;
+    std::cout << "adc 0: " << adc_1->get_sensor_data(0) << std::endl;
+    std::cout << "adc 1: " << adc_1->get_sensor_data(1) << std::endl;
+    std::cout << "adc 2: " << adc_1->get_sensor_data(2) << std::endl;
+    std::cout << "adc 3: " << adc_1->get_sensor_data(3) << std::endl;
+    std::cout << "adc 4: " << adc_1->get_sensor_data(4) << std::endl;
+    std::cout << "adc 5: " << adc_1->get_sensor_data(5) << std::endl;
+    std::cout << "adc 6: " << adc_1->get_sensor_data(6) << std::endl;
     accelerator_msg.value = adc_1->get_sensor_data(0);
     //  steering_wheel_msg.value = adc_1->get_sensor_data(1);
     //  steering_wheel_topic.publish(steering_wheel_msg);

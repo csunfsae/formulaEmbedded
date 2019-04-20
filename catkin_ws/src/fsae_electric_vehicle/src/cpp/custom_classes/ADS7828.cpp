@@ -36,7 +36,7 @@
       exit(1);
     }
     char buffer[1] = {0};
-    unsigned char temp_buf[2];
+    unsigned char temp_buf[2] = {0x00, 0x00};
     //the kount here is a quick and dirty fix
     while((this->sensor_list[kount] != NULL) || (kount < 1)){
       buffer[0] = {(COMMANDS_BUFFER[kount])};
@@ -46,7 +46,7 @@
         printf("Failed to read from the i2c bus.\n");
         printf("\n\n");
       } else { 
-        this->sensor_list[kount]->set_data((((temp_buf[0] & 0x0F)*256) | temp_buf[1]));
+        this->sensor_list[kount]->set_data((((temp_buf[0] & 0x0F)*256) + temp_buf[1]));
       }
       kount++;
     }
@@ -54,7 +54,7 @@
 
   void ADS7828::calculate(){
     int kount = 0;
-    while((this->sensor_list[kount] != NULL) || (kount < 2)){
+    while((this->sensor_list[kount] != NULL) || (kount < 3)){
       this->sensor_list[kount]->calculate_units();
       kount++;
     }
