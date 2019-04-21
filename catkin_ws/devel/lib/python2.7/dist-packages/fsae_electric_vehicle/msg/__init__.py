@@ -12,4 +12,5 @@ from ._suspension import *
 from ._suspension_offset import *
 from ._temp_and_pressure import *
 from ._tire_pressure import *
+from ._vehicle_speed import *
 from ._wheel_velocity import *

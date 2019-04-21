@@ -32,6 +32,8 @@
     (:file "_package_temp_and_pressure" :depends-on ("_package"))
     (:file "tire_pressure" :depends-on ("_package_tire_pressure"))
     (:file "_package_tire_pressure" :depends-on ("_package"))
+    (:file "vehicle_speed" :depends-on ("_package_vehicle_speed"))
+    (:file "_package_vehicle_speed" :depends-on ("_package"))
     (:file "wheel_velocity" :depends-on ("_package_wheel_velocity"))
     (:file "_package_wheel_velocity" :depends-on ("_package"))
   ))

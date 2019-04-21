@@ -82,6 +82,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg"
     "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/analog_sensor.msg"
     "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/can_message.msg"
+    "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg"
     )
 endif()
 

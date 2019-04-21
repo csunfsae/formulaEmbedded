@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/rule:
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/rule
+
+# Convenience name for target.
+SPEEDOMETER: fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/rule
+
+.PHONY : SPEEDOMETER
+
+# fast build rule for target.
+SPEEDOMETER/fast:
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/build.make fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/build
+.PHONY : SPEEDOMETER/fast
+
+# Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule:
 	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
 .PHONY : fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir/rule
@@ -194,6 +209,21 @@ INERTIAL_MEASUREMENT_UNIT: fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT
 INERTIAL_MEASUREMENT_UNIT/fast:
 	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build.make fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build
 .PHONY : INERTIAL_MEASUREMENT_UNIT/fast
+
+# Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule:
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule
+
+# Convenience name for target.
+fsae_electric_vehicle_genpy: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule
+
+.PHONY : fsae_electric_vehicle_genpy
+
+# fast build rule for target.
+fsae_electric_vehicle_genpy/fast:
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build
+.PHONY : fsae_electric_vehicle_genpy/fast
 
 # Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
@@ -811,6 +841,21 @@ _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast:
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast
 
 # Convenience name for target.
+fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed.dir/rule:
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed.dir/rule
+.PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed.dir/rule
+
+# Convenience name for target.
+_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed: fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed.dir/rule
+
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed/fast:
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed/fast
+
+# Convenience name for target.
 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule:
 	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule
 .PHONY : fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir/rule
@@ -899,21 +944,6 @@ fsae_electric_vehicle_generate_messages_lisp: fsae_electric_vehicle/CMakeFiles/f
 fsae_electric_vehicle_generate_messages_lisp/fast:
 	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build
 .PHONY : fsae_electric_vehicle_generate_messages_lisp/fast
-
-# Convenience name for target.
-fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule:
-	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule
-.PHONY : fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule
-
-# Convenience name for target.
-fsae_electric_vehicle_genpy: fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/rule
-
-.PHONY : fsae_electric_vehicle_genpy
-
-# fast build rule for target.
-fsae_electric_vehicle_genpy/fast:
-	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build
-.PHONY : fsae_electric_vehicle_genpy/fast
 
 src/RTIMULib2/RTIMULib/IMUDrivers/RTHumidity.o: src/RTIMULib2/RTIMULib/IMUDrivers/RTHumidity.cpp.o
 
@@ -1752,6 +1782,33 @@ src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.s:
 	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build.make fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.s
 .PHONY : src/cpp/INERTIAL_MEASUREMENT_UNIT.cpp.s
 
+src/cpp/SPEEDOMETER.o: src/cpp/SPEEDOMETER.cpp.o
+
+.PHONY : src/cpp/SPEEDOMETER.o
+
+# target to build an object file
+src/cpp/SPEEDOMETER.cpp.o:
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/build.make fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/src/cpp/SPEEDOMETER.cpp.o
+.PHONY : src/cpp/SPEEDOMETER.cpp.o
+
+src/cpp/SPEEDOMETER.i: src/cpp/SPEEDOMETER.cpp.i
+
+.PHONY : src/cpp/SPEEDOMETER.i
+
+# target to preprocess a source file
+src/cpp/SPEEDOMETER.cpp.i:
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/build.make fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/src/cpp/SPEEDOMETER.cpp.i
+.PHONY : src/cpp/SPEEDOMETER.cpp.i
+
+src/cpp/SPEEDOMETER.s: src/cpp/SPEEDOMETER.cpp.s
+
+.PHONY : src/cpp/SPEEDOMETER.s
+
+# target to generate assembly for a file
+src/cpp/SPEEDOMETER.cpp.s:
+	cd /home/nvidia/Github/formulaEmbedded/catkin_ws/build && $(MAKE) -f fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/build.make fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/src/cpp/SPEEDOMETER.cpp.s
+.PHONY : src/cpp/SPEEDOMETER.cpp.s
+
 src/cpp/custom_classes/ADS7828.o: src/cpp/custom_classes/ADS7828.cpp.o
 
 .PHONY : src/cpp/custom_classes/ADS7828.o
@@ -1816,8 +1873,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... install/local"
+	@echo "... SPEEDOMETER"
 	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... INERTIAL_MEASUREMENT_UNIT"
+	@echo "... fsae_electric_vehicle_genpy"
 	@echo "... install"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... CAN_BUS"
@@ -1861,6 +1920,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gps"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_compass"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor"
@@ -1868,7 +1928,6 @@ help:
 	@echo "... fsae_electric_vehicle_gencpp"
 	@echo "... install/strip"
 	@echo "... fsae_electric_vehicle_generate_messages_lisp"
-	@echo "... fsae_electric_vehicle_genpy"
 	@echo "... src/RTIMULib2/RTIMULib/IMUDrivers/RTHumidity.o"
 	@echo "... src/RTIMULib2/RTIMULib/IMUDrivers/RTHumidity.i"
 	@echo "... src/RTIMULib2/RTIMULib/IMUDrivers/RTHumidity.s"
@@ -1962,6 +2021,9 @@ help:
 	@echo "... src/cpp/INERTIAL_MEASUREMENT_UNIT.o"
 	@echo "... src/cpp/INERTIAL_MEASUREMENT_UNIT.i"
 	@echo "... src/cpp/INERTIAL_MEASUREMENT_UNIT.s"
+	@echo "... src/cpp/SPEEDOMETER.o"
+	@echo "... src/cpp/SPEEDOMETER.i"
+	@echo "... src/cpp/SPEEDOMETER.s"
 	@echo "... src/cpp/custom_classes/ADS7828.o"
 	@echo "... src/cpp/custom_classes/ADS7828.i"
 	@echo "... src/cpp/custom_classes/ADS7828.s"

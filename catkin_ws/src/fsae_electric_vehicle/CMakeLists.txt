@@ -56,7 +56,7 @@ project(fsae_electric_vehicle)
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg message_generation roslaunch)
 roslaunch_add_file_check(src/launch)
 ## Declare ROS messages and services
-add_message_files(FILES wheel_velocity.msg steering_wheel.msg suspension_offset.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg suspension.msg pedals.msg gps.msg analog_sensor.msg can_message.msg)
+add_message_files(FILES wheel_velocity.msg steering_wheel.msg suspension_offset.msg temp_and_pressure.msg accelerometer.msg compass.msg gyroscope.msg suspension.msg pedals.msg gps.msg analog_sensor.msg can_message.msg vehicle_speed.msg)
 #add_service_files(FILES AddTwoInts.srv)
 
 ## Generate added messages and services
@@ -83,6 +83,10 @@ add_dependencies(ANALOG_DIGITAL_CONVERTER_0x49 fsae_electric_vehicle_generate_me
 add_executable(CAN_BUS src/cpp/CAN_BUS.cpp)
 target_link_libraries(CAN_BUS ${catkin_LIBRARIES})
 add_dependencies(CAN_BUS fsae_electric_vehicle_generate_messages_cpp)
+
+add_executable(SPEEDOMETER src/cpp/SPEEDOMETER.cpp)
+target_link_libraries(SPEEDOMETER ${catkin_LIBRARIES})
+add_dependencies(SPEEDOMETER fsae_electric_vehicle_generate_messages_cpp)
 
 ##ALL ROS NODEJS CONFIGURATION
 install(PROGRAMS

@@ -229,16 +229,17 @@ int close_port()
 int main(int argc, char **argv)
 {
   fsae_electric_vehicle::can_message can_message;
-
   ros::init(argc, argv, "can_bus");
   ros::NodeHandle n;
   ros::Publisher CAN_BUS = n.advertise<fsae_electric_vehicle::can_message>("can_bus", 1000);
   ros::Subscriber CAN_BUS_COMMANDS = n.subscribe("can_bus_commands", 1000, send_port);
+  ros::Rate loop_rate(1000);
   open_port("can0");
-  ros::spin();
   while(ros::ok()){
     can_message = read_port(can_message);
     CAN_BUS.publish(can_message);
+    ros::spinOnce();
+    loop_rate.sleep();
   }
 
   return 0;

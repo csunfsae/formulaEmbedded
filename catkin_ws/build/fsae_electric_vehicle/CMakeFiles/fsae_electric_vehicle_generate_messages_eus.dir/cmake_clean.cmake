@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fsae_electric_vehicle_generate_messages_eus"
   "/home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/gps.l"
+  "/home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/vehicle_speed.l"
   "/home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/temp_and_pressure.l"
   "/home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/accelerometer.l"
   "/home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/gyroscope.l"

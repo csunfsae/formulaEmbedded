@@ -283,6 +283,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named SPEEDOMETER
+
+# Build rule for target.
+SPEEDOMETER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SPEEDOMETER
+.PHONY : SPEEDOMETER
+
+# fast build rule for target.
+SPEEDOMETER/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/build.make fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir/build
+.PHONY : SPEEDOMETER/fast
+
+#=============================================================================
 # Target rules for targets named BAROMETRIC_PRESSURE_SENSOR
 
 # Build rule for target.
@@ -307,6 +320,19 @@ INERTIAL_MEASUREMENT_UNIT: cmake_check_build_system
 INERTIAL_MEASUREMENT_UNIT/fast:
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build.make fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir/build
 .PHONY : INERTIAL_MEASUREMENT_UNIT/fast
+
+#=============================================================================
+# Target rules for targets named fsae_electric_vehicle_genpy
+
+# Build rule for target.
+fsae_electric_vehicle_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle_genpy
+.PHONY : fsae_electric_vehicle_genpy
+
+# fast build rule for target.
+fsae_electric_vehicle_genpy/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build
+.PHONY : fsae_electric_vehicle_genpy/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
@@ -842,6 +868,19 @@ _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast:
 .PHONY : _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel/fast
 
 #=============================================================================
+# Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed
+
+# Build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed
+
+# fast build rule for target.
+_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed/fast:
+	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed.dir/build.make fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed.dir/build
+.PHONY : _fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed/fast
+
+#=============================================================================
 # Target rules for targets named _fsae_electric_vehicle_generate_messages_check_deps_gyroscope
 
 # Build rule for target.
@@ -919,19 +958,6 @@ fsae_electric_vehicle_generate_messages_lisp/fast:
 	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir/build
 .PHONY : fsae_electric_vehicle_generate_messages_lisp/fast
 
-#=============================================================================
-# Target rules for targets named fsae_electric_vehicle_genpy
-
-# Build rule for target.
-fsae_electric_vehicle_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fsae_electric_vehicle_genpy
-.PHONY : fsae_electric_vehicle_genpy
-
-# fast build rule for target.
-fsae_electric_vehicle_genpy/fast:
-	$(MAKE) -f fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build.make fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir/build
-.PHONY : fsae_electric_vehicle_genpy/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -954,8 +980,10 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... SPEEDOMETER"
 	@echo "... BAROMETRIC_PRESSURE_SENSOR"
 	@echo "... INERTIAL_MEASUREMENT_UNIT"
+	@echo "... fsae_electric_vehicle_genpy"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... CAN_BUS"
 	@echo "... _run_tests_fsae_electric_vehicle_roslaunch-check"
@@ -997,13 +1025,13 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gps"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_steering_wheel"
+	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_gyroscope"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_compass"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_analog_sensor"
 	@echo "... _fsae_electric_vehicle_generate_messages_check_deps_can_message"
 	@echo "... fsae_electric_vehicle_gencpp"
 	@echo "... fsae_electric_vehicle_generate_messages_lisp"
-	@echo "... fsae_electric_vehicle_genpy"
 .PHONY : help
 
 

@@ -28,15 +28,17 @@ function rosSubscribe(rosNode, ioMessage) {
     });
 
     let steering_wheel = rosNode.subscribe('steering_wheel', std_msgs.analog_sensor, (data) => {
-        console.log(data);
     });
 
     let accelerator = rosNode.subscribe('accelerator', std_msgs.analog_sensor, (data) => {
-        console.log(data);
     });
     let can_data = rosNode.subscribe('can_bus', std_msgs.can_message, (data) => {
         new ioMessage("canbus", {id: data.id, data:data.data, device:"can_bus"});
     });
+    let vehicle_speed = rosNode.subscribe('vehicle_speed', std_msgs.vehicle_speed, (data) => {
+        console.log(data);
+    });
 }
+
 
 module.exports = rosSubscribe;

@@ -32,8 +32,10 @@
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/edit_cache.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/test.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/install/local.dir
+/home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/SPEEDOMETER.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/BAROMETRIC_PRESSURE_SENSOR.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/INERTIAL_MEASUREMENT_UNIT.dir
+/home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/install.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/std_msgs_generate_messages_lisp.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/CAN_BUS.dir
@@ -77,6 +79,7 @@
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gps.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_steering_wheel.dir
+/home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_gyroscope.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_compass.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_analog_sensor.dir
@@ -84,4 +87,3 @@
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_gencpp.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/install/strip.dir
 /home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_generate_messages_lisp.dir
-/home/nvidia/Github/formulaEmbedded/catkin_ws/build/fsae_electric_vehicle/CMakeFiles/fsae_electric_vehicle_genpy.dir

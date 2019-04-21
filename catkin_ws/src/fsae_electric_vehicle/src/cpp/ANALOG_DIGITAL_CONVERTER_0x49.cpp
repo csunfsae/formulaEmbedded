@@ -68,14 +68,12 @@ int main(int argc, char **argv)
     std::cout << "adc 5: " << adc_1->get_sensor_data(5) << std::endl;
     std::cout << "adc 6: " << adc_1->get_sensor_data(6) << std::endl;
     accelerator_msg.value = adc_1->get_sensor_data(0);
-    //  steering_wheel_msg.value = adc_1->get_sensor_data(1);
-    //  steering_wheel_topic.publish(steering_wheel_msg);
+    steering_wheel_msg.value = adc_1->get_sensor_data(1);
+    steering_wheel_topic.publish(steering_wheel_msg);
     accelerator_topic.publish(accelerator_msg);
     ros::spinOnce();
     loop_rate.sleep();
   }
-
-
   return 0;
 }
 

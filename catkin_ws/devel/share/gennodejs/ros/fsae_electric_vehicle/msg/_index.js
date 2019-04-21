@@ -16,6 +16,7 @@ let gps = require('./gps.js');
 let accelerometer = require('./accelerometer.js');
 let suspension_offset = require('./suspension_offset.js');
 let can_message = require('./can_message.js');
+let vehicle_speed = require('./vehicle_speed.js');
 
 module.exports = {
   compass: compass,
@@ -33,4 +34,5 @@ module.exports = {
   accelerometer: accelerometer,
   suspension_offset: suspension_offset,
   can_message: can_message,
+  vehicle_speed: vehicle_speed,
 };

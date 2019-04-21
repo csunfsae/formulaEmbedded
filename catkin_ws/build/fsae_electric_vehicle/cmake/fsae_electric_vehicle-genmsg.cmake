@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "fsae_electric_vehicle: 12 messages, 0 services")
+message(STATUS "fsae_electric_vehicle: 13 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ifsae_electric_vehicle:/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -20,6 +20,11 @@ add_custom_target(fsae_electric_vehicle_generate_messages ALL)
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg" NAME_WE)
 add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg" ""
+)
+
+get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg" NAME_WE)
+add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "fsae_electric_vehicle" "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg" ""
 )
 
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/temp_and_pressure.msg" NAME_WE)
@@ -85,6 +90,12 @@ add_custom_target(_fsae_electric_vehicle_generate_messages_check_deps_${_filenam
 ### Generating Messages
 _generate_msg_cpp(fsae_electric_vehicle
   "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_cpp(fsae_electric_vehicle
+  "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/fsae_electric_vehicle
@@ -172,6 +183,8 @@ add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_g
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/temp_and_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_cpp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
@@ -206,6 +219,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fsae_electric_vehicle_generate_mess
 ### Generating Messages
 _generate_msg_eus(fsae_electric_vehicle
   "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_eus(fsae_electric_vehicle
+  "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/fsae_electric_vehicle
@@ -293,6 +312,8 @@ add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_g
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/temp_and_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_eus _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
@@ -327,6 +348,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fsae_electric_vehicle_generate_mess
 ### Generating Messages
 _generate_msg_lisp(fsae_electric_vehicle
   "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_lisp(fsae_electric_vehicle
+  "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/fsae_electric_vehicle
@@ -414,6 +441,8 @@ add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_g
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/temp_and_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_lisp _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
@@ -448,6 +477,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fsae_electric_vehicle_generate_mess
 ### Generating Messages
 _generate_msg_nodejs(fsae_electric_vehicle
   "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_nodejs(fsae_electric_vehicle
+  "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/fsae_electric_vehicle
@@ -535,6 +570,8 @@ add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_g
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/temp_and_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_nodejs _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/accelerometer.msg" NAME_WE)
@@ -569,6 +606,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS fsae_electric_vehicle_generate_mess
 ### Generating Messages
 _generate_msg_py(fsae_electric_vehicle
   "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
+)
+_generate_msg_py(fsae_electric_vehicle
+  "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/fsae_electric_vehicle
@@ -655,6 +698,8 @@ add_dependencies(fsae_electric_vehicle_generate_messages fsae_electric_vehicle_g
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/gps.msg" NAME_WE)
+add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/vehicle_speed.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/nvidia/Github/formulaEmbedded/catkin_ws/src/fsae_electric_vehicle/msg/temp_and_pressure.msg" NAME_WE)
 add_dependencies(fsae_electric_vehicle_generate_messages_py _fsae_electric_vehicle_generate_messages_check_deps_${_filename})

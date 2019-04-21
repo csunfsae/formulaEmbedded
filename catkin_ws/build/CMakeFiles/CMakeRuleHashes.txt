@@ -10,6 +10,7 @@ c03c8b4e0eecd5aea250dcdaed6cd53b /home/nvidia/Github/formulaEmbedded/catkin_ws/d
 4f35f74902f3d9d2def4216f9c5dba65 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/suspension.h
 20b17db56650a126685cc4d866717624 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/suspension_offset.h
 d765a4c8307714fca0fc613f17364acf /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/temp_and_pressure.h
+1ca9185326759fe9d5584cc8657530a9 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/vehicle_speed.h
 d7127949cb7659ade44db17987f912c3 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/include/fsae_electric_vehicle/wheel_velocity.h
 e903d21928c7ece5f6798a41f627c33b /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/__init__.py
 17db790276b01b3dd64adb2f3cfb74e5 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_accelerometer.py
@@ -23,6 +24,7 @@ b4bc9915423e27deeda0e1a4ba2b91ab /home/nvidia/Github/formulaEmbedded/catkin_ws/d
 89aa9f60f5021f62438d8f5a3cc968b2 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_suspension.py
 d52d36708d0235e4a8925f6b5f71acd4 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_suspension_offset.py
 4c7199b5b8c00133c5617ede5cd3505a /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_temp_and_pressure.py
+c851853411b9b906dadbf16395112912 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_vehicle_speed.py
 66806f1b6a1733eccea4a6660d714f10 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/lib/python2.7/dist-packages/fsae_electric_vehicle/msg/_wheel_velocity.py
 c853b844e932d6195acf715e4c20d8e3 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/accelerometer.lisp
 0ed31083946f976ccec712cf26c2c953 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/analog_sensor.lisp
@@ -35,6 +37,7 @@ adb1cd73cf6361f78b88ffa4699ac206 /home/nvidia/Github/formulaEmbedded/catkin_ws/d
 2701ce0629d18737e09ef463ad213e8c /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/suspension.lisp
 9469eccacab7cf645afca6cab47a57c3 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/suspension_offset.lisp
 6532d2b332e2b6456bd89097a11562a0 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/temp_and_pressure.lisp
+eb61a3259721d493e304527d63049119 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/vehicle_speed.lisp
 b73584a1ba2fce2213c94580d290cfbf /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/common-lisp/ros/fsae_electric_vehicle/msg/wheel_velocity.lisp
 0422e219540fd5b042e25e87d6992486 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/accelerometer.js
 2709b06d9ed4227c873f4047032507cf /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/analog_sensor.js
@@ -47,6 +50,7 @@ f90d6de6bd8b0ae1dc9c3a362324aec0 /home/nvidia/Github/formulaEmbedded/catkin_ws/d
 7f86cb8acd2883969fc919e477cca068 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/suspension.js
 e274227956b292a02ec184542b3ab6ce /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/suspension_offset.js
 4cf5ac2e470e77a96b34e127d2a39165 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/temp_and_pressure.js
+25d7d7ce83e32fbf2e071e4255f9c4da /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/vehicle_speed.js
 6102ce446fca8c68133d720826db4aae /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/gennodejs/ros/fsae_electric_vehicle/msg/wheel_velocity.js
 c0971de3cc182065d49e920b284e92c1 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/manifest.l
 debfe25e1103f9e15dcc53226915d831 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/accelerometer.l
@@ -60,6 +64,7 @@ de3e6a4efea547dd4b2c2e4d29ee9267 /home/nvidia/Github/formulaEmbedded/catkin_ws/d
 f2e478b5a416b7d58c49d3702491f96f /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/suspension.l
 b2ae6a76e459d9d908fcda54a538d9a3 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/suspension_offset.l
 12af0b5ed8beba79d3c57afc01efdc0b /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/temp_and_pressure.l
+a909e555e06c6ee14ec2e31a0047cbbe /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/vehicle_speed.l
 9a45ebbe765392d25630698cfaa28477 /home/nvidia/Github/formulaEmbedded/catkin_ws/devel/share/roseus/ros/fsae_electric_vehicle/msg/wheel_velocity.l
 748d2485fb87354abfdf9421bc6f2403 CMakeFiles/clean_test_results
 a19deded2fc7259ec250fc5935638e05 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_accelerometer
@@ -73,6 +78,7 @@ c3486483c45947e65e517e94f5337723 fsae_electric_vehicle/CMakeFiles/_fsae_electric
 d3ff12830898abe39467be9194571001 fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension
 ff4a562f019248fc5c7b8f1dd549a40d fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_suspension_offset
 096df428bb9104934ab71961c0605fbd fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_temp_and_pressure
+74e82fb88fec9eac228d1ab49499497c fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_vehicle_speed
 fb624cc91ac12122ee8daca23b7bd11e fsae_electric_vehicle/CMakeFiles/_fsae_electric_vehicle_generate_messages_check_deps_wheel_velocity
 020296682fab84b4c91661b1ac556f44 fsae_electric_vehicle/CMakeFiles/_run_tests_fsae_electric_vehicle_roslaunch-check_src_launch
 5a570097031e763c72a17f19aa8ccb6c fsae_electric_vehicle/CMakeFiles/clean_test_results_fsae_electric_vehicle
