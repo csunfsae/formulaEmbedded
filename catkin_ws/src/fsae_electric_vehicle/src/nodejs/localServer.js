@@ -18,6 +18,7 @@ express.get('/', (req, res) => {
 
 class ioMessage {
   constructor(type, json) {
+    json.time = new Date();
     this.json = json;
     this.type = type;
     this.emit();
@@ -37,7 +38,7 @@ function canMessage(action, value=null){
 function app() {
   rosnodejs.initNode('localServer')
   .then((rosNode) => {
-    rosSubscribe(rosNode, ioMessage);
+    rosSubscribe(rosNode, std_msgs, ioMessage);
     io.on('connection', function (client) {
       client.on("disconnect", function(){
         canMessage('toggle_analog');

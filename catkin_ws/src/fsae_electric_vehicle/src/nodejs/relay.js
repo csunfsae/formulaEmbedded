@@ -2,6 +2,9 @@
 const rosnodejs = require('rosnodejs');
 const io = require('socket.io-client')("https://api.matadormotorsports.racing");
 const models = require("./models");
+
+const rosnodejs = require('rosnodejs');
+const std_msgs = rosnodejs.require('fsae_electric_vehicle').msg;
 const rosSubscribe = require('./rosSubscribe');
 
 class ioMessage{
@@ -26,7 +29,7 @@ class ioMessage{
 function relay() {
     rosnodejs.initNode('relay')
         .then((rosNode) => {
-            rosSubscribe(rosNode, ioMessage);
+            rosSubscribe(rosNode, std_msgs, ioMessage);
         });
 }
 
