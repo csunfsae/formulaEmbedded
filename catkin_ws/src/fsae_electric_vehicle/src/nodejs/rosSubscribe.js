@@ -36,7 +36,10 @@ function rosSubscribe(rosNode, ioMessage) {
         new ioMessage("canbus", {id: data.id, data:data.data, device:"can_bus"});
     });
     let vehicle_speed = rosNode.subscribe('vehicle_speed', std_msgs.vehicle_speed, (data) => {
-        console.log(data);
+    });
+    let suspension_offset = rosNode.subscribe('suspension_offset', std_msgs.suspension_offset, (data) => {
+    });
+    let brake = rosNode.subscribe('brake', std_msgs.analog_sensor , (data) => {
     });
 }
 

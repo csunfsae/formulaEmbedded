@@ -25,23 +25,17 @@ struct suspension_offset_
 
   suspension_offset_()
     : front_left_value(0.0)
-    , front_left_time()
     , front_right_value(0.0)
-    , front_right_time()
     , back_left_value(0.0)
-    , back_left_time()
     , back_right_value(0.0)
-    , back_right_time()  {
+    , time_collected()  {
     }
   suspension_offset_(const ContainerAllocator& _alloc)
     : front_left_value(0.0)
-    , front_left_time(_alloc)
     , front_right_value(0.0)
-    , front_right_time(_alloc)
     , back_left_value(0.0)
-    , back_left_time(_alloc)
     , back_right_value(0.0)
-    , back_right_time(_alloc)  {
+    , time_collected(_alloc)  {
   (void)_alloc;
     }
 
@@ -50,26 +44,17 @@ struct suspension_offset_
    typedef float _front_left_value_type;
   _front_left_value_type front_left_value;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _front_left_time_type;
-  _front_left_time_type front_left_time;
-
    typedef float _front_right_value_type;
   _front_right_value_type front_right_value;
-
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _front_right_time_type;
-  _front_right_time_type front_right_time;
 
    typedef float _back_left_value_type;
   _back_left_value_type back_left_value;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _back_left_time_type;
-  _back_left_time_type back_left_time;
-
    typedef float _back_right_value_type;
   _back_right_value_type back_right_value;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _back_right_time_type;
-  _back_right_time_type back_right_time;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _time_collected_type;
+  _time_collected_type time_collected;
 
 
 
@@ -149,12 +134,12 @@ struct MD5Sum< ::fsae_electric_vehicle::suspension_offset_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "8a6ea563b0ec5361d7adcaeba167aaab";
+    return "efe3c26acf397027388f0a2994b3fca9";
   }
 
   static const char* value(const ::fsae_electric_vehicle::suspension_offset_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x8a6ea563b0ec5361ULL;
-  static const uint64_t static_value2 = 0xd7adcaeba167aaabULL;
+  static const uint64_t static_value1 = 0xefe3c26acf397027ULL;
+  static const uint64_t static_value2 = 0x388f0a2994b3fca9ULL;
 };
 
 template<class ContainerAllocator>
@@ -174,13 +159,10 @@ struct Definition< ::fsae_electric_vehicle::suspension_offset_<ContainerAllocato
   static const char* value()
   {
     return "float32 front_left_value \n\
-string front_left_time \n\
 float32 front_right_value \n\
-string front_right_time \n\
 float32 back_left_value \n\
-string back_left_time \n\
 float32 back_right_value \n\
-string back_right_time \n\
+string time_collected\n\
 ";
   }
 
@@ -200,13 +182,10 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.front_left_value);
-      stream.next(m.front_left_time);
       stream.next(m.front_right_value);
-      stream.next(m.front_right_time);
       stream.next(m.back_left_value);
-      stream.next(m.back_left_time);
       stream.next(m.back_right_value);
-      stream.next(m.back_right_time);
+      stream.next(m.time_collected);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -227,20 +206,14 @@ struct Printer< ::fsae_electric_vehicle::suspension_offset_<ContainerAllocator> 
   {
     s << indent << "front_left_value: ";
     Printer<float>::stream(s, indent + "  ", v.front_left_value);
-    s << indent << "front_left_time: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.front_left_time);
     s << indent << "front_right_value: ";
     Printer<float>::stream(s, indent + "  ", v.front_right_value);
-    s << indent << "front_right_time: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.front_right_time);
     s << indent << "back_left_value: ";
     Printer<float>::stream(s, indent + "  ", v.back_left_value);
-    s << indent << "back_left_time: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.back_left_time);
     s << indent << "back_right_value: ";
     Printer<float>::stream(s, indent + "  ", v.back_right_value);
-    s << indent << "back_right_time: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.back_right_time);
+    s << indent << "time_collected: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.time_collected);
   }
 };
 

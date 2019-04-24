@@ -7,20 +7,17 @@ import struct
 
 
 class suspension_offset(genpy.Message):
-  _md5sum = "8a6ea563b0ec5361d7adcaeba167aaab"
+  _md5sum = "efe3c26acf397027388f0a2994b3fca9"
   _type = "fsae_electric_vehicle/suspension_offset"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """float32 front_left_value 
-string front_left_time 
 float32 front_right_value 
-string front_right_time 
 float32 back_left_value 
-string back_left_time 
 float32 back_right_value 
-string back_right_time 
+string time_collected
 """
-  __slots__ = ['front_left_value','front_left_time','front_right_value','front_right_time','back_left_value','back_left_time','back_right_value','back_right_time']
-  _slot_types = ['float32','string','float32','string','float32','string','float32','string']
+  __slots__ = ['front_left_value','front_right_value','back_left_value','back_right_value','time_collected']
+  _slot_types = ['float32','float32','float32','float32','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -30,7 +27,7 @@ string back_right_time
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       front_left_value,front_left_time,front_right_value,front_right_time,back_left_value,back_left_time,back_right_value,back_right_time
+       front_left_value,front_right_value,back_left_value,back_right_value,time_collected
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -41,29 +38,20 @@ string back_right_time
       #message fields cannot be None, assign default values for those that are
       if self.front_left_value is None:
         self.front_left_value = 0.
-      if self.front_left_time is None:
-        self.front_left_time = ''
       if self.front_right_value is None:
         self.front_right_value = 0.
-      if self.front_right_time is None:
-        self.front_right_time = ''
       if self.back_left_value is None:
         self.back_left_value = 0.
-      if self.back_left_time is None:
-        self.back_left_time = ''
       if self.back_right_value is None:
         self.back_right_value = 0.
-      if self.back_right_time is None:
-        self.back_right_time = ''
+      if self.time_collected is None:
+        self.time_collected = ''
     else:
       self.front_left_value = 0.
-      self.front_left_time = ''
       self.front_right_value = 0.
-      self.front_right_time = ''
       self.back_left_value = 0.
-      self.back_left_time = ''
       self.back_right_value = 0.
-      self.back_right_time = ''
+      self.time_collected = ''
 
   def _get_types(self):
     """
@@ -77,29 +65,9 @@ string back_right_time
     :param buff: buffer, ``StringIO``
     """
     try:
-      buff.write(_get_struct_f().pack(self.front_left_value))
-      _x = self.front_left_time
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_f().pack(self.front_right_value))
-      _x = self.front_right_time
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_f().pack(self.back_left_value))
-      _x = self.back_left_time
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_f().pack(self.back_right_value))
-      _x = self.back_right_time
+      _x = self
+      buff.write(_get_struct_4f().pack(_x.front_left_value, _x.front_right_value, _x.back_left_value, _x.back_right_value))
+      _x = self.time_collected
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -115,54 +83,19 @@ string back_right_time
     """
     try:
       end = 0
+      _x = self
       start = end
-      end += 4
-      (self.front_left_value,) = _get_struct_f().unpack(str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.front_left_time = str[start:end].decode('utf-8')
-      else:
-        self.front_left_time = str[start:end]
-      start = end
-      end += 4
-      (self.front_right_value,) = _get_struct_f().unpack(str[start:end])
+      end += 16
+      (_x.front_left_value, _x.front_right_value, _x.back_left_value, _x.back_right_value,) = _get_struct_4f().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       start = end
       end += length
       if python3:
-        self.front_right_time = str[start:end].decode('utf-8')
+        self.time_collected = str[start:end].decode('utf-8')
       else:
-        self.front_right_time = str[start:end]
-      start = end
-      end += 4
-      (self.back_left_value,) = _get_struct_f().unpack(str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.back_left_time = str[start:end].decode('utf-8')
-      else:
-        self.back_left_time = str[start:end]
-      start = end
-      end += 4
-      (self.back_right_value,) = _get_struct_f().unpack(str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.back_right_time = str[start:end].decode('utf-8')
-      else:
-        self.back_right_time = str[start:end]
+        self.time_collected = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -175,29 +108,9 @@ string back_right_time
     :param numpy: numpy python module
     """
     try:
-      buff.write(_get_struct_f().pack(self.front_left_value))
-      _x = self.front_left_time
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_f().pack(self.front_right_value))
-      _x = self.front_right_time
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_f().pack(self.back_left_value))
-      _x = self.back_left_time
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x))
-      buff.write(_get_struct_f().pack(self.back_right_value))
-      _x = self.back_right_time
+      _x = self
+      buff.write(_get_struct_4f().pack(_x.front_left_value, _x.front_right_value, _x.back_left_value, _x.back_right_value))
+      _x = self.time_collected
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -214,54 +127,19 @@ string back_right_time
     """
     try:
       end = 0
+      _x = self
       start = end
-      end += 4
-      (self.front_left_value,) = _get_struct_f().unpack(str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.front_left_time = str[start:end].decode('utf-8')
-      else:
-        self.front_left_time = str[start:end]
-      start = end
-      end += 4
-      (self.front_right_value,) = _get_struct_f().unpack(str[start:end])
+      end += 16
+      (_x.front_left_value, _x.front_right_value, _x.back_left_value, _x.back_right_value,) = _get_struct_4f().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
       start = end
       end += length
       if python3:
-        self.front_right_time = str[start:end].decode('utf-8')
+        self.time_collected = str[start:end].decode('utf-8')
       else:
-        self.front_right_time = str[start:end]
-      start = end
-      end += 4
-      (self.back_left_value,) = _get_struct_f().unpack(str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.back_left_time = str[start:end].decode('utf-8')
-      else:
-        self.back_left_time = str[start:end]
-      start = end
-      end += 4
-      (self.back_right_value,) = _get_struct_f().unpack(str[start:end])
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.back_right_time = str[start:end].decode('utf-8')
-      else:
-        self.back_right_time = str[start:end]
+        self.time_collected = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -270,9 +148,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_f = None
-def _get_struct_f():
-    global _struct_f
-    if _struct_f is None:
-        _struct_f = struct.Struct("<f")
-    return _struct_f
+_struct_4f = None
+def _get_struct_4f():
+    global _struct_4f
+    if _struct_4f is None:
+        _struct_4f = struct.Struct("<4f")
+    return _struct_4f

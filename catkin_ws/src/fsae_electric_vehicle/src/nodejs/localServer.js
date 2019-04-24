@@ -2,7 +2,10 @@
 'use strict';
 const express = require('express')();
 const server = require('http').Server(express);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server,{
+    pingInterval: 1000,
+    pingTimeout: 1000
+});
 const ioClient = require('socket.io-client')("https://api.matadormotorsports.racing");
 
 const rosSubscribe = require('./rosSubscribe');
@@ -29,14 +32,20 @@ function app() {
     .then((rosNode) => {
       rosSubscribe(rosNode, ioMessage);
       io.on('connection', function (client) {
+          client.on("disconnect", function(){
+              console.log("IN THE DISCONNECT EVENT");
+              const pub = rosNode.advertise('can_bus_commands', std_msgs.can_message);
+              const msg = new std_msgs.can_message();
+              msg.id = '201';
+              msg.data = "toggle_analog";
+              pub.publish(msg);
+          });
          client.on('can_bus', function (data) {
-           console.log(data);
            const pub = rosNode.advertise('can_bus_commands', std_msgs.can_message);
            const msg = new std_msgs.can_message();
            msg.id = '201';
            msg.data = data.action;
            msg.speed = data.value;
-           console.log(msg);
            pub.publish(msg);
          });
       });
