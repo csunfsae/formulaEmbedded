@@ -28,18 +28,28 @@ function rosSubscribe(rosNode, ioMessage) {
     });
 
     let steering_wheel = rosNode.subscribe('steering_wheel', std_msgs.analog_sensor, (data) => {
+        new ioMessage("steering_wheel",{data: data.value, time: data.time, device: "steering_wheel" });
     });
 
     let accelerator = rosNode.subscribe('accelerator', std_msgs.analog_sensor, (data) => {
+        new ioMessage('accelerator', { value: data.value, time:data.time, device: 'accelerator' });
     });
     let can_data = rosNode.subscribe('can_bus', std_msgs.can_message, (data) => {
-        new ioMessage("canbus", {id: data.id, data:data.data, device:"can_bus"});
+        new ioMessage("can_bus", { id: data.id, data: data.data, value: data.value, time: data.time, device:"can_bus"});
     });
     let vehicle_speed = rosNode.subscribe('vehicle_speed', std_msgs.vehicle_speed, (data) => {
+        new ioMessage('speed', { value: data.value, device: 'arduino'});
     });
     let suspension_offset = rosNode.subscribe('suspension_offset', std_msgs.suspension_offset, (data) => {
+        new ioMessage('suspension_offset', { 
+            fl: data.front_left_value, 
+            fr: data.front_right_value, 
+            rl: data.back_left_value, 
+            rr: data.back_right_value, 
+            time: data.time_collected });
     });
     let brake = rosNode.subscribe('brake', std_msgs.analog_sensor , (data) => {
+        new ioMessage('brake', { value: data.value, device: 'brake' });
     });
 }
 
