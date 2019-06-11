@@ -19,7 +19,7 @@
     "dtrace-provider": "^0.8.7",
     "express": "^4.16.4",
     "rosnodejs": "^3.0.0",
-    "sequelize": "^5.3.0",
+    "sequelize": "^5.8.8",
     "socket.io": "^2.2.0",
     "sqlite3": "^4.0.6",
     "yarn": "^1.13.0"
