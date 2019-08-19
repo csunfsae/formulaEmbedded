@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "bunyan": "^1.8.12",
-    "dtrace-provider": "^0.8.7",
+    "dtrace-provider": "^0.8.8",
     "express": "^4.17.1",
     "rosnodejs": "^3.0.0",
     "sequelize": "^5.10.1",
