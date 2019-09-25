@@ -1,4 +1,5 @@
 <launch>
   <node pkg="fsae_electric_vehicle" type="GPS" name="GPS"/>
   <node pkg="fsae_electric_vehicle" type="serial.py" name="SERIAL"/>
+  <node pkg="fsae_electric_vehicle" type="reader.py" name="NODEREADER"/>
 </launch>

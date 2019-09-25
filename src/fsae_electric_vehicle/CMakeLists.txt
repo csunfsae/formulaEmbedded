@@ -49,3 +49,8 @@ install(PROGRAMS
    src/js/reader.js
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+install (FILES
+  src/launch/main.launch
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
