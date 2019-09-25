@@ -1,0 +1,5 @@
+build/
+devel/
+install/
+oldfolders/
+node_modules/

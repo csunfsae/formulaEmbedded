@@ -1,0 +1,12 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "listener": "node reader.js"
+  },
+  "author": "",
+  "dependencies": {
+    "rosnodejs": "3.0.0"
+  }
+}
