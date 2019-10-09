@@ -8,7 +8,7 @@
             "includePath": [
                 "C:\\opt\\rosdeps\\x64\\include\\**",
                 "C:\\opt\\ros\\melodic\\x64\\include\\**",
-                "C:\\Users\\thadh\\Documents\\ros\\src\\fsae_electric_vehicle\\include\\**",
+                "${workspaceFolder}/src/fsae_electric_vehicle/include/**",
                 "${workspaceFolder}/devel/include"
             ],
             "name": "ROS",

@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
 
   fsae_electric_vehicle::gps gps;
 
-  ros::Rate loop_rate{100};
+  ros::Rate loop_rate{5};
   std::cout << "Init!" << std::endl;
 
   int x = 0;
