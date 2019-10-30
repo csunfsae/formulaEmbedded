@@ -18,7 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 roslaunch_add_file_check(src/launch)
 
-add_message_files(FILES gps.msg serial.msg)
+add_message_files(FILES gps.msg serial.msg speedometer.msg)
 
 generate_messages(DEPENDENCIES std_msgs)
 
@@ -38,6 +38,11 @@ target_link_libraries(SocketSender ${catkin_LIBRARIES})
 target_compile_features(SocketSender PUBLIC cxx_std_17)
 add_dependencies(SocketSender fsae_electric_vehicle_generate_messages_cpp)
 
+add_executable(SPEEDOMETER src/cpp/speedometer/main.cpp)
+target_link_libraries(SPEEDOMETER ${catkin_LIBRARIES})
+target_compile_features(SPEEDOMETER PUBLIC cxx_std_17)
+add_dependencies(SPEEDOMETER fsae_electric_vehicle_generate_messages_cpp)
+
 catkin_install_python(
   PROGRAMS
   src/python/serial/serial.py
@@ -49,6 +54,10 @@ install(TARGETS GPS
 )
 
 install(TARGETS SocketSender
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(TARGETS SPEEDOMETER
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
