@@ -10,21 +10,21 @@ After init
   ros::NodeHandle n;
   std::cout << "After node handle calling ros::start()" << std::endl;
 
-  ros::Publisher coolant_msg = n.advertise<fsae_electric_vehicle::tempurature>("tempurature", 1000);
+  ros::Publisher coolant_msg = n.advertise<fsae_electric_vehicle::temperature>("temperature", 1000);
 
   std::cout << "After publisher" << std::endl;
-
+  
   fsae_electric_vehicle::temperature temperature;
 
   ros::Rate loop_rate(10);
   std::cout << "Init!" << std::endl;
 
   int x = 0;
-//change all to subscriber node not publisher
+
   while (ros::ok()) {
     coolant.temp = x;
-    x++;
-    gps_topic.publish(gps);
+    x++; //simulation
+    coolant_msg.publish(temperature);
     ros::spinOnce();
     loop_rate.sleep();
   }
