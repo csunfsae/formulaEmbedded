@@ -16,14 +16,14 @@ After init
   
   fsae_electric_vehicle::temperature temperature;
 
-  ros::Rate loop_rate(10);
-  std::cout << "Init!" << std::endl;
-
-  int x = 0;
+  ros::Rate loop_rate(5);
+  std::cout << "listening" << std::endl;
+`
+  float x = 0;
 
   while (ros::ok()) {
     coolant.temp = x;
-    x++; //simulation
+    x+=static_cast <float> (rand()) / static_cast <float> (RAND_MAX); //simulation
     coolant_msg.publish(temperature);
     ros::spinOnce();
     loop_rate.sleep();
