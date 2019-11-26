@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv) {
   std::cout << "Starting Coolant" << std::endl;
-After init
+
   ros::init(argc, argv, "Coolant");
   std::cout << "initialized coolant node" << std::endl;
   
@@ -18,7 +18,7 @@ After init
 
   ros::Rate loop_rate(5);
   std::cout << "listening" << std::endl;
-`
+
   float x = 0;
 
   while (ros::ok()) {
