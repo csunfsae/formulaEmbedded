@@ -4,11 +4,23 @@
 #include "fsae_electric_vehicle/speedometer.h"
 #include "std_msgs/String.h"
 
-#include <WinSock2.h>
-#include <Ws2tcpip.h>
-#pragma comment(lib, "Ws2_32.lib")
+#ifdef _WIN32
+ #include <WinSock2.h>
+ #include <Ws2tcpip.h>
+ #pragma comment(lib, "Ws2_32.lib")
+#else
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <arpa/inet.h>
+ #include <netdb.h>
+ #include <unistd.h>
+#endif
 
-SOCKET sd;
+#ifdef _WIN32
+  SOCKET sd;
+#else
+  int sd;
+#endif
 
 void speedCallback(const fsae_electric_vehicle::speedometer::ConstPtr& msg) {
      ROS_INFO("I heard: [%f]", msg->speed);
@@ -18,7 +30,7 @@ void speedCallback(const fsae_electric_vehicle::speedometer::ConstPtr& msg) {
     struct sockaddr_in addr;
     std::memset(&addr, 0, sizeof(addr));
     addr.sin_family = AF_INET;
-    InetPton(AF_INET, "127.0.0.1", &(addr.sin_addr));
+    inet_pton(AF_INET, "127.0.0.1", &(addr.sin_addr)); //changed to ANSI version for compatibility
     addr.sin_port = htons(1234);
      sendto(sd, buf, 4, 0, reinterpret_cast<sockaddr*>(&addr), sizeof(addr));
    }
@@ -35,8 +47,14 @@ int main(int argc, char **argv) {
   addr.sin_port = htons(1232);
 
       int optval = 1;
+
+  #ifdef _WIN32    
     setsockopt(sd, SOL_SOCKET, SO_EXCLUSIVEADDRUSE,
                reinterpret_cast<char*>(&optval), sizeof optval);
+  #else
+    setsockopt(sd, SOL_SOCKET, SO_REUSEADDR,
+               reinterpret_cast<char*>(&optval), sizeof optval);
+  #endif
 
   bind(sd, reinterpret_cast<sockaddr*>(&addr), sizeof(addr));
 
@@ -49,6 +67,11 @@ int main(int argc, char **argv) {
 
   ros::spin();
 
-  ::shutdown(sd, SD_BOTH);
-  closesocket(sd);
+  #ifdef _WIN32
+    shutdown(sd, SD_BOTH);
+    closesocket(sd);
+  #else
+    shutdown(sd, SHUT_RDWR);
+    close(sd);
+  #endif
 }
