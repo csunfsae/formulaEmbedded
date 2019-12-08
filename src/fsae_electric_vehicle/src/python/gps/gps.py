@@ -34,6 +34,7 @@ def GPS():
         if regexp.search(a_string):
             readout = pynmea2.parse(a_string)
             if readout.latitude != 0:
+                print('Found!')
                 msg.latitude = readout.latitude
                 msg.longitude = readout.longitude
                 msg.sats = int(readout.num_sats)
@@ -41,6 +42,8 @@ def GPS():
                 msg.time = 0 #datetime.now(timezone.utc).isoformat()
                 pub.publish(msg)
                 rate.sleep()
+            else:
+                print('Err')
 
 if __name__ == '__main__':
     try:

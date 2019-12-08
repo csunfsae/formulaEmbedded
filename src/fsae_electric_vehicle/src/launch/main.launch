@@ -1,5 +1,5 @@
 <launch>
-  <node pkg="fsae_electric_vehicle" type="gps.py" name="GPS"/>
+  <node pkg="fsae_electric_vehicle" type="gps.py" name="GPS" output="screen"/>
   <node pkg="fsae_electric_vehicle" type="SPEEDOMETER" name="SPEEDOMETER"/>
   <node pkg="fsae_electric_vehicle" type="SocketSender" name="SocketSender"/>
   <node pkg="fsae_electric_vehicle" type="reader.py" name="READER" output="screen"/>
