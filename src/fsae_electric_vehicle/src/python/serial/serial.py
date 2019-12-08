@@ -6,7 +6,7 @@ from fsae_electric_vehicle.msg import serial
 from fsae_electric_vehicle.msg import speedometer
 
 def callback(data):
-    rospy.loginfo("%d the latitude value %d" % (data.latitude, 42))
+    rospy.loginfo("%d the latitude value: %d the longitude value" % (data.latitude, data.logitude))
     #print(data.latitude)
 
 def callbackspeed(data):
@@ -14,7 +14,7 @@ def callbackspeed(data):
 
 def listener():
     rospy.init_node('custom_listener', anonymous=True)
-    rospy.Subscriber("gps", gps, callback)
+    rospy.Subscriber("GPS", gps, callback)
     print('hello!')
 
     rospy.Subscriber("speedometer", speedometer, callbackspeed)

@@ -36,11 +36,6 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(GPS src/cpp/gps/main.cpp)
-target_link_libraries(GPS ${catkin_LIBRARIES})
-target_compile_features(GPS PUBLIC cxx_std_17)
-add_dependencies(GPS fsae_electric_vehicle_generate_messages_cpp)
-
 add_executable(DriveTrain src/cpp/drivetrain/drive_train.cpp)
 target_link_libraries(DriveTrain ${catkin_LIBRARIES})
 target_compile_features(DriveTrain PUBLIC cxx_std_17)
@@ -72,8 +67,10 @@ catkin_install_python(
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-install(TARGETS GPS
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+catkin_install_python(
+  PROGRAMS
+  src/python/gps/gps.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 install(TARGETS SocketSender
