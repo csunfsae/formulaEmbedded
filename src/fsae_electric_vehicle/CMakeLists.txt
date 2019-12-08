@@ -63,7 +63,7 @@ add_dependencies(SPEEDOMETER fsae_electric_vehicle_generate_messages_cpp)
 
 catkin_install_python(
   PROGRAMS
-  src/python/serial/serial.py
+  src/python/reader/reader.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
