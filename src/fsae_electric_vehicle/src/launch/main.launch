@@ -1,9 +1,9 @@
 <launch>
   <node pkg="fsae_electric_vehicle" type="gps.py" name="GPS" output="screen"/>
   <node pkg="fsae_electric_vehicle" type="SPEEDOMETER" name="SPEEDOMETER"/>
-  <node pkg="fsae_electric_vehicle" type="brake_pressure" name="brake_pressure"/>
-  <node pkg="fsae_electric_vehicle" type="Coolant_temp" name="Coolant_temp"/>
-  <node pkg="fsae_electric_vehicle" type="drivetrain" name="drivetrain"/>
+  <node pkg="fsae_electric_vehicle" type="Brakes" name="Brakes"/>
+  <node pkg="fsae_electric_vehicle" type="CoolantTemp" name="CoolantTemp"/>
+  <node pkg="fsae_electric_vehicle" type="DriveTrain" name="DriveTrain"/>
   <node pkg="fsae_electric_vehicle" type="SocketSender" name="SocketSender"/>
   <node pkg="fsae_electric_vehicle" type="reader.py" name="READER" output="screen"/>
   <!--<node pkg="fsae_electric_vehicle" type="node reader.js" name="NODEREADER"/>-->
