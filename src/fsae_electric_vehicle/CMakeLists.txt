@@ -46,7 +46,7 @@ target_link_libraries(CoolantTemp ${catkin_LIBRARIES})
 target_compile_features(CoolantTemp PUBLIC cxx_std_17)
 add_dependencies(CoolantTemp fsae_electric_vehicle_generate_messages_cpp)
 
-add_executable(Brakes src/cpp/brakes/brake_pressure.cpp src/cpp/Brakes/CANController.cpp)
+add_executable(Brakes src/cpp/brakes/brake_pressure.cpp src/cpp/brakes/CANController.cpp)
 target_link_libraries(Brakes ${catkin_LIBRARIES})
 target_compile_features(Brakes PUBLIC cxx_std_17)
 add_dependencies(Brakes fsae_electric_vehicle_generate_messages_cpp)
