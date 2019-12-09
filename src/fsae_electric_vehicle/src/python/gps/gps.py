@@ -43,7 +43,13 @@ def GPS():
                 pub.publish(msg)
                 rate.sleep()
             else:
-                print('Err')
+                msg.latitude = 1
+                msg.longitude = 1
+                msg.sats = int(1)
+                msg.alt = float(1)
+                msg.time = 0 #datetime.now(timezone.utc).isoformat()
+                pub.publish(msg)
+                rate.sleep()
 
 if __name__ == '__main__':
     try:
