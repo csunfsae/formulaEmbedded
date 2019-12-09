@@ -99,7 +99,7 @@ int main(int argc, char **argv) {
   spinner.start();
 
   ros::Subscriber speed = n.subscribe<fsae_electric_vehicle::speedometer>("speedometer", 1000, speedCallback);
-  ros::Subscriber gps = n.subscribe<fsae_electric_vehicle::gps>("gps", 1000, gpsCallback);
+  ros::Subscriber gps = n.subscribe<fsae_electric_vehicle::gps>("GPS", 1000, gpsCallback);
   ros::Subscriber bat = n.subscribe<fsae_electric_vehicle::drive_train>("drivetrain_voltage", 1000, batteryCallback);
   ros::Subscriber cool = n.subscribe<fsae_electric_vehicle::coolant>("coolant_temperature", 1000, coolantCallback);
   ros::Subscriber brake = n.subscribe<fsae_electric_vehicle::brake_pressure>("brake_pressure", 1000, brakeCallback);
