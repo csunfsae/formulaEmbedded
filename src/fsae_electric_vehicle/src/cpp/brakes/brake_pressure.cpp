@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include <fsae_electric_vehicle/brake_pressure.h>
+#include "CANController.h"
 
 int main(int argc, char **argv) {
   //std::cout << "Starting brake_pressure process" << std::endl;
@@ -15,14 +16,20 @@ int main(int argc, char **argv) {
 
   fsae_electric_vehicle::brake_pressure brake_pressure; //constructor
 
-  ros::Rate loop_rate(100);
+  ros::Rate loop_rate(50);
   //std::cout << "listening bp" << std::endl;
 
-  float x = 0;
+  CANController can;
+  can.start("can0");
+
+  float lastVal = 0;
 
   while (ros::ok()) {
-    brake_pressure.pressure = x;
-    x+=static_cast <float> (rand()) / static_cast <float> (RAND_MAX); //simulation
+    auto data = can.getData(0x02051884, 0x1FFFFFFF);
+    if (data.has_value()) {
+      std::memcpy(&lastVal, data->data, 4);
+    }
+    brake_pressure.pressure = lastVal;
     brake_pressure_msg.publish(brake_pressure);
     ros::spinOnce();
     loop_rate.sleep();

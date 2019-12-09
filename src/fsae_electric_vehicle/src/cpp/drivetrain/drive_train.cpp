@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
   CANController can;
   can.start("can0");
 
-  int lastVal = 0;
+  float lastVal = 0;
 
   while (ros::ok()) {
     auto data = can.getData(0x02051881, 0x1FFFFFFF);
