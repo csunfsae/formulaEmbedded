@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include <fsae_electric_vehicle/drive_train.h>
+#include "CANController.h"
 
 int main(int argc, char **argv) {
   //std::cout << "Starting drivetrain" << std::endl;
@@ -18,11 +19,17 @@ int main(int argc, char **argv) {
   ros::Rate loop_rate(100);
   //std::cout << "listening" << std::endl;
 
-  float x = 0;
+  CANController can;
+  can.start("can0");
+
+  int lastVal = 0;
 
   while (ros::ok()) {
-    drivetrain.voltage = x;
-    x+=static_cast <float> (rand()) / static_cast <float> (RAND_MAX); //simulation
+    auto data = can.getData(0x02051881, 0x1FFFFFFF);
+    if (data.has_value()) {
+      std::memcpy(&lastVal, data->data, 4);
+    }
+    drivetrain.voltage = lastVal;
     drivetrain_msg.publish(drivetrain);
     ros::spinOnce();
     loop_rate.sleep();
