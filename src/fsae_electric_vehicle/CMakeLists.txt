@@ -36,12 +36,12 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(DriveTrain src/cpp/drivetrain/drive_train.cpp)
+add_executable(DriveTrain src/cpp/drivetrain/drive_train.cpp src/cpp/drivetrain/CANController.cpp)
 target_link_libraries(DriveTrain ${catkin_LIBRARIES})
 target_compile_features(DriveTrain PUBLIC cxx_std_17)
 add_dependencies(DriveTrain fsae_electric_vehicle_generate_messages_cpp)
 
-add_executable(CoolantTemp src/cpp/Coolant_temp/main.cpp)
+add_executable(CoolantTemp src/cpp/Coolant_temp/main.cpp  src/cpp/Coolant_temp/CANController.cpp)
 target_link_libraries(CoolantTemp ${catkin_LIBRARIES})
 target_compile_features(CoolantTemp PUBLIC cxx_std_17)
 add_dependencies(CoolantTemp fsae_electric_vehicle_generate_messages_cpp)
