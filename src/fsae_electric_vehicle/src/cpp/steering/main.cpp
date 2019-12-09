@@ -25,6 +25,8 @@ int main(int argc, char **argv) {
   //assumes data output includes values from 0-1023
   //int x = 0.0;
   int pos = 1023/2; //middle forward position
+  bool right == true;
+
 
   while (ros::ok()) {
     steering.value = pos;
@@ -33,8 +35,16 @@ int main(int argc, char **argv) {
     //x += 0.01;
     //pos = static_cast<int>(1023/2 * sin(x) + 1023/2); 
     
-    (if pos < 1023)
+    //should produce pure linear output (like a triangle wave)
+    if(right == true)
       pos++;
+    else if(right == false)
+      pos--;
+
+    if(pos == 1023)
+      right = false;
+    else if(pos == 0)
+      right = true;
 
     steering_topic.publish(steering);
     ros::spinOnce();
