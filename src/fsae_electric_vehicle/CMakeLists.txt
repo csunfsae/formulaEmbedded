@@ -26,6 +26,7 @@ add_message_files(FILES
   coolant.msg
   drive_train.msg
   suspension.msg
+  data_struct.msg
 )
 
 generate_messages(DEPENDENCIES std_msgs)
@@ -61,6 +62,11 @@ target_link_libraries(SPEEDOMETER ${catkin_LIBRARIES})
 target_compile_features(SPEEDOMETER PUBLIC cxx_std_17)
 add_dependencies(SPEEDOMETER fsae_electric_vehicle_generate_messages_cpp)
 
+add_executable(DataStruct src/cpp/dataStruct/main.cpp)
+target_link_libraries(DataStruct ${catkin_LIBRARIES})
+target_compile_features(DataStruct PUBLIC cxx_std_17)
+add_dependencies(DataStruct fsae_electric_vehicle_generate_messages_cpp)
+
 catkin_install_python(
   PROGRAMS
   src/python/reader/reader.py
@@ -90,6 +96,10 @@ install(TARGETS CoolantTemp
 )
 
 install(TARGETS DriveTrain
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(TARGETS DataStruct
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
