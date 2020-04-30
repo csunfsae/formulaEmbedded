@@ -72,6 +72,15 @@ struct data
 //      std::lock_guard<std::mutex> lock{dataMutex};
 //      std::memcpy(&data[2], &msg->speed, 4);
 
+// void printStruct(const struct data& d)
+// {
+//     printf("%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",
+//             d.time, d.timer, d.steerAngle, d.battTemp, d.battVolt, d.motSpeed, d.brakePos,
+//             d.accelPos, d.waterTemp, d.latitude, d.longitude, d.Xacc, d.Yacc, d.Zacc,
+//             d.Xgyro, d.Ygyro, d.Zgyro, d.FLsusp,
+//             d.FRsusp, d.RLsusp, d.RRsusp, d.FLspeed, d.FRspeed, d.RLspeed, d.RRspeed);
+// }
+
 int main(int argc, char** argv)
 {
 
@@ -115,9 +124,12 @@ int main(int argc, char** argv)
     char charData[sizeof(struct data)];
     std::memcpy(charData, &d, sizeof(d));
 
+    //printStruct(d);
+
     ros::Publisher data_topic = n.advertise<fsae_electric_vehicle::data_struct>("DataStruct", 1000);
 
     std::cout << "Created publisher" << std::endl;
+    // std::cout << charData << std::endl;
 
     ros::Rate loop_rate(10);
 
@@ -127,6 +139,7 @@ int main(int argc, char** argv)
 
         msg.data = charData;
         
+        // std::cout << "I'm saying: " << msg.data << std::endl;
         data_topic.publish(msg);
 
         ros::spinOnce();
