@@ -58,7 +58,8 @@ char dataStore[96];
 //      std::memcpy(&data[2], &msg->speed, 4);
 
 void dataCallback(const fsae_electric_vehicle::data_struct::ConstPtr& msg) {
-  std::memcpy(&dataStore[0], &msg->data, 96);
+//    std::cout << "I heard: " << msg->data << std::endl;
+    std::memcpy(dataStore, msg->data.c_str(), sizeof(msg->data));
 }
 
 
@@ -111,7 +112,6 @@ int main(int argc, char **argv) {
 
   ros::Subscriber dataStruct = n.subscribe<fsae_electric_vehicle::data_struct>("DataStruct", 1000, dataCallback);
 
-
   std::cout << "Created Subscriber" << std::endl;
 
   ros::Rate loop_rate{10};
@@ -128,6 +128,7 @@ int main(int argc, char **argv) {
     addr.sin_family = AF_INET;
     inet_pton(AF_INET, "64.227.48.74", &(addr.sin_addr)); //changed to ANSI version for compatibility
     addr.sin_port = htons(8080);
+//    std::cout << "Sending: " << dataStore << std::endl;
     sendto(sd, dataStore, 96, 0, reinterpret_cast<sockaddr*>(&addr), sizeof(addr));
 
     ros::spinOnce();
