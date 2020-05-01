@@ -3,3 +3,5 @@ devel/
 install/
 oldfolders/
 node_modules/
+*.lvlps
+builds/
